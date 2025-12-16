@@ -41,9 +41,15 @@ This capstone course is the culminating experience for the Digital Culture and D
 
 ## Assignments
 
-- **Labs 1-6** — Skill-building exercises (AI tools, HTML/CSS, data visualization, Python mapping)
-- **Skills Portfolio** — Web-based showcase of lab work and skills
-- **Self-Reflections** — Midsemester & Final reflections with grade justification
+- **Labs 1-6** — Skill-building exercises that build portfolio iteratively:
+  - Lab 1: Portfolio setup (GitHub, HTML/CSS fundamentals)
+  - Lab 2: AI tool evaluation (evergreen framework)
+  - Lab 3: Visualization critique (Tufte principles)
+  - Lab 4: Data visualization with Tableau Public
+  - Lab 5: Vibe coding & AI-assisted development (under review)
+  - Lab 6: Python mapping with Folium/GeoPy
+- **Skills Portfolio** — Web-based showcase built incrementally throughout semester
+- **Self-Reflections (3)** — Baseline, Midsemester & Final reflections with grade justification
 - **Project Proposal** — Research question, methodology, and annotated bibliography
 - **Semester Project** — Deep dive into a topic (solo or group)
 
@@ -64,6 +70,13 @@ This course uses an **"ungrading" model** focused on qualitative assessment:
 - Final grade = average of 2 self-assigned grades (Midsemester + Final Reflection)
 - Students argue for their grade based on work quality and engagement
 - Instructors may adjust based on persuasiveness of argument
+
+### Tools & Workflow
+
+- **Code Editor:** VS Code
+- **Version Control:** GitHub Desktop + GitHub Pages
+- **Data Visualization:** Tableau Public, Python (Folium, GeoPy)
+- **AI Tools:** Evaluated critically in Lab 2; integrated thoughtfully in later labs
 
 > *"If class time is spent with only the instructors talking, this course is going to suck for all of us."*
 

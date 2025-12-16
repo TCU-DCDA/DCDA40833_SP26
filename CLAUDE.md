@@ -6,6 +6,22 @@
 
 ---
 
+## Current Repository Status (December 2025)
+
+### Recent Updates
+- **Lab 1:** Rewritten as portfolio foundation (GitHub, HTML/CSS) using VS Code + GitHub Desktop
+- **Lab 2:** Rewritten as evergreen AI evaluation framework (no specific tools)
+- **Lab 4:** Updated from Google Looker Studio to Tableau Public
+- **Lab 5:** Drafted as "vibe coding" lab (flagged for review)
+- **Lab 6:** Cleaned up and linked to local training materials
+
+### Pending Decisions
+- Finalize Lab 5 approach (standalone vs. distributed AI integration)
+- Determine final lab count (5 or 6)
+- Lab 3 cleanup (remove HTML artifacts, add portfolio integration notes)
+
+---
+
 ## Core Principles
 
 ### 1. No Assumptions
