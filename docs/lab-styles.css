@@ -42,12 +42,11 @@ body {
 
 /* Lab Sidebar Navigation (matching index page sidebar) */
 .lab-sidebar {
-    position: -webkit-sticky; /* Chrome/Safari */
-    position: sticky;
+    position: fixed; /* More reliable across all browsers including Chrome */
     top: 0;
+    left: 0;
+    width: 280px;
     height: 100vh;
-    max-height: 100vh;
-    align-self: start; /* Chrome fix for sticky in grid */
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Safari */
