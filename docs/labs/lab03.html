@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Tufte Critique | DCDA 40833</title>
+    <link rel="stylesheet" href="../lab-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="lab-page-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="lab-sidebar">
+            <!-- Lab Brand -->
+            <div class="lab-brand">
+                <div class="lab-number">Lab 03</div>
+                <p class="lab-designation">Tufte Critique</p>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="lab-nav">
+                <a href="../index.html" class="back-link">
+                    <i data-lucide="arrow-left" class="icon"></i>
+                    <span>Back to Resources</span>
+                </a>
+            </nav>
+
+            <!-- Jump Menu -->
+            <div class="jump-menu">
+                <h3>Jump To</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#step1">Step 1: Select Infographic</a></li>
+                        <li><a href="#step2">Step 2: Write Critique</a></li>
+                        <li><a href="#step3">Step 3: Portfolio Page</a></li>
+                        <li><a href="#submission">Submission</a></li>
+                        <li><a href="#discussion">In-Class Discussion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="lab-main-content">
+
+    <!-- Hero Section -->
+    <header class="lab-hero" style="background-image: url('images/lab03.png')">
+        <div class="lab-hero-content">
+            <h1>Tufte Critique</h1>
+            <p class="lab-subtitle">Evaluating Data Visualization</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="lab-wrapper">
+
+        <main class="lab-content">
+
+        <!-- Overview -->
+        <section class="overview" id="overview">
+            <h2>Overview</h2>
+            <p>Let's apply some of the points from Dr. Crotty's recent lecture (based on Edward Tufte's ideas) to critically evaluate real-world data visualizations. This exercise will sharpen your ability to assess the quality and integrity of visual arguments—a crucial skill for both consuming and creating data-driven content.</p>
+        </section>
+
+        <!-- Step 1 -->
+        <section id="step1">
+            <h2>Step 1: Select an Infographic</h2>
+            <p>Find one example from the "Beautiful News" section of the Information is Beautiful site:</p>
+            <p><a href="https://informationisbeautiful.net/beautifulnews/" target="_blank">https://informationisbeautiful.net/beautifulnews/</a></p>
+            <p>Read closely one infographic of your choice and its supporting article (provided as a link below the graphic).</p>
+        </section>
+
+        <!-- Step 2 -->
+        <section id="step2">
+            <h2>Step 2: Write Your Critique (500+ words)</h2>
+            <p>Analyze the visualization using Tufte's framework:</p>
+
+            <div class="concept-box">
+                <h4>Required Analysis</h4>
+                <p>Critique the visualization in terms of what Tufte describes as information <strong>"resolution"</strong> (169-176). Put another way, how comprehensive and complete is the graphic regarding the information it provides? Is there important information from the article you feel is missing in the graphic?</p>
+            </div>
+
+            <div class="concept-box">
+                <h4>Additional Concerns (choose at least two)</h4>
+                <ul>
+                    <li>Effects without causes</li>
+                    <li>Cherry-picking</li>
+                    <li>Overreaching</li>
+                    <li>Rage to Conclude</li>
+                </ul>
+            </div>
+
+            <p>Your critique should be <strong>at least 500 words</strong> and demonstrate close reading of both the infographic and its source material.</p>
+        </section>
+
+        <!-- Step 3 -->
+        <section id="step3">
+            <h2>Step 3: Create Portfolio Page</h2>
+            <p>Create a new HTML page in your portfolio called <code>tufte-critique.html</code> that includes:</p>
+            <ul>
+                <li>Your written critique</li>
+                <li>The infographic itself (embedded as an image)</li>
+                <li>A link to the original source</li>
+                <li>Proper HTML structure and styling consistent with your portfolio</li>
+            </ul>
+            <p>Make sure to link this new page from your main portfolio <code>index.html</code> navigation.</p>
+        </section>
+
+        <!-- Submission -->
+        <section class="deliverables" id="submission">
+            <h2>Submission</h2>
+
+            <div class="checklist">
+                <div class="checklist-item">
+                    <input type="checkbox" id="check1">
+                    <label for="check1">Push your updated portfolio to your GitHub repository</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check2">
+                    <label for="check2">Verify your GitHub Pages site displays the new critique page correctly</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check3">
+                    <label for="check3">Submit to D2L dropbox:
+                        <ul>
+                            <li>Link to your GitHub repository</li>
+                            <li>Link to your live GitHub Pages site</li>
+                        </ul>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- In-Class Discussion -->
+        <section id="discussion">
+            <h2>In-Class Discussion</h2>
+            <p>Be prepared to share and discuss your critique with the class. You'll be asked to present your findings and engage in dialogue about how Tufte's principles apply to contemporary data visualization.</p>
+        </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="lab-footer">
+        <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
+        <p><a href="../index.html">Back to Resources</a></p>
+    </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Jump Menu Active State
+        const jumpLinks = document.querySelectorAll('.jump-menu nav a');
+        const sections = document.querySelectorAll('section[id]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            jumpLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCDA 40833 - Senior Capstone Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <!-- Brand -->
+            <div class="brand">
+                <h1>DCDA 40833</h1>
+                <p class="subtitle">Spring 2026</p>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#labs" class="active">
+                            <i data-lucide="book-open" class="icon"></i>
+                            <span>Labs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">
+                            <i data-lucide="briefcase" class="icon"></i>
+                            <span>Skills Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#project">
+                            <i data-lucide="rocket" class="icon"></i>
+                            <span>Semester Project</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#reflections">
+                            <i data-lucide="file-text" class="icon"></i>
+                            <span>Self-Reflections</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#resources">
+                            <i data-lucide="wrench" class="icon"></i>
+                            <span>Tools & Resources</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <a href="https://github.com" class="quick-link" target="_blank">
+                    <i data-lucide="github" class="icon"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://colab.research.google.com" class="quick-link" target="_blank">
+                    <i data-lucide="code-2" class="icon"></i>
+                    <span>Google Colab</span>
+                </a>
+                <a href="../README.md" class="quick-link">
+                    <i data-lucide="folder-open" class="icon"></i>
+                    <span>Course Repo</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2>Senior Capstone Resources</h2>
+                        <p class="course-description">
+                            Your digital workspace for the DCDA capstone. Access weekly labs, project guidelines,
+                            self-reflection templates, and tools for building your skills portfolio.
+                        </p>
+                    </div>
+                    <!-- Search -->
+                    <div class="hero-search">
+                        <div class="search-wrapper">
+                            <i data-lucide="search" class="search-icon"></i>
+                            <input type="text" class="search-box" id="searchBox" placeholder="Search labs, projects, resources...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Container -->
+            <div class="container">
+
+                <!-- Labs Section -->
+                <section class="section" id="labs">
+                    <div class="section-header">
+                        <h3>Labs (Weeks 1-8)</h3>
+                    </div>
+                    <div class="card-grid">
+                        <div class="card large" data-search="lab 1 portfolio github html css setup" style="background-image: url('labs/images/lab01.png')">
+                            <div class="card-header">
+                                <h4>Lab 1: Portfolio Setup</h4>
+                                <span class="badge lab">Lab</span>
+                            </div>
+                            <p>Set up your GitHub account, create a repository, and build the foundation for your Skills Portfolio using HTML & CSS.</p>
+                            <a href="labs/lab01.html" class="card-link">View Instructions</a>
+                        </div>
+
+                        <div class="card" data-search="lab 2 ai tool evaluation framework" style="background-image: url('labs/images/lab02.png')">
+                            <div class="card-header">
+                                <h4>Lab 2: AI Tool Evaluation</h4>
+                                <span class="badge lab">Lab</span>
+                            </div>
+                            <p>Develop an evergreen framework for evaluating AI tools and apply it to current tools of your choice.</p>
+                            <a href="labs/lab02.html" class="card-link">View Instructions</a>
+                        </div>
+
+                        <div class="card" data-search="lab 3 visualization critique tufte infographic">
+                            <div class="card-header">
+                                <h4>Lab 3: Tufte Critique</h4>
+                                <span class="badge lab">Lab</span>
+                            </div>
+                            <p>Analyze a data visualization using Edward Tufte's principles and critique its effectiveness.</p>
+                            <a href="labs/lab03.html" class="card-link">View Instructions</a>
+                        </div>
+
+                        <div class="card large" data-search="lab 4 tableau public data visualization dashboard">
+                            <div class="card-header">
+                                <h4>Lab 4: Tableau Visualization</h4>
+                                <span class="badge lab">Lab</span>
+                            </div>
+                            <p>Create an interactive data visualization using Tableau Public and embed it in your portfolio.</p>
+                            <a href="labs/lab04.html" class="card-link">View Instructions</a>
+                        </div>
+
+                        <div class="card" data-search="lab 5 python mapping folium geopy hometown interactive map">
+                            <div class="card-header">
+                                <h4>Lab 5: Python Mapping</h4>
+                                <span class="badge lab">Lab</span>
+                            </div>
+                            <p>Create an interactive map of your hometown using Python's Folium and GeoPy libraries.</p>
+                            <a href="labs/lab05.html" class="card-link">View Instructions</a>
+                        </div>
+
+                        <div class="card" data-search="lab 6 vibe coding ai assisted development">
+                            <div class="card-header">
+                                <h4>Lab 6: Vibe Coding</h4>
+                                <span class="badge lab">Lab</span>
+                            </div>
+                            <p>Explore AI-assisted development and integrate AI tools into your creative workflow.</p>
+                            <a href="labs/lab06.html" class="card-link">View Instructions</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Portfolio Section -->
+                <section class="section" id="portfolio">
+                    <div class="section-header">
+                        <h3>Skills Portfolio</h3>
+                    </div>
+                    <div class="card-grid">
+                        <div class="card large" data-search="skills portfolio final submission website showcase">
+                            <div class="card-header">
+                                <h4>Portfolio Final Submission</h4>
+                                <span class="badge project">Portfolio</span>
+                            </div>
+                            <p>Your web-based showcase built iteratively throughout the semester. Refine, polish, and unify your work from Labs 1-6.</p>
+                            <a href="../skills_portfolio/skills_portfolio.md" class="card-link">View Requirements</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Semester Project Section -->
+                <section class="section" id="project">
+                    <div class="section-header">
+                        <h3>Semester Project (Weeks 9-16)</h3>
+                    </div>
+                    <div class="card-grid">
+                        <div class="card large" data-search="semester project data analysis python">
+                            <div class="card-header">
+                                <h4>Option 1: Data Analysis</h4>
+                                <span class="badge project">Project</span>
+                            </div>
+                            <p>Deep dive into Python-driven data analysis and visualization on a topic of your choosing.</p>
+                            <a href="../project/project_prompt.md" class="card-link">View Prompt</a>
+                        </div>
+
+                        <div class="card large" data-search="semester project digital culture web development creative">
+                            <div class="card-header">
+                                <h4>Option 2: Digital Culture</h4>
+                                <span class="badge project">Project</span>
+                            </div>
+                            <p>Deep dive into web development or multimodal authoring focused on research or creative endeavor.</p>
+                            <a href="../project/project_prompt_alt.md" class="card-link">View Prompt</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Self-Reflections Section -->
+                <section class="section" id="reflections">
+                    <div class="section-header">
+                        <h3>Self-Reflections</h3>
+                    </div>
+                    <div class="card-grid">
+                        <div class="card" data-search="baseline reflection self-assessment initial">
+                            <div class="card-header">
+                                <h4>Baseline Reflection</h4>
+                                <span class="badge reflection">Reflection</span>
+                            </div>
+                            <p>Initial self-assessment of your skills and goals at the beginning of the semester.</p>
+                            <a href="../self-reflections/self-reflection1.md" class="card-link">View Template</a>
+                        </div>
+
+                        <div class="card" data-search="midsemester reflection grade argument weeks 1-8">
+                            <div class="card-header">
+                                <h4>Midsemester Reflection</h4>
+                                <span class="badge reflection">Reflection</span>
+                            </div>
+                            <p>Argue for your grade based on work quality, engagement, and growth (covers Weeks 1-8).</p>
+                            <a href="../self-reflections/self-reflection2.md" class="card-link">View Template</a>
+                        </div>
+
+                        <div class="card" data-search="final reflection grade argument weeks 9-16">
+                            <div class="card-header">
+                                <h4>Final Reflection</h4>
+                                <span class="badge reflection">Reflection</span>
+                            </div>
+                            <p>Final self-assessment and grade argument covering the entire semester (Weeks 9-16).</p>
+                            <a href="../self-reflections/self-reflection3.md" class="card-link">View Template</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Resources Section -->
+                <section class="section" id="resources">
+                    <div class="section-header">
+                        <h3>Tools & Resources</h3>
+                    </div>
+                    <div class="card-grid">
+                        <div class="card" data-search="github version control git">
+                            <div class="card-header">
+                                <h4>GitHub</h4>
+                                <span class="badge resource">Tool</span>
+                            </div>
+                            <p>Version control and repository hosting for your portfolio and projects.</p>
+                            <a href="https://github.com" class="card-link">Visit Site</a>
+                        </div>
+
+                        <div class="card" data-search="vs code visual studio editor ide">
+                            <div class="card-header">
+                                <h4>VS Code</h4>
+                                <span class="badge resource">Tool</span>
+                            </div>
+                            <p>Code editor for HTML, CSS, Python, and other development work.</p>
+                            <a href="https://code.visualstudio.com" class="card-link">Visit Site</a>
+                        </div>
+
+                        <div class="card" data-search="tableau public data visualization dashboard">
+                            <div class="card-header">
+                                <h4>Tableau Public</h4>
+                                <span class="badge resource">Tool</span>
+                            </div>
+                            <p>Free data visualization platform for creating interactive dashboards.</p>
+                            <a href="https://public.tableau.com" class="card-link">Visit Site</a>
+                        </div>
+
+                        <div class="card" data-search="google colab python jupyter notebook">
+                            <div class="card-header">
+                                <h4>Google Colab</h4>
+                                <span class="badge resource">Tool</span>
+                            </div>
+                            <p>Cloud-based Jupyter notebooks for Python programming and data analysis.</p>
+                            <a href="https://colab.research.google.com" class="card-link">Visit Site</a>
+                        </div>
+
+                        <div class="card" data-search="mdn mozilla html css javascript documentation">
+                            <div class="card-header">
+                                <h4>MDN Web Docs</h4>
+                                <span class="badge resource">Documentation</span>
+                            </div>
+                            <p>Comprehensive documentation for HTML, CSS, and JavaScript.</p>
+                            <a href="https://developer.mozilla.org" class="card-link">Visit Site</a>
+                        </div>
+
+                        <div class="card" data-search="python documentation programming">
+                            <div class="card-header">
+                                <h4>Python Docs</h4>
+                                <span class="badge resource">Documentation</span>
+                            </div>
+                            <p>Official Python language documentation and tutorials.</p>
+                            <a href="https://docs.python.org/3/" class="card-link">Visit Site</a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
+                <p>Instructors: Dr. Curt Rode & Dr. Sean Crotty</p>
+                <p><a href="../README.md">Course Repository</a> | <a href="https://github.com">GitHub</a></p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Search Functionality
+        const searchBox = document.getElementById('searchBox');
+        const cards = document.querySelectorAll('.card');
+
+        searchBox.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-search').toLowerCase();
+                const text = card.textContent.toLowerCase();
+
+                if (searchData.includes(searchTerm) || text.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Active Navigation State
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Update active nav based on scroll position
+        const sections = document.querySelectorAll('.section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1: Portfolio Setup | DCDA 40833</title>
+    <link rel="stylesheet" href="../lab-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="lab-page-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="lab-sidebar">
+            <!-- Lab Brand -->
+            <div class="lab-brand">
+                <div class="lab-number">Lab 01</div>
+                <p class="lab-designation">Portfolio Setup</p>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="lab-nav">
+                <a href="../index.html" class="back-link">
+                    <i data-lucide="arrow-left" class="icon"></i>
+                    <span>Back to Resources</span>
+                </a>
+            </nav>
+
+            <!-- Jump Menu -->
+            <div class="jump-menu">
+                <h3>Jump To</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#part1">Part 1: GitHub Setup</a></li>
+                        <li><a href="#part2">Part 2: Tools & Local Setup</a></li>
+                        <li><a href="#part3">Part 3: HTML & CSS</a></li>
+                        <li><a href="#part4">Part 4: Build Portfolio</a></li>
+                        <li><a href="#part5">Part 5: Add Comments</a></li>
+                        <li><a href="#deliverables">Deliverables</a></li>
+                        <li><a href="#looking-ahead">Looking Ahead</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="lab-main-content">
+
+    <!-- Hero Section -->
+    <header class="lab-hero" style="background-image: url('images/lab01.png')">
+        <div class="lab-hero-content">
+            <h1>Skills Portfolio Setup</h1>
+            <p class="lab-subtitle">GitHub, HTML & CSS Foundations</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="lab-wrapper">
+
+        <main class="lab-content">
+
+        <!-- Overview -->
+        <section class="overview" id="overview">
+            <h2>Overview</h2>
+            <p>In this lab, you will set up the foundation for your <strong>Skills Portfolio</strong> — a website that will grow throughout the semester as you add artifacts from each lab assignment. By the end of this lab, you will have:</p>
+            <ul>
+                <li>A GitHub account and repository</li>
+                <li>A live website hosted on GitHub Pages</li>
+                <li>A basic HTML/CSS structure ready for future content</li>
+            </ul>
+        </section>
+
+        <!-- Part 1 -->
+        <section id="part1">
+            <h2>Part 1: GitHub Setup</h2>
+
+            <h3>Create a GitHub Account</h3>
+            <ol>
+                <li>Go to <a href="https://github.com" target="_blank">github.com</a> and sign up for a free account</li>
+                <li>Use your TCU email or personal email (your choice)</li>
+                <li>Choose a professional username — this will be visible in your portfolio URL</li>
+            </ol>
+
+            <h3>Create Your Repository</h3>
+            <ol>
+                <li>Click the <strong>+</strong> icon (top right) → <strong>New repository</strong></li>
+                <li>Name it: <code>dcda40833-portfolio</code> (or similar — lowercase, no spaces)</li>
+                <li>Set to <strong>Public</strong> (required for GitHub Pages free hosting)</li>
+                <li>Check <strong>Add a README file</strong></li>
+                <li>Click <strong>Create repository</strong></li>
+            </ol>
+
+            <h3>Enable GitHub Pages</h3>
+            <ol>
+                <li>In your repo, go to <strong>Settings → Pages</strong> (left sidebar)</li>
+                <li>Under "Source," select <strong>Deploy from a branch</strong></li>
+                <li>Choose <strong>main</strong> branch and <strong>/ (root)</strong> folder</li>
+                <li>Click <strong>Save</strong></li>
+                <li>Your live URL will be: <code>https://yourusername.github.io/dcda40833-portfolio/</code></li>
+            </ol>
+
+            <div class="alert alert-warning">
+                <i data-lucide="alert-circle"></i>
+                <div>
+                    <strong>Note:</strong> The URL won't work until you push an <code>index.html</code> file. First-time deployment can take 5-10 minutes. If your site doesn't appear, check <strong>Settings → Pages</strong> for status or error messages.
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2 -->
+        <section id="part2">
+            <h2>Part 2: Tools & Local Setup</h2>
+
+            <h3>Install VS Code</h3>
+            <ol>
+                <li>Download <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+                <li>Install and open it</li>
+                <li>This will be your code editor for HTML, CSS, and other files throughout the course</li>
+            </ol>
+
+            <h3>Install GitHub Desktop</h3>
+            <ol>
+                <li>Download <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
+                <li>Sign in with your GitHub account</li>
+                <li>Clone your repository: <strong>File → Clone Repository</strong> → select your repo</li>
+                <li>Choose a local folder (e.g., <code>Documents/DCDA</code>)</li>
+            </ol>
+
+            <div class="alert alert-info">
+                <i data-lucide="lightbulb"></i>
+                <div>
+                    <strong>Tip:</strong> In GitHub Desktop, click <strong>Repository → Open in Visual Studio Code</strong> to quickly open your project.
+                </div>
+            </div>
+
+            <h3>The Git Workflow (GitHub Desktop)</h3>
+            <p>Whenever you make changes:</p>
+            <ol>
+                <li><strong>Save</strong> your files in VS Code</li>
+                <li>Open <strong>GitHub Desktop</strong> — it automatically detects changes</li>
+                <li>Write a <strong>commit message</strong> describing what you changed</li>
+                <li>Click <strong>Commit to main</strong></li>
+                <li>Click <strong>Push origin</strong> to upload to GitHub</li>
+            </ol>
+            <p>Your live site will update automatically within a few minutes.</p>
+
+            <div class="alert alert-info">
+                <i data-lucide="book-open"></i>
+                <div>
+                    <strong>Want to learn more about Git?</strong> See <a href="https://guides.github.com/introduction/git-handbook/" target="_blank">GitHub's Git Handbook</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3 -->
+        <section id="part3">
+            <h2>Part 3: HTML & CSS Foundations</h2>
+
+            <h3>Key Concepts (Reference)</h3>
+            <p>This section summarizes what we'll cover in class. Use it as a reference.</p>
+
+            <div class="concept-box">
+                <h4>HTML (structure):</h4>
+                <ul>
+                    <li><strong>Elements:</strong> <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code></li>
+                    <li><strong>Attributes:</strong> <code>class</code>, <code>id</code>, <code>href</code>, <code>src</code>, <code>alt</code></li>
+                </ul>
+            </div>
+
+            <div class="concept-box">
+                <h4>CSS (style):</h4>
+                <ul>
+                    <li><strong>Selectors:</strong> element (<code>p</code>), class (<code>.classname</code>), id (<code>#idname</code>)</li>
+                    <li><strong>Box model:</strong> margin, border, padding, content</li>
+                    <li><strong>Common properties:</strong> <code>color</code>, <code>background-color</code>, <code>font-family</code>, <code>font-size</code>, <code>margin</code>, <code>padding</code>, <code>width</code>, <code>height</code></li>
+                </ul>
+            </div>
+
+            <div class="alert alert-info">
+                <i data-lucide="book-open"></i>
+                <div>
+                    <strong>Self-study resources:</strong>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">MDN HTML Basics</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank">MDN CSS Basics</a></li>
+                        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
+                        <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 4 -->
+        <section id="part4">
+            <h2>Part 4: Build Your Portfolio Structure</h2>
+
+            <h3>Create Your Files</h3>
+            <ol>
+                <li>Open your repository folder in VS Code (<strong>File → Open Folder</strong> or use GitHub Desktop's <strong>Open in Visual Studio Code</strong>)</li>
+                <li>Create the following structure:</li>
+            </ol>
+
+            <div class="code-block">
+                <pre><code>dcda40833-portfolio/
+├── index.html
+├── css/
+│   └── style.css
+└── images/
+    └── (your images go here)</code></pre>
+            </div>
+
+            <p><strong>In VS Code:</strong></p>
+            <ul>
+                <li>Click the <strong>New File</strong> icon to create <code>index.html</code></li>
+                <li>Click the <strong>New Folder</strong> icon to create <code>css</code> and <code>images</code> folders</li>
+                <li>Inside <code>css</code>, create <code>style.css</code></li>
+                <li>The <code>images</code> folder can stay empty for now</li>
+            </ul>
+
+            <h3>Starter Template</h3>
+            <p><strong>index.html:</strong></p>
+            <div class="code-block">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Your Name | DCDA Portfolio&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Your Name&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="#about"&gt;About&lt;/a&gt;
+            &lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section id="about"&gt;
+            &lt;h2&gt;About Me&lt;/h2&gt;
+            &lt;p&gt;Write a brief introduction about yourself here.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section id="portfolio"&gt;
+            &lt;h2&gt;Portfolio&lt;/h2&gt;
+
+            &lt;!-- Lab 1 will go here --&gt;
+            &lt;article class="lab-entry"&gt;
+                &lt;h3&gt;Lab 1: Portfolio Setup&lt;/h3&gt;
+                &lt;p&gt;Description of what you learned...&lt;/p&gt;
+            &lt;/article&gt;
+
+            &lt;!-- Future labs will be added here --&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2026 Your Name | TCU DCDA&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <p><strong>css/style.css:</strong></p>
+            <div class="code-block">
+                <pre><code>/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #4a1a7a; /* TCU purple */
+    text-decoration: none;
+}
+
+/* Lab entries */
+.lab-entry {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #4a1a7a;
+}</code></pre>
+            </div>
+
+            <h3>Personalize It</h3>
+            <p>At minimum, update:</p>
+            <ol>
+                <li>Your name (in <code>&lt;title&gt;</code>, <code>&lt;h1&gt;</code>, and <code>&lt;footer&gt;</code>)</li>
+                <li>About Me section content</li>
+                <li>Colors, fonts, or layout to make it your own</li>
+            </ol>
+        </section>
+
+        <!-- Part 5 -->
+        <section id="part5">
+            <h2>Part 5: Add Comments</h2>
+            <p>Add HTML and CSS comments to explain your code. This helps you learn and helps us assess your understanding.</p>
+
+            <p><strong>HTML comments:</strong> <code>&lt;!-- This is a comment --&gt;</code></p>
+            <p><strong>CSS comments:</strong> <code>/* This is a comment */</code></p>
+
+            <p>Example:</p>
+            <div class="code-block">
+                <pre><code>&lt;!-- Navigation links - these jump to sections on the page --&gt;
+&lt;nav&gt;
+    &lt;a href="#about"&gt;About&lt;/a&gt;
+    &lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+
+            <p><strong>Err on the side of over-commenting.</strong> The more you explain, the better we can see your understanding.</p>
+        </section>
+
+        <!-- Deliverables -->
+        <section class="deliverables" id="deliverables">
+            <h2>Deliverables</h2>
+            <p>Submit to D2L:</p>
+
+            <div class="checklist">
+                <div class="checklist-item">
+                    <input type="checkbox" id="check1">
+                    <label for="check1"><strong>Link to your live GitHub Pages site</strong> (e.g., <code>https://yourusername.github.io/dcda40833-portfolio/</code>)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check2">
+                    <label for="check2"><strong>Link to your GitHub repository</strong> (e.g., <code>https://github.com/yourusername/dcda40833-portfolio</code>)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check3">
+                    <label for="check3"><strong>Your site should include:</strong> Personalized About Me section, placeholder sections for Labs 2-6, HTML and CSS comments explaining your code</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check4">
+                    <label for="check4"><strong>Written Reflection (150-200 words)</strong> — Submit as a separate document or text entry addressing:
+                        <ul>
+                            <li>What was new to you in this lab (GitHub, HTML, CSS, or all three)?</li>
+                            <li>What did you find most challenging, and how did you work through it?</li>
+                            <li>What aspects of your portfolio are you most looking forward to developing as the semester progresses?</li>
+                        </ul>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Looking Ahead -->
+        <section class="looking-ahead" id="looking-ahead">
+            <h2>Looking Ahead</h2>
+            <p>Each subsequent lab will add to this portfolio. You'll document what you learned, embed visualizations, link to artifacts, and continuously refine the design. By the end of the semester, you'll have a polished showcase of your DCDA skills.</p>
+        </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="lab-footer">
+        <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
+        <p><a href="../index.html">Back to Resources</a></p>
+    </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Jump Menu Active State
+        const jumpLinks = document.querySelectorAll('.jump-menu nav a');
+        const sections = document.querySelectorAll('section[id]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            jumpLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

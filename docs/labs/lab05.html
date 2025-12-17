@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5: Python Mapping | DCDA 40833</title>
+    <link rel="stylesheet" href="../lab-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="lab-page-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="lab-sidebar">
+            <!-- Lab Brand -->
+            <div class="lab-brand">
+                <div class="lab-number">Lab 05</div>
+                <p class="lab-designation">Python Mapping</p>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="lab-nav">
+                <a href="../index.html" class="back-link">
+                    <i data-lucide="arrow-left" class="icon"></i>
+                    <span>Back to Resources</span>
+                </a>
+            </nav>
+
+            <!-- Jump Menu -->
+            <div class="jump-menu">
+                <h3>Jump To</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#preparation">Preparation</a></li>
+                        <li><a href="#task">Task</a></li>
+                        <li><a href="#reflection">Reflection</a></li>
+                        <li><a href="#portfolio">Create Portfolio Page</a></li>
+                        <li><a href="#submission">Submission</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="lab-main-content">
+
+    <!-- Hero Section -->
+    <header class="lab-hero">
+        <div class="lab-hero-content">
+            <h1>Creating an Interactive Map of Your Hometown</h1>
+            <p class="lab-subtitle">Python, Folium & GeoPy</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="lab-wrapper">
+
+        <main class="lab-content">
+
+        <!-- Preparation -->
+        <section id="preparation">
+            <h2>Preparation</h2>
+            <p>Complete the Lab 5 training notebook to refresh and/or learn the skills needed for this lab:</p>
+
+            <div class="concept-box">
+                <h4>Training Materials</h4>
+                <ul>
+                    <li><strong>Training Notebook:</strong> <code>DCDA_Capstone_Python_mapping_2025_V3.ipynb</code></li>
+                    <li><strong>Sample Data:</strong> <code>lab06_materials/Lab_6_data/</code></li>
+                </ul>
+            </div>
+
+            <p>The training covers geocoding with GeoPy, creating point maps with Folium, custom basemaps, and exporting maps as HTML.</p>
+        </section>
+
+        <!-- Task -->
+        <section id="task">
+            <h2>Task</h2>
+            <p>Create an interactive online map of your hometown. The map should:</p>
+
+            <ul>
+                <li>Use a <strong>custom basemap</strong> (create one on <a href="https://mapbox.com" target="_blank">mapbox.com</a>, or use pre-made options from Folium, ESRI, CartoDB, or other sources)</li>
+                <li>Include <strong>point-markers for at least 10 locations</strong> unique to your hometown (parks, mom-and-pop restaurants, your church, school, etc.)</li>
+                <li><strong>Do not include</strong> your actual house or other private information</li>
+                <li>Think of it as highlighting places for someone visiting your hometown for the first time, or places meaningful to you personally</li>
+            </ul>
+
+            <h3>Data Preparation</h3>
+            <p>You will need to create a <code>.csv</code> file with those locations to either:</p>
+            <ol>
+                <li>Geocode using the Nominatim geocoding service, or</li>
+                <li>Plot using lat/long coordinates you include yourself</li>
+            </ol>
+
+            <h3>Required Pop-ups</h3>
+            <p>The map must have <strong>pop-ups</strong> (tooltips) that include:</p>
+            <ul>
+                <li>Placename</li>
+                <li>Description</li>
+                <li>Image URL (when possible)</li>
+            </ul>
+
+            <h3>CSV Format</h3>
+            <div class="code-block">
+                <pre><code>Loc_ID,PlaceName,Address,City,State,Zip,Lat,Lon,About,Image_Url
+1,Example Place,123 Main St,Yourtown,TX,76109,32.7555,-97.3308,Description here,https://...</code></pre>
+            </div>
+        </section>
+
+        <!-- Reflection -->
+        <section id="reflection">
+            <h2>Reflection (300+ words)</h2>
+            <p>Write a brief reflection addressing the following:</p>
+
+            <div class="concept-box">
+                <ol>
+                    <li><strong>Challenges:</strong> What elements of this exercise were most challenging for you, and why?</li>
+                    <li><strong>Final Project:</strong> How do you see yourself using web-mapping in your final project?</li>
+                    <li><strong>Professional Application:</strong> How do you see yourself using web-mapping in your professional life post-graduation?</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Create Portfolio Page -->
+        <section id="portfolio">
+            <h2>Create Portfolio Page</h2>
+            <p>Create a new HTML page in your portfolio called <code>hometown-map.html</code> that includes:</p>
+
+            <ul>
+                <li>Your interactive map (the exported <code>.html</code> file from Folium can be embedded using an <code>&lt;iframe&gt;</code> or integrated directly)</li>
+                <li>Your reflection (300+ words addressing the prompts above)</li>
+                <li>Link to your Google Colab notebook (Share → General access → Anyone with the link → Viewer)</li>
+                <li>Proper HTML structure and styling consistent with your portfolio</li>
+            </ul>
+
+            <p>Make sure to link this new page from your main portfolio <code>index.html</code> navigation.</p>
+
+            <div class="alert alert-info">
+                <i data-lucide="lightbulb"></i>
+                <div>
+                    <strong>Tip:</strong> To embed your Folium map, you can either:
+                    <ul>
+                        <li>Use an iframe: <code>&lt;iframe src="your-map.html" width="100%" height="600px"&gt;&lt;/iframe&gt;</code></li>
+                        <li>Or copy the Folium HTML directly into your portfolio page</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Submission -->
+        <section class="deliverables" id="submission">
+            <h2>Submission</h2>
+
+            <div class="checklist">
+                <div class="checklist-item">
+                    <input type="checkbox" id="check1">
+                    <label for="check1">Push your updated portfolio (including the map HTML file) to your GitHub repository</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check2">
+                    <label for="check2">Verify your GitHub Pages site displays the map and reflection correctly</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check3">
+                    <label for="check3">Submit to D2L dropbox:
+                        <ul>
+                            <li>Link to your GitHub repository</li>
+                            <li>Link to your live GitHub Pages site</li>
+                        </ul>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="lab-footer">
+        <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
+        <p><a href="../index.html">Back to Resources</a></p>
+    </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Jump Menu Active State
+        const jumpLinks = document.querySelectorAll('.jump-menu nav a');
+        const sections = document.querySelectorAll('section[id]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            jumpLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

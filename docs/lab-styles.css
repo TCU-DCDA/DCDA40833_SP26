@@ -1,0 +1,624 @@
+/* Lab Template Styles - Mazda Soul Red Theme */
+
+/* CSS Variables */
+:root {
+    --soul-red: #C1272D;
+    --soul-red-dark: #8B1C1F;
+    --soul-red-light: #E63946;
+    --charcoal: #0f0f0f;
+    --dark-gray: #1a1a1a;
+    --darker-gray: #0a0a0a;
+    --light-gray: #e8e8e8;
+    --silver: #c0c0c0;
+    --text-primary: #ffffff;
+    --text-secondary: #b8b8b8;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: var(--charcoal);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Page Layout - Grid with Sidebar (matching index page) */
+.lab-page-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+/* Lab Sidebar Navigation (matching index page sidebar) */
+.lab-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(193, 39, 45, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    overflow-y: auto;
+}
+
+/* Lab Brand (matching index page brand) */
+.lab-brand {
+    padding: 0 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.lab-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--soul-red-light) 0%, var(--soul-red) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.25rem;
+}
+
+.lab-designation {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Navigation (matching index page nav) */
+.lab-nav {
+    padding: 0 1rem;
+}
+
+.lab-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.back-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: var(--soul-red);
+    transition: height 0.3s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.back-link:hover {
+    background: rgba(193, 39, 45, 0.1);
+    color: var(--soul-red-light);
+}
+
+.back-link:hover::before {
+    height: 70%;
+}
+
+.back-link i {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
+/* Main Content Wrapper */
+.lab-main-content {
+    overflow-y: auto;
+}
+
+/* Lab Hero */
+.lab-hero {
+    background: linear-gradient(135deg, var(--darker-gray) 0%, var(--dark-gray) 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--soul-red);
+    position: relative;
+    overflow: hidden;
+}
+
+.lab-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, var(--soul-red-dark) 0%, transparent 50%);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.lab-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lab-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: var(--soul-red);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.lab-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--silver) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.lab-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+/* Hero with Background Image */
+.lab-hero[style*="background-image"] {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.lab-hero[style*="background-image"]::before {
+    background: linear-gradient(135deg,
+        rgba(15, 15, 15, 0.80) 0%,
+        rgba(26, 26, 26, 0.75) 100%);
+    opacity: 1;
+}
+
+/* Jump Menu (in sidebar) */
+.jump-menu {
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(193, 39, 45, 0.1);
+    padding-top: 1rem;
+}
+
+.jump-menu h3 {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+.jump-menu nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.jump-menu nav li {
+    margin: 0;
+}
+
+.jump-menu nav a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.jump-menu nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: var(--soul-red);
+    transition: height 0.3s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.jump-menu nav a:hover {
+    color: var(--soul-red-light);
+    background: rgba(193, 39, 45, 0.1);
+}
+
+.jump-menu nav a:hover::before {
+    height: 70%;
+}
+
+.jump-menu nav a.active {
+    color: var(--soul-red);
+    background: rgba(193, 39, 45, 0.15);
+}
+
+.jump-menu nav a.active::before {
+    height: 70%;
+}
+
+/* Main Content - Full Width */
+.lab-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.lab-content {
+    width: 100%;
+}
+
+/* Sections - Card Style */
+section {
+    background: var(--dark-gray);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(193, 39, 45, 0.1);
+    margin-bottom: 2rem;
+}
+
+.overview {
+    background: linear-gradient(135deg, var(--soul-red-dark) 0%, var(--soul-red) 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--soul-red-light);
+    margin-bottom: 4rem;
+}
+
+.overview h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.overview p,
+.overview ul {
+    color: var(--light-gray);
+}
+
+.overview ul {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Typography */
+h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--soul-red);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--soul-red-light);
+    margin-bottom: 0.75rem;
+}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Lists */
+ul, ol {
+    color: var(--text-secondary);
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+    color: var(--soul-red-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--soul-red);
+}
+
+/* Code */
+code {
+    background: var(--dark-gray);
+    color: var(--soul-red-light);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.code-block {
+    background: var(--dark-gray);
+    border-left: 4px solid var(--soul-red);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.code-block pre {
+    margin: 0;
+}
+
+.code-block code {
+    background: transparent;
+    color: var(--text-secondary);
+    padding: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Concept Boxes */
+.concept-box {
+    background: var(--dark-gray);
+    border-left: 4px solid var(--soul-red);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+}
+
+.concept-box h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.concept-box ul {
+    margin-left: 1.5rem;
+}
+
+/* Alerts */
+.alert {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.alert i {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.alert-warning {
+    background: rgba(255, 193, 7, 0.1);
+    border-left-color: #ffc107;
+    color: var(--text-secondary);
+}
+
+.alert-warning i {
+    color: #ffc107;
+}
+
+.alert-info {
+    background: rgba(13, 110, 253, 0.1);
+    border-left-color: #0d6efd;
+    color: var(--text-secondary);
+}
+
+.alert-info i {
+    color: #0d6efd;
+}
+
+.alert ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Deliverables Section */
+.deliverables {
+    background: var(--dark-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid var(--soul-red);
+}
+
+.deliverables h2 {
+    border-bottom-color: var(--soul-red);
+}
+
+/* Checklist */
+.checklist {
+    margin-top: 2rem;
+}
+
+.checklist-item {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--charcoal);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.checklist-item:hover {
+    background: rgba(193, 39, 45, 0.05);
+}
+
+.checklist-item input[type="checkbox"] {
+    margin-top: 0.25rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--soul-red);
+}
+
+.checklist-item label {
+    flex: 1;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.checklist-item ul {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+/* Looking Ahead Section */
+.looking-ahead {
+    background: linear-gradient(135deg, var(--soul-red-dark) 0%, var(--soul-red) 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--soul-red-light);
+}
+
+.looking-ahead h2 {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.looking-ahead p {
+    color: var(--light-gray);
+}
+
+/* Footer */
+.lab-footer {
+    background: var(--dark-gray);
+    padding: 2rem;
+    text-align: center;
+    border-top: 3px solid var(--soul-red);
+    margin-top: 4rem;
+}
+
+.lab-footer p {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.lab-footer a {
+    color: var(--soul-red);
+    text-decoration: none;
+}
+
+.lab-footer a:hover {
+    color: var(--soul-red-light);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .lab-page-container {
+        grid-template-columns: 1fr;
+    }
+
+    .lab-sidebar {
+        display: none;
+    }
+
+    .lab-hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .lab-hero h1 {
+        font-size: 2rem;
+    }
+
+    .lab-subtitle {
+        font-size: 1rem;
+    }
+
+    .lab-wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    section {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .code-block {
+        padding: 1rem;
+    }
+}
+
+
+/* Icon styling (matching index page) */
+.icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
+/* Scrollbar Styling */
+.lab-sidebar::-webkit-scrollbar,
+.lab-main-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lab-sidebar::-webkit-scrollbar-track,
+.lab-main-content::-webkit-scrollbar-track {
+    background: var(--darker-gray);
+}
+
+.lab-sidebar::-webkit-scrollbar-thumb,
+.lab-main-content::-webkit-scrollbar-thumb {
+    background: var(--soul-red);
+    border-radius: 3px;
+}
+
+.lab-sidebar::-webkit-scrollbar-thumb:hover,
+.lab-main-content::-webkit-scrollbar-thumb:hover {
+    background: var(--soul-red-light);
+}

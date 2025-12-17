@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4: Tableau Visualization | DCDA 40833</title>
+    <link rel="stylesheet" href="../lab-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="lab-page-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="lab-sidebar">
+            <!-- Lab Brand -->
+            <div class="lab-brand">
+                <div class="lab-number">Lab 04</div>
+                <p class="lab-designation">Tableau Viz</p>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="lab-nav">
+                <a href="../index.html" class="back-link">
+                    <i data-lucide="arrow-left" class="icon"></i>
+                    <span>Back to Resources</span>
+                </a>
+            </nav>
+
+            <!-- Jump Menu -->
+            <div class="jump-menu">
+                <h3>Jump To</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li><a href="#task">Task</a></li>
+                        <li><a href="#reflection">Reflection & Analysis</a></li>
+                        <li><a href="#portfolio">Create Portfolio Page</a></li>
+                        <li><a href="#submission">Submission</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="lab-main-content">
+
+    <!-- Hero Section -->
+    <header class="lab-hero">
+        <div class="lab-hero-content">
+            <h1>Data Visualization in Tableau Public</h1>
+            <p class="lab-subtitle">Exploratory Data Analysis</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="lab-wrapper">
+
+        <main class="lab-content">
+
+        <!-- Overview -->
+        <section class="overview" id="overview">
+            <h2>Overview</h2>
+            <p>In this assignment, you will use <a href="https://public.tableau.com/app/discover" target="_blank">Tableau Public</a> (a free data visualization platform) to perform exploratory data analysis and visualize a dataset of your choosing.</p>
+            <p>You can either use the web-based interface or download <a href="https://www.tableau.com/products/public/download" target="_blank">Tableau Desktop Public Edition</a>.</p>
+        </section>
+
+        <!-- Getting Started -->
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            <p>Tableau has excellent tutorials to help you get familiar with the platform. Work through these to build a foundation:</p>
+            <ul>
+                <li><a href="https://public.tableau.com/en-us/s/resources" target="_blank">A Beginner's Guide to Tableau Public</a></li>
+                <li><a href="https://www.youtube.com/watch?v=jEgVto5QME8" target="_blank">Getting Started with Tableau Public (Video)</a></li>
+                <li><a href="https://public.tableau.com/en-us/s/resources" target="_blank">How-To Videos</a></li>
+                <li><a href="https://public.tableau.com/app/learn/how-to-videos" target="_blank">Viz Type Tutorials</a></li>
+            </ul>
+            <p>These will walk you through connecting to a data source, navigating the workspace, creating basic charts, maps, and tables, etc.</p>
+        </section>
+
+        <!-- Task -->
+        <section id="task">
+            <h2>Task</h2>
+            <p>Use Tableau Public to identify patterns (and breaks in patterns) in a dataset you choose to visualize.</p>
+
+            <h3>Dataset Options</h3>
+            <ol>
+                <li>A sample dataset provided by Tableau Public (<strong>not</strong> the one from the tutorial)</li>
+                <li>A dataset from <a href="https://www.kaggle.com/datasets" target="_blank">Kaggle</a></li>
+                <li>A dataset you compiled yourself using <a href="https://instantdatascraper.com/" target="_blank">Instant Data Scraper</a></li>
+                <li>Another dataset you have access to</li>
+            </ol>
+
+            <div class="alert alert-info">
+                <i data-lucide="lightbulb"></i>
+                <div>
+                    <strong>Important:</strong> Choose a dataset from a topic you're fairly familiar with.
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflection & Analysis -->
+        <section id="reflection">
+            <h2>Reflection & Analysis (500+ words)</h2>
+            <p>Write an analysis addressing the following:</p>
+
+            <div class="concept-box">
+                <h4>1. Data Preparation</h4>
+                <p>Discuss any errors you received trying to upload your dataset and what you needed to do to prepare it for a successful upload.</p>
+            </div>
+
+            <div class="concept-box">
+                <h4>2. Design Choices</h4>
+                <p>Describe the choices you made in terms of the visualization's metrics and dimensions.</p>
+            </div>
+
+            <div class="concept-box">
+                <h4>3. Expected Patterns</h4>
+                <p>Considering your metrics and dimensions, describe the patterns or trends you expected to see based on your understanding of the topic. How much of your understanding is confirmed by the visualization? Focus on a particular section of the graph.</p>
+            </div>
+
+            <div class="concept-box">
+                <h4>4. Surprises/Outliers</h4>
+                <p>Describe where the visualization deviates from your expectations. Focus on sections with "outliers" or surprises you didn't expect.</p>
+            </div>
+
+            <div class="concept-box">
+                <h4>5. Questions for Further Investigation</h4>
+                <p>Draft questions that would help explain the outliers/surprises. The goal is not to offer definitive explanations, but to frame questions for deeper investigation.</p>
+            </div>
+
+            <div class="concept-box">
+                <h4>6. Tool Evaluation</h4>
+                <p>Evaluate Tableau Public as a visualization tool. What can it do that other tools cannot? What can other tools accomplish that Tableau Public cannot (at least as easily)? What limitations did you encounter?</p>
+            </div>
+
+            <p>Your reflection should be <strong>at least 500 words</strong> total.</p>
+        </section>
+
+        <!-- Create Portfolio Page -->
+        <section id="portfolio">
+            <h2>Create Portfolio Page</h2>
+            <p>Create a new HTML page in your portfolio called <code>tableau-visualization.html</code> that includes:</p>
+            <ul>
+                <li>Your published Tableau visualization (embedded using Tableau's embed code)</li>
+                <li>Your reflection and analysis (500+ words addressing all prompts above)</li>
+                <li>Proper HTML structure and styling consistent with your portfolio</li>
+            </ul>
+            <p>Make sure to link this new page from your main portfolio <code>index.html</code> navigation.</p>
+
+            <div class="alert alert-info">
+                <i data-lucide="lightbulb"></i>
+                <div>
+                    <strong>Tip:</strong> After publishing your viz to Tableau Public, click the "Share" button to get the embed code for your HTML page.
+                </div>
+            </div>
+        </section>
+
+        <!-- Submission -->
+        <section class="deliverables" id="submission">
+            <h2>Submission</h2>
+
+            <div class="checklist">
+                <div class="checklist-item">
+                    <input type="checkbox" id="check1">
+                    <label for="check1">Push your updated portfolio to your GitHub repository</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check2">
+                    <label for="check2">Verify your GitHub Pages site displays the Tableau visualization correctly</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check3">
+                    <label for="check3">Submit to D2L dropbox:
+                        <ul>
+                            <li>Link to your GitHub repository</li>
+                            <li>Link to your live GitHub Pages site</li>
+                        </ul>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="lab-footer">
+        <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
+        <p><a href="../index.html">Back to Resources</a></p>
+    </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Jump Menu Active State
+        const jumpLinks = document.querySelectorAll('.jump-menu nav a');
+        const sections = document.querySelectorAll('section[id]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            jumpLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
