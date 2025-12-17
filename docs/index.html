@@ -333,12 +333,17 @@
             });
         });
 
-        // Active Navigation State
-        const navLinks = document.querySelectorAll('nav a');
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Active Navigation State - only target sidebar nav links
+        const navLinks = document.querySelectorAll('.sidebar nav ul a');
 
         navLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function(e) {
+                // Remove active from all
                 navLinks.forEach(l => l.classList.remove('active'));
+                // Add active to clicked link
                 this.classList.add('active');
             });
         });
@@ -364,9 +369,6 @@
                 }
             });
         });
-
-        // Initialize Lucide Icons
-        lucide.createIcons();
     </script>
 </body>
 </html>
