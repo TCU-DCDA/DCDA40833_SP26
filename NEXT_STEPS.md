@@ -22,9 +22,9 @@
 ## Medium Priority
 
 ### Lab 03 - Tufte Critique
-- [ ] Remove `&nbsp;` HTML artifacts
-- [ ] Add portfolio integration instructions
-- [ ] Specify deliverable format clearly
+- [x] Remove `&nbsp;` HTML artifacts
+- [x] Add portfolio integration instructions
+- [x] Specify deliverable format clearly
 
 ### Lab Count Confirmation
 - Current: 6 labs
