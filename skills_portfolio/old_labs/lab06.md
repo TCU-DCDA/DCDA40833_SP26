@@ -37,15 +37,37 @@ The map must have **pop-ups** (tooltips) that include:
 
 ---
 
-## Deliverables
+## Reflection (300+ words)
 
-Submit a folder to the Lab 6 assignment folder containing:
+Write a brief reflection addressing the following:
 
-1. **The map** saved as a `.html` webpage
-2. **A PDF reflection** that includes:
-   - Link to your Google Colab notebook
-     - *Sharing settings:* Share → General access → Anyone with the link → Viewer
-   - Answers to the following prompts:
-     1. What elements of this exercise were most challenging for you, and why?
-     2. How do you see yourself using web-mapping in your final project?
-     3. How do you see yourself using web-mapping in your professional life post-graduation?
+1. What elements of this exercise were most challenging for you, and why?
+2. How do you see yourself using web-mapping in your final project?
+3. How do you see yourself using web-mapping in your professional life post-graduation?
+
+---
+
+## Create Portfolio Page
+
+Create a new HTML page in your portfolio called `hometown-map.html` that includes:
+
+- Your interactive map (the exported `.html` file from Folium can be embedded using an `<iframe>` or integrated directly)
+- Your reflection (300+ words addressing the prompts above)
+- Link to your Google Colab notebook (Share → General access → Anyone with the link → Viewer)
+- Proper HTML structure and styling consistent with your portfolio
+
+Make sure to link this new page from your main portfolio `index.html` navigation.
+
+> 💡 **Tip:** To embed your Folium map, you can either:
+> - Use an iframe: `<iframe src="your-map.html" width="100%" height="600px"></iframe>`
+> - Or copy the Folium HTML directly into your portfolio page
+
+---
+
+## Submission
+
+1. Push your updated portfolio (including the map HTML file) to your GitHub repository
+2. Verify your GitHub Pages site displays the map and reflection correctly
+3. Submit to D2L dropbox:
+   - Link to your GitHub repository
+   - Link to your live GitHub Pages site

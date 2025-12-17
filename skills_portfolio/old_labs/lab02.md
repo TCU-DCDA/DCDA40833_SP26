@@ -88,29 +88,25 @@ Write a **500-750 word analysis** addressing:
 
 ---
 
-## Part 4: Portfolio Integration
+## Part 4: Create Portfolio Page
 
-Add a **Lab 2 entry** to your Skills Portfolio that includes:
+Create a new HTML page in your portfolio called `ai-evaluation.html` that includes:
 
-- Brief summary of the tools you explored
-- 1-2 key takeaways about AI in creative/analytical work
-- Your position on appropriate AI use (can be preliminary — you'll refine this over the semester)
+- Your 500-750 word analysis (addressing all prompts from Part 3)
+- Evidence of exploration (embedded screenshots, example outputs, or links)
+- Proper HTML structure and styling consistent with your portfolio
+
+Make sure to link this new page from your main portfolio `index.html` navigation.
 
 ---
 
-## Deliverables
+## Submission
 
-Submit to D2L:
-
-1. **Written Analysis (500-750 words)** — addressing the prompts in Part 3
-
-2. **Evidence of Exploration** — screenshots, example outputs, or links demonstrating your hands-on testing
-
-3. **Updated Portfolio** — with Lab 2 entry added
-
-4. **Links:**
-   - GitHub Pages site URL
-   - GitHub repository URL
+1. Push your updated portfolio to your GitHub repository
+2. Verify your GitHub Pages site displays the new AI evaluation page correctly
+3. Submit to D2L dropbox:
+   - Link to your GitHub repository
+   - Link to your live GitHub Pages site
 
 ---
 

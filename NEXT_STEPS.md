@@ -21,10 +21,20 @@
 
 ## Medium Priority
 
-### Lab 03 - Tufte Critique
-- [x] Remove `&nbsp;` HTML artifacts
-- [x] Add portfolio integration instructions
-- [x] Specify deliverable format clearly
+### Lab Consistency Updates - COMPLETED ✓
+All labs (2-4, 6) now have:
+- [x] Portfolio integration with specific HTML page names
+- [x] Consistent GitHub workflow (push repo, verify Pages)
+- [x] Standard submission format (GH repo + Pages links to D2L)
+- [x] Word count minimums for reflections
+- [x] Removed legacy D2L "submit to folder" language
+- [x] Removed pair work options for consistency
+
+**Specific updates:**
+- Lab 2: Added `ai-evaluation.html` page integration
+- Lab 3: Added `tufte-critique.html` page integration, removed `&nbsp;` artifacts
+- Lab 4: Added `tableau-visualization.html` page integration, removed pairs language
+- Lab 6: Added `hometown-map.html` page integration, updated from folder submission
 
 ### Lab Count Confirmation
 - Current: 6 labs
@@ -32,11 +42,8 @@
 - **Confirm:** Keep 6 labs or reduce to 5?
 
 ### Backup Files Cleanup
-- [ ] Delete `lab01_original.md`
-- [ ] Delete `lab02_original.md`
-- [ ] Delete `lab05_original.md`
-- [ ] Delete `lab06_original.md`
-- (Or keep as reference until semester starts?)
+- [x] Confirmed: No `*_original.md` backup files exist in repository
+- These appear to have been previously cleaned up
 
 ---
 

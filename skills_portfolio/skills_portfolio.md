@@ -1,59 +1,125 @@
-Skills Portfolio
+# Skills Portfolio — Final Submission
 
-For your Skills Portfolio, please update and complete the website you started developing in Labs 2 and 5. By "update and complete," we mean: 1) further refining and personalizing the visual appeal of the site beyond what you submitted for Lab 5 (with additional CSS and other design choices, for example) and 2) further populating the portfolio with context and content from the course (up to and including Lab 6).
+## Overview
 
-In terms of context and content, you should include: 
+Your **Skills Portfolio** is a web-based showcase of your work throughout the semester. Unlike a traditional assignment submitted once at the end of the course, this portfolio has been **built iteratively** — you started the foundation in Lab 1 and added new pages with each subsequent lab.
 
-A brief synopsis of the requirements of each lab (including Labs 2 and 5)
-A detailed discussion of what you've learned and what you feel each lab demonstrates of your abilities.
-Links to the full text written portion of each lab (as a unique HTML page or as a linked document)
-Embedded content (Tableau visualizations and other relevant images)
-Additionally, please provide internal comments for the HTML (in the <!-- comment --> format) and CSS (in the /* comment */ format) to leave notes that articulate in more descriptive detail what each block of code is doing. These comments will only be available to you in your HTML editor (like Brackets) or if someone chooses to right-click "view source code" on your site.
+This final submission asks you to **refine, polish, and unify** your portfolio into a cohesive demonstration of your skills and learning.
 
-Also, err towards OVER-commenting at this stage.  The more you use the comment feature, the better we can assess your understanding of the website you're building.  
+---
 
-As you work, make sure you save all your  HTML  and CSS files into your "portfolio" folder.  Please save all image files (JPGs, GIFs, PNGs) into your "images" subfolder.
+## What Your Portfolio Should Include
 
-By 11:30 pm on Sunday 3/10 please use two things:
+By this point in the semester, your portfolio should contain:
 
-1) a ZIP file of your "portfolio" folder into the appropriate D2L dropbox.  Please DO NOT upload your HTML, CSS, or image files individually. What you'll submit is a fully updated file called "portfolio.zip"
+### Required Pages (from Labs 1-6)
 
-2) your Self-Reflection 2 (see below).
+1. **Home/Landing Page** (`index.html`) — Set up in Lab 1
+   - Introduction and navigation to all other pages
+   - Professional presentation of who you are
 
-Self-Reflection 2
+2. **AI Tool Evaluation** (`ai-evaluation.html`) — Lab 2
+   - Your analysis of AI tools (500-750 words)
+   - Evidence of exploration (screenshots, examples)
 
+3. **Tufte Critique** (`tufte-critique.html`) — Lab 3
+   - Your visualization critique (500+ words)
+   - Embedded infographic and link to source
 
-Please use the following text as an outline for your 2nd Self-Reflection. Please submit as a Word doc by the deadline.
+4. **Tableau Visualization** (`tableau-visualization.html`) — Lab 4
+   - Embedded Tableau Public visualization
+   - Reflection and analysis (500+ words)
 
-Name
+5. **[Lab 5 Content]** — Lab 5
+   - *Content TBD based on Lab 5 assignment*
 
-Date
+6. **Hometown Map** (`hometown-map.html`) — Lab 6
+   - Interactive Folium map (embedded)
+   - Reflection (300+ words)
+   - Link to Google Colab notebook
 
-DCDA 40833
+---
 
- 
+## Final Polish Requirements
 
-Overview
-Here is an overview of how I’ve developed this semester.
+For this final submission, go beyond what you submitted for individual labs:
 
-Proficiencies
+### 1. Visual Refinement & Consistency
 
-Digital Culture
-Here is a description of how I’ve developed in this strand so far. It uses specific examples from my work.
+- **Unified design:** Ensure all pages share consistent styling (colors, fonts, layout)
+- **Enhanced CSS:** Add polish beyond basic requirements (spacing, hover effects, responsive design)
+- **Navigation:** Clear, working navigation on every page
+- **Professional appearance:** Clean, readable, well-organized
 
-Data Analytics
-Here is a description of how I’ve developed in this strand so far. It uses specific examples from my work.
+### 2. Enhanced Content & Context
 
-Project Design and Planning
-Here is a description of how I’ve developed in this strand so far. It uses specific examples from my work.
+For each lab page, add:
 
-Collaboration
-Here is a description of how I’ve developed in this strand so far. It uses specific examples from my work.
+- **Brief introduction** explaining the assignment's purpose
+- **Reflection on learning** — What did you learn? What was challenging?
+- **Connection to your skills** — How does this demonstrate your DCDA abilities?
 
-Self Evaluation
-Here is an evaluation of my development over the course of the semester. It uses specific examples from my work, paying particular attention to work I submitted and feedback I received for the Skills Portfolio as well as noting any assignments I may have rushed or even failed to turn in.
+Consider adding:
+- An "About" page introducing yourself and your interests
+- A reflection on your growth across the semester
 
-Grade
-Based on the above information, I argue that I have earned [insert your grade here].
+### 3. Code Quality & Documentation
 
- 
+**IMPORTANT:** Comment your code thoroughly.
+
+- **HTML comments** (`<!-- comment -->`) explaining structure and purpose of sections
+- **CSS comments** (`/* comment */`) explaining styling choices and what each block does
+- **Over-comment** at this stage — we want to see your understanding, not just working code
+
+Comments should explain:
+- Why you made certain design choices
+- What each section of code accomplishes
+- How different elements work together
+
+> 💡 **Tip:** Comments are visible in VS Code and when viewing page source (right-click → View Page Source), but not to regular site visitors.
+
+### 4. Technical Requirements
+
+- All files organized in your repository (HTML, CSS, images, etc.)
+- All links working (internal navigation, external resources)
+- All embedded content displaying correctly (Tableau viz, Folium map, images)
+- Site deployed and functional on GitHub Pages
+
+---
+
+## Submission
+
+**Due:** [See course schedule]
+
+Submit to D2L dropbox:
+1. Link to your **GitHub repository**
+2. Link to your **live GitHub Pages site**
+
+Your instructors will review both your live site and your repository code (including comments).
+
+---
+
+## Connection to Self-Reflection
+
+Your Skills Portfolio will be a key piece of evidence in your **Final Self-Reflection** (submitted separately). Use your portfolio to demonstrate:
+
+- **Digital Culture proficiency** — Web development, design, digital communication
+- **Data Analytics proficiency** — Visualization, critique, mapping, data storytelling
+- **Project Design and Planning** — Building something iteratively over the semester
+- **Self-direction and growth** — How you refined your work beyond minimum requirements
+
+See the `/self-reflections/` folder for the self-reflection template and guidelines.
+
+---
+
+## Grading Considerations
+
+In the spirit of this course's **ungrading approach**, this assignment doesn't receive a numerical score. However, in your self-reflection and grade argument, you should address:
+
+- **Completeness:** Are all required pages present and functional?
+- **Polish:** Did you go beyond minimum requirements to create something professional?
+- **Understanding:** Do your comments demonstrate understanding of what you built?
+- **Growth:** How did your skills develop from Lab 1 to Lab 6?
+- **Timeliness:** Did you submit complete work on time throughout the semester?
+
+Your portfolio is evidence of your learning — make it something you're proud to share.
