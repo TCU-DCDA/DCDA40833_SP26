@@ -17,12 +17,19 @@ This capstone course is the culminating experience for the Digital Culture and D
 ## Repository Structure
 
 ```
+├── docs/                       # Course resource website (GitHub Pages)
+│   ├── index.html              # Main resource hub
+│   ├── styles.css              # Mazda Soul Red theme
+│   ├── lab-styles.css          # Lab page styling
+│   └── labs/                   # Lab instruction pages (HTML)
+│       ├── lab01.html - lab06.html
+│       └── images/             # Lab hero images
 ├── project/                    # Semester project prompts & guidelines
 │   ├── project_prompt.md       # Main project proposal prompt
 │   └── project_prompt_alt.md   # Alternative version for creative projects
 ├── self-reflections/           # Self-reflection templates
 │   └── self-reflection2.md     # Midsemester/Final reflection template
-├── skills_portfolio/           # Portfolio prompt & lab materials
+├── skills_portfolio/           # Portfolio prompt & lab materials (markdown source)
 │   ├── skills_portfolio.md     # Skills portfolio instructions
 │   └── old_labs/               # Lab exercises (lab01-lab06)
 │       ├── lab01.md - lab06.md
@@ -30,6 +37,17 @@ This capstone course is the culminating experience for the Digital Culture and D
 │       └── lab06_materials/    # Python mapping notebook & datasets
 └── legacy_materials/           # Previous semester syllabus
 ```
+
+## Live Site
+
+The course resource page is deployed via GitHub Pages:
+**URL:** `https://tcu-dcda.github.io/DCDA40833_SP26/`
+
+Features:
+- Searchable resource hub with Labs, Portfolio, Projects, and Reflections
+- Individual lab instruction pages with sidebar navigation
+- Mazda Soul Red theme with background imagery
+- Mobile-responsive design
 
 ## Course Structure
 
@@ -46,8 +64,8 @@ This capstone course is the culminating experience for the Digital Culture and D
   - Lab 2: AI tool evaluation (evergreen framework)
   - Lab 3: Visualization critique (Tufte principles)
   - Lab 4: Data visualization with Tableau Public
-  - Lab 5: Vibe coding & AI-assisted development (under review)
-  - Lab 6: Python mapping with Folium/GeoPy
+  - Lab 5: Python mapping with Folium/GeoPy
+  - Lab 6: Vibe coding & AI-assisted development
 - **Skills Portfolio** — Web-based showcase built incrementally throughout semester
 - **Self-Reflections (3)** — Baseline, Midsemester & Final reflections with grade justification
 - **Project Proposal** — Research question, methodology, and annotated bibliography
