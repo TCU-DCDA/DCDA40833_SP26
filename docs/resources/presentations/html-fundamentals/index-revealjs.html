@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Fundamentals | DCDA 40833</title>
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    
+    <!-- Custom Soul Red Theme -->
+    <link rel="stylesheet" href="../template/css/soul-red-theme.css">
+    
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Title -->
+            <section class="title-slide">
+                <h1>HTML Fundamentals</h1>
+                <h3>The Foundation of Every Website</h3>
+                <p style="margin-top: 1.5em; font-size: 0.8em;">Building blocks for creating structured web content</p>
+                
+                <div class="key-insight" style="margin-top: 2em; text-align: left;">
+                    <p><strong>What You'll Learn:</strong></p>
+                    <ul style="font-size: 0.7em;">
+                        <li>HTML document structure and anatomy</li>
+                        <li>Essential HTML elements for content</li>
+                        <li>Attributes and how they enhance elements</li>
+                        <li>Creating links, images, and lists</li>
+                    </ul>
+                </div>
+                
+                <p class="author">DCDA 40833 • Web Development</p>
+            </section>
+
+            <!-- Slide 2: HTML Document Structure -->
+            <section>
+                <h2>Every HTML Document Has the Same Structure</h2>
+                
+                <div class="two-column">
+                    <div class="column">
+                        <div class="definition-box">
+                            <h4>🏠 Think of HTML like a house:</h4>
+                            <ul style="font-size: 0.65em;">
+                                <li>📄 <strong>DOCTYPE</strong> = Building permit</li>
+                                <li>🏠 <strong>html</strong> = The entire house</li>
+                                <li>🧠 <strong>head</strong> = The attic (info not visible)</li>
+                                <li>🏡 <strong>body</strong> = The living space (what visitors see)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <pre><code class="language-html" data-trim data-line-numbers>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First Website</title>
+</head>
+<body>
+    <h1>Welcome to my site!</h1>
+</body>
+</html>
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Head vs Body -->
+            <section>
+                <h2>Head vs Body: What Goes Where?</h2>
+                
+                <div class="comparison">
+                    <div class="comparison-box" style="border-color: var(--accent-info); background: rgba(52, 152, 219, 0.1);">
+                        <h4>👤 HEAD Section</h4>
+                        <p style="font-size: 0.7em;"><strong>Information ABOUT the page</strong></p>
+                        <ul style="font-size: 0.6em;">
+                            <li>Page title (browser tab)</li>
+                            <li>CSS links</li>
+                            <li>Meta information</li>
+                            <li>Search engine data</li>
+                        </ul>
+                        <p style="font-size: 0.55em; font-style: italic;">Visitors don't see this directly</p>
+                    </div>
+                    <div class="comparison-box" style="border-color: var(--accent-success); background: rgba(39, 174, 96, 0.1);">
+                        <h4>🏡 BODY Section</h4>
+                        <p style="font-size: 0.7em;"><strong>Content visitors see</strong></p>
+                        <ul style="font-size: 0.6em;">
+                            <li>Text and headings</li>
+                            <li>Images and videos</li>
+                            <li>Links and buttons</li>
+                            <li>Everything visible</li>
+                        </ul>
+                        <p style="font-size: 0.55em; font-style: italic;">This is your actual content</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Essential Text Elements -->
+            <section>
+                <h2>Essential Text Elements</h2>
+                
+                <div class="two-column">
+                    <div class="column">
+                        <div class="steps" style="font-size: 0.7em;">
+                            <div class="step">
+                                <span class="step-number" style="font-size: 0.6em;">h1-h6</span>
+                                <div class="step-content">
+                                    <p style="margin: 0;">Headings (h1 biggest → h6 smallest)</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number" style="font-size: 0.7em;">p</span>
+                                <div class="step-content">
+                                    <p style="margin: 0;">Paragraphs of text</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number" style="font-size: 0.5em;">strong</span>
+                                <div class="step-content">
+                                    <p style="margin: 0;">Important text (bold)</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number" style="font-size: 0.6em;">em</span>
+                                <div class="step-content">
+                                    <p style="margin: 0;">Emphasized text (italic)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <pre><code class="language-html" data-trim>
+<h1>Main Title</h1>
+<h2>Section Title</h2>
+<p>This is a paragraph with 
+   <strong>important</strong> text.</p>
+<p>Another paragraph with 
+   <em>emphasized</em> text.</p>
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Lists -->
+            <section>
+                <h2>Creating Lists</h2>
+                
+                <div class="two-column">
+                    <div class="column">
+                        <h4>Unordered Lists (Bullets)</h4>
+                        <pre><code class="language-html" data-trim>
+<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Water</li>
+</ul>
+                        </code></pre>
+                        <p style="font-size: 0.7em;"><strong>Result:</strong></p>
+                        <ul style="font-size: 0.6em;">
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Water</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h4>Ordered Lists (Numbers)</h4>
+                        <pre><code class="language-html" data-trim>
+<ol>
+    <li>Wake up</li>
+    <li>Brush teeth</li>
+    <li>Eat breakfast</li>
+</ol>
+                        </code></pre>
+                        <p style="font-size: 0.7em;"><strong>Result:</strong></p>
+                        <ol style="font-size: 0.6em;">
+                            <li>Wake up</li>
+                            <li>Brush teeth</li>
+                            <li>Eat breakfast</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Links -->
+            <section>
+                <h2>Creating Links</h2>
+                <p>Links are the <strong>connections</strong> between web pages</p>
+                
+                <pre><code class="language-html" data-trim>
+<!-- Link to another website -->
+<a href="https://www.google.com">Visit Google</a>
+
+<!-- Link to another page on your site -->
+<a href="about.html">About Me</a>
+
+<!-- Email link -->
+<a href="mailto:your@email.com">Send Email</a>
+                </code></pre>
+                
+                <div class="key-insight" style="font-size: 0.75em;">
+                    <p><strong>Key Points:</strong></p>
+                    <ul style="font-size: 0.85em;">
+                        <li><code>href</code> = "hypertext reference" (where the link goes)</li>
+                        <li>Text between tags = what visitors see and click</li>
+                        <li>Always use descriptive text (not "click here")</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 7: Images -->
+            <section>
+                <h2>Adding Images</h2>
+                
+                <pre><code class="language-html" data-trim>
+<img src="photo.jpg" alt="A beautiful sunset over the mountains">
+
+<!-- Images from the web -->
+<img src="https://example.com/image.jpg" alt="Description">
+                </code></pre>
+                
+                <div class="two-column" style="margin-top: 1em;">
+                    <div class="column">
+                        <div class="definition-box" style="font-size: 0.7em;">
+                            <h4>🔗 Important Image Attributes:</h4>
+                            <ul>
+                                <li><strong>src</strong> = where the image file is</li>
+                                <li><strong>alt</strong> = describes image for screen readers</li>
+                                <li><strong>width</strong> = controls width (optional)</li>
+                                <li><strong>height</strong> = controls height (optional)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="key-insight" style="font-size: 0.65em;">
+                            <p><strong>Why alt text matters:</strong> Screen readers use it to describe images to visually impaired users. Always include meaningful descriptions!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Attributes Explained -->
+            <section>
+                <h2>Attributes: Extra Information for Elements</h2>
+                <p>Attributes provide <strong>additional information</strong> about HTML elements</p>
+                
+                <pre><code class="language-html" data-trim>
+<p id="intro" class="highlight">Important paragraph</p>
+
+<a href="contact.html" title="Go to contact page">Contact</a>
+
+<img src="logo.png" alt="Company logo" width="200">
+                </code></pre>
+                
+                <div class="definition-box" style="margin-top: 1em; font-size: 0.75em;">
+                    <h4>🏷️ Common Attributes:</h4>
+                    <ul>
+                        <li><strong>id</strong> = unique identifier for an element</li>
+                        <li><strong>class</strong> = groups elements for styling</li>
+                        <li><strong>title</strong> = tooltip text on hover</li>
+                        <li><strong>href</strong> = destination for links</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 9: File Organization -->
+            <section>
+                <h2>Organizing Your Website Files</h2>
+                
+                <div class="two-column">
+                    <div class="column">
+                        <pre><code class="language-plaintext" data-trim>
+my-website/
+├── index.html
+├── about.html
+├── css/
+│   └── style.css
+├── images/
+│   ├── logo.png
+│   └── photo.jpg
+└── js/
+    └── script.js
+                        </code></pre>
+                    </div>
+                    <div class="column">
+                        <div class="key-insight" style="font-size: 0.7em;">
+                            <h4>📝 Best Practices:</h4>
+                            <ul>
+                                <li><strong>index.html</strong> = your homepage</li>
+                                <li><strong>Lowercase names</strong> with no spaces</li>
+                                <li><strong>Organize by type</strong> (css/, images/, js/)</li>
+                                <li><strong>Descriptive names</strong> (about.html not page2.html)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Ready to Build -->
+            <section class="closing-slide">
+                <h2>You're Ready to Create Web Pages! 🚀</h2>
+                
+                <div class="closing-content">
+                    <p><strong>HTML Skills You've Learned:</strong></p>
+                    <ul style="font-size: 0.7em; text-align: left; columns: 2; column-gap: 2em;">
+                        <li>✅ Document structure</li>
+                        <li>✅ Text elements</li>
+                        <li>✅ Lists</li>
+                        <li>✅ Links</li>
+                        <li>✅ Images with alt text</li>
+                        <li>✅ Attributes</li>
+                        <li>✅ File organization</li>
+                    </ul>
+                </div>
+                
+                <div class="key-insight" style="margin-top: 1em; font-size: 0.75em;">
+                    <p>HTML is the <strong>foundation</strong> — everything else builds on this! 🏗️</p>
+                </div>
+                
+                <p class="next-steps">Next: Semantic HTML for meaningful, accessible pages</p>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            showSlideNumber: 'all',
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide',
+            plugins: [RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+</html>
