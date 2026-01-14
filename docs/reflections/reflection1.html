@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseline Reflection - DCDA 40833</title>
+    <link rel="stylesheet" href="../lab-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="lab-page-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="lab-sidebar">
+            <!-- Brand -->
+            <div class="lab-brand">
+                <div class="lab-number">Reflection 1</div>
+                <div class="lab-designation">Baseline Self-Assessment</div>
+            </div>
+
+            <!-- Back to Home -->
+            <nav class="lab-nav">
+                <ul>
+                    <li>
+                        <a href="../index.html" class="back-link">
+                            <i data-lucide="arrow-left" class="icon"></i>
+                            <span>Back to Home</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Jump Menu -->
+            <div class="jump-menu">
+                <h3>Jump To</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#prompt">Reflection Prompt</a></li>
+                        <li><a href="#submission">Submission</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="lab-main-content">
+
+            <!-- Hero Section -->
+            <div class="lab-hero">
+                <div class="lab-hero-content">
+                    <span class="lab-badge">Reflection 1</span>
+                    <h1>Baseline Self-Assessment</h1>
+                    <p class="lab-subtitle">Establishing your starting point</p>
+                </div>
+            </div>
+
+            <!-- Content Wrapper -->
+            <div class="lab-wrapper">
+                <div class="lab-content">
+
+                    <!-- Overview -->
+                    <section class="overview" id="overview">
+                        <h2>Overview</h2>
+                        <p>This reflection is designed to establish a baseline for your knowledge and skills at the beginning of the semester. There are no right or wrong answers—we want to understand where you're starting from so you (and we) can measure your growth throughout the course.</p>
+                        <p>Write quickly and honestly. Get all of your ideas out, even if they're vague impressions or associations. You won't be graded on the quality of this writing—this is purely for establishing your baseline.</p>
+                    </section>
+
+                    <!-- Reflection Prompt -->
+                    <section id="prompt">
+                        <h2>Reflection Prompt</h2>
+
+                        <p><strong>Please write approximately 250 words addressing the following questions:</strong></p>
+
+                        <h3>Digital Culture Proficiency</h3>
+                        <p>Off the top of your head, based on the knowledge you bring with you to the course and your experience as a DCDA major or minor:</p>
+                        <ul>
+                            <li>How proficient do you feel in your skills and content knowledge regarding <strong>"Digital Culture"</strong>?</li>
+                            <li>Give an example of what you're comfortable with and/or what you find challenging about your abilities here.</li>
+                        </ul>
+
+                        <h3>Data Analytics Proficiency</h3>
+                        <p>Similarly, reflect on your data analytics background:</p>
+                        <ul>
+                            <li>How proficient do you feel in your skills and content knowledge regarding <strong>"Data Analytics"</strong>?</li>
+                            <li>Give an example of what you're comfortable with and/or what you find challenging about your abilities here.</li>
+                        </ul>
+
+                        <h3>Looking Ahead</h3>
+                        <p>Additionally, please address:</p>
+                        <ul>
+                            <li><strong>What are you looking forward to</strong> regarding the capstone course?</li>
+                            <li><strong>What are you concerned about</strong> (or even dreading) regarding the capstone course?</li>
+                        </ul>
+
+                        <div class="alert alert-info">
+                            <i data-lucide="lightbulb"></i>
+                            <div>
+                                <strong>Remember:</strong> Write quickly, trying to get all of your ideas out—even if they are just vague impressions or associations. There is no right or wrong answer to these questions, and you won't be graded on this writing. This assignment is designed to establish a baseline that you can use later in the course to measure your learning.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Submission -->
+                    <section id="submission">
+                        <h2>Submission</h2>
+                        <p>Submit your reflection (approximately 250 words) to <strong>D2L</strong>.</p>
+
+                        <ul>
+                            <li>You may submit as a text entry or attach a document (Word, PDF, etc.)</li>
+                            <li>This is not graded for quality—only for completion</li>
+                            <li>Be honest and thorough in your self-assessment</li>
+                        </ul>
+
+                        <div class="alert alert-warning">
+                            <i data-lucide="calendar"></i>
+                            <div>
+                                <strong>Due Date:</strong> January 15, 2026 by 11:30 PM
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="lab-footer">
+                <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
+                <p>Instructors: Dr. Curt Rode & Dr. Sean Crotty</p>
+                <p><a href="../index.html">Back to Course Home</a></p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Active Navigation State for jump menu
+        const jumpLinks = document.querySelectorAll('.jump-menu nav a');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            jumpLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
