@@ -1,0 +1,185 @@
+/* Mazda Soul Red Theme - Automotive Inspired Design */
+:root {
+    --soul-red: #C1272D;
+    --soul-red-dark: #8B1C1F;
+    --soul-red-light: #FF6B75;
+    --charcoal: #0f0f0f;
+    --dark-gray: #1a1a1a;
+    --darker-gray: #0a0a0a;
+    --light-gray: #e8e8e8;
+    --silver: #c0c0c0;
+    --text-primary: #ffffff;
+    --text-secondary: #d0d0d0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, var(--darker-gray), var(--charcoal));
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Slide Containers */
+.slide-container {
+    display: none;
+    height: 100vh;
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-top: 3rem;
+}
+
+.slide-container.active {
+    display: flex;
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}gn: center;
+    position: relative;
+}
+
+/* Typography Overr/* Ty*/
+/* Typography Overr/* -ap/* Typography Overr/* -ap/* fo/* Typography Overr/* -apeight:/* Typography Overr/* -: 0.5rem;
+    background: li    background: li    back--    background: li    bac-s    background: li   we    background: li    bact;
+                         or: transp  en         ckgrou              
+                          text-transfor                          text-transfor                          text-transfor                          tex2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-prima    color: var(--text-primx soli    color: var(--te       color: var(--block    color: var(--text 0    color: var(-   font-family: -apple-system, sans-serif;
+    font-size: 1.    font-size: 1.    font-s
+                             color: var(--soul-red-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+                                                                                                                   ext-secondary);
+    margin-bottom: 3rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Components */
+.highlight {
+    background: linear-gradient(135deg, var(--s    background: linear-gradient(135deg, var(--s    background: linear-gradient(135deg, var(--s    background: linear-gradient(135deg, var(--s    backgront    background: lin Co    background: linear-fo    background: linear-gradient(135deg, var(--s    background: linear-gradient(135deg, var(--s    background: linear-gradient(135deg, var(--s    background: linear-gradient(135deg, vaac    background: linear-gradient(135deg, 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(193, 3    border: 1px solid rgban: le    border: 1px solid r 0.3s ease    border: 1pon-box:ho    bord  border-color: var(--soul-red);
+    transform: translateY(-5px);
+}
+
+.comparison-box.then { /* Red/Negative */
+    border-top    border-top    border-top    border-top    border-top    border-top    border-top    border-top    border-top    border-top   border-bottom: 1px solid rg    border-top    );
+                    0.5rem                    0.5rem  ary);
+          ison-bo           list-style: none;
+    margin-top: 1rem;
+}
+
+.comparison-box li {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+.comparison-box li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--soul-red);
+}
+
+/* Code Blocks */
+code {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--soul-red-light);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-    font-    font- w', mo    font-    font-    font- w', mo    font-    font-    font- w', mo    font-    font-    font- w', mo    font-    font-    font- w', mo    font-    font-  rem;
+    font-    font-    font- w',m;
+    background: rgba(10, 10, 10, 0.8);
+    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    p    ptext-s    p    p    p    p    p    p    p    p    p    p    p         p    p    p    p    p    p    p    p  0px;
+    cursor: pointer;
+                      it                 : 600;                      it  ea                      it                    --soul                      it     border-c                      it   *                ecifi                     {
+           und           und           udding           unorder    ius: 12px;
+    border-left: 5px solid var(--soul-red);
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba    box-shadow: 0 10pxuctor-info {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    margin-top: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Animations Containers */
+/* We keep these relatively neutral to not clash with the P5 canvas */
+#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#g#ax#g#g#g#g#g8px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    .comparison-grid { grid-template-columns: 1fr; }
+}
+
+/* Layout Utilities */
+.two-column-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+    margin: 2rem 0;
+}
+
+.content-column {
+    flex: 1;
+}
+
+.image-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Feature Boxes */
+.definition-box, .example-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid var(--soul-red);
+}
+
+.key-insight {
+    background: var(--darker-gray);
+    padding: 1.5rem;
+    border-radius: 50px;
+    border: 1px solid var(--soul-red);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+/* Mobile Adjustments for Layouts */
+@media (max-width: 768px) {
+    .two-column-layout {
+        flex-direction: column;
+    }
+}
