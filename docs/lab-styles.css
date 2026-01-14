@@ -4,14 +4,14 @@
 :root {
     --soul-red: #C1272D;
     --soul-red-dark: #8B1C1F;
-    --soul-red-light: #E63946;
+    --soul-red-light: #FF6B75; /* Brightened for better contrast - was #E63946 */
     --charcoal: #0f0f0f;
     --dark-gray: #1a1a1a;
     --darker-gray: #0a0a0a;
     --light-gray: #e8e8e8;
     --silver: #c0c0c0;
     --text-primary: #ffffff;
-    --text-secondary: #b8b8b8;
+    --text-secondary: #d0d0d0; /* Brightened for WCAG AA compliance - was #b8b8b8 */
 }
 
 /* Base Styles */
@@ -32,12 +32,9 @@ body {
     line-height: 1.6;
 }
 
-/* Page Layout - Grid with Sidebar (matching index page) */
+/* Page Layout - Sidebar is fixed, so container just needs min-height */
 .lab-page-container {
-    display: grid;
-    grid-template-columns: 280px 1fr;
     min-height: 100vh;
-    height: 100%;
 }
 
 /* Lab Sidebar Navigation (matching index page sidebar) */
@@ -137,6 +134,7 @@ body {
 
 /* Main Content Wrapper */
 .lab-main-content {
+    margin-left: 280px;
     overflow-y: auto;
 }
 
@@ -560,12 +558,12 @@ code {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .lab-page-container {
-        grid-template-columns: 1fr;
-    }
-
     .lab-sidebar {
         display: none;
+    }
+
+    .lab-main-content {
+        margin-left: 0;
     }
 
     .lab-hero {

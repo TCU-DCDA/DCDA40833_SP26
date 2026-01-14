@@ -15,7 +15,52 @@ By the end of this lab, you'll have a live, personalized website ready to house 
 
 ---
 
-## Part 1: Create Your Portfolio Repository
+## Part 1: Setup Your Tools
+
+Before creating your portfolio, you'll need to set up the three essential tools for this course.
+
+### Step 1: Create a GitHub Account
+
+1. Go to [github.com](https://github.com)
+2. Click **Sign up**
+3. Follow the prompts to create your account:
+   - You can use your TCU email or personal email
+   - Choose a **professional username** — this will appear in your portfolio URL and on all your projects
+   - Example: `jsmith`, `jane-smith`, `janesmith-dev`
+4. Verify your email address
+
+> 💡 **Tip:** If you already have a GitHub account, you can use it for this course. Just make sure your username is professional enough to share with future employers.
+
+### Step 2: Download and Install GitHub Desktop
+
+GitHub Desktop makes it easy to sync your work between your computer and GitHub without using command-line tools.
+
+1. Go to [desktop.github.com](https://desktop.github.com)
+2. Click **Download for [your operating system]**
+3. Once downloaded, open the installer:
+   - **Mac:** Drag GitHub Desktop to your Applications folder
+   - **Windows:** Run the `.exe` file and follow the installation wizard
+4. Open GitHub Desktop
+5. Click **Sign in to GitHub.com**
+6. Sign in with your GitHub account credentials
+7. Complete the setup wizard (you can use the default settings)
+
+### Step 3: Download and Install Visual Studio Code
+
+VS Code is a free code editor that will be your primary tool for editing HTML, CSS, and other files.
+
+1. Go to [code.visualstudio.com](https://code.visualstudio.com)
+2. Click the large **Download** button (it will detect your operating system)
+3. Once downloaded, install VS Code:
+   - **Mac:** Open the `.dmg` file and drag Visual Studio Code to your Applications folder
+   - **Windows:** Run the installer and follow the prompts (recommended: check "Add to PATH" if asked)
+4. Open VS Code to verify it installed correctly
+
+> 💡 **Optional but recommended:** In GitHub Desktop, go to **GitHub Desktop → Preferences → Integrations** (Mac) or **File → Options → Integrations** (Windows) and set VS Code as your external editor. This makes it easy to open projects directly from GitHub Desktop.
+
+---
+
+## Part 2: Create Your Portfolio Repository
 
 You'll create your own copy of the course portfolio template using GitHub's "Use this template" feature.
 
@@ -35,7 +80,7 @@ You now have your own copy of the template in your GitHub account.
 
 ---
 
-## Part 2: Clone to Your Computer
+## Part 3: Clone to Your Computer
 
 Use GitHub Desktop to download your repository so you can edit it locally.
 
@@ -49,7 +94,7 @@ Once cloned, click **"Open in Visual Studio Code"** to start editing.
 
 ---
 
-## Part 3: Enable GitHub Pages
+## Part 4: Enable GitHub Pages
 
 Before making changes, set up GitHub Pages so your site goes live automatically when you push updates.
 
@@ -65,7 +110,7 @@ Your site URL will be: `https://yourusername.github.io/dcda-portfolio/`
 
 ---
 
-## Part 4: Explore the Template
+## Part 5: Explore the Template
 
 Before editing, take a few minutes to understand what you're working with.
 

@@ -2,14 +2,14 @@
 :root {
     --soul-red: #C1272D;
     --soul-red-dark: #8B1C1F;
-    --soul-red-light: #E63946;
+    --soul-red-light: #FF6B75; /* Brightened for better contrast - was #E63946 */
     --charcoal: #0f0f0f;
     --dark-gray: #1a1a1a;
     --darker-gray: #0a0a0a;
     --light-gray: #e8e8e8;
     --silver: #c0c0c0;
     --text-primary: #ffffff;
-    --text-secondary: #b8b8b8;
+    --text-secondary: #d0d0d0; /* Brightened for WCAG AA compliance - was #b8b8b8 */
 }
 
 * {
