@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Infrastructure | DCDA 40833</title>
+    <link rel="stylesheet" href="../lab-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <style>
+        /* Special overrides for the animations to fit the card design */
+        .animation-container {
+            background: #1a1a2e;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 2rem auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        
+        .animation-container canvas {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .comparison-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .comparison-box.then { border-top: 3px solid #e74c3c; }
+        .comparison-box.now { border-top: 3px solid #2ecc71; }
+    </style>
+</head>
+<body>
+    <div class="lab-page-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="lab-sidebar">
+            <div class="lab-brand">
+                <div class="lab-number">Lecture</div>
+                <p class="lab-designation">Infrastructure</p>
+            </div>
+
+            <nav class="lab-nav">
+                <a href="../index.html" class="back-link">
+                    <i data-lucide="arrow-left" class="icon"></i>
+                    <span>Back to Resources</span>
+                </a>
+            </nav>
+
+            <div class="jump-menu">
+                <h3>Jump To</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#intro">Introduction</a></li>
+                        <li><a href="#problem">The Problem</a></li>
+                        <li><a href="#version-control">1. Version Control</a></li>
+                        <li><a href="#backup">2. Backup</a></li>
+                        <li><a href="#hosting">3. Web Hosting</a></li>
+                        <li><a href="#collaboration">4. Collaboration</a></li>
+                        <li><a href="#workflow">The Workflow</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="lab-main-content">
+
+            <!-- Hero Section -->
+            <header class="lab-hero">
+                <div class="lab-hero-content">
+                    <span class="lab-badge">Mini-Lecture</span>
+                    <h1>GitHub as Infrastructure</h1>
+                    <p class="lab-subtitle">Version Control • Backup • Hosting</p>
+                </div>
+            </header>
+
+            <div class="lab-wrapper">
+                <div class="lab-content">
+
+                    <!-- Introduction -->
+                    <section id="intro">
+                        <h2>Infrastructure of Code</h2>
+                        <div class="animation-container" id="github-animation"></div>
+                        <div class="concept-box">
+                            <h4>Code becomes Culture</h4>
+                            <p>How does code become culture? Through the infrastructure that stores, tracks, and publishes it.</p>
+                        </div>
+                    </section>
+                    
+                    <!-- The Problem -->
+                    <section id="problem">
+                        <h2>The Problem We're Solving</h2>
+                        <div class="comparison-grid">
+                            <div class="comparison-box then">
+                                <h3>❌ Before GitHub</h3>
+                                <ul>
+                                    <li>Lost files ("my laptop died")</li>
+                                    <li>Version chaos (final_v2_REAL_final.html)</li>
+                                    <li>No collaboration history</li>
+                                    <li>Manual file hosting</li>
+                                    <li>Breaking changes with no undo</li>
+                                </ul>
+                            </div>
+                            <div class="comparison-box now">
+                                <h3>✅ With GitHub</h3>
+                                <ul>
+                                    <li>Cloud backup automatically</li>
+                                    <li>Time travel (undo any change)</li>
+                                    <li>Perfect history of who/what/when</li>
+                                    <li>Free hosting included</li>
+                                    <li>Safety net for experimentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Role 1: Version Control -->
+                    <section id="version-control">
+                        <h2>Role #1: Version Control</h2>
+                        <p>Imagine a save system for your code that lets you time travel.</p>
+                        
+                        <div class="animation-container" id="version-control-animation"></div>
+                        
+                        <div class="alert alert-info">
+                            <i data-lucide="info"></i>
+                            <div>
+                                <strong>Key Concept:</strong> Every "Commit" is a checkpoint you can return to later. It's like a save point in a video game.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Role 2: Backup -->
+                    <section id="backup">
+                        <h2>Role #2: Backup</h2>
+                        <div class="comparison-grid">
+                            <div>
+                                <h3>💻 Your Computer</h3>
+                                <p>This is your "Local" environment. It's where you type code. It is fragile (coffee spills, disk failures).</p>
+                            </div>
+                            <div>
+                                <h3>☁️ GitHub Cloud</h3>
+                                <p>This is "Remote". It is resilient. Once you <strong>Push</strong> your code here, it is safe.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Role 3: Hosting -->
+                    <section id="hosting">
+                        <h2>Role #3: Web Hosting (GitHub Pages)</h2>
+                        <p>We don't just want to store code; we want to publish a website. GitHub Pages builds your site automatically from your repository.</p>
+                        
+                        <div class="animation-container" id="github-pages-animation"></div>
+                        
+                        <div class="code-block">
+                            <pre><code>Your Repo (HTML/CSS) --> GitHub Build Process --> https://you.github.io</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Role 4: Collaboration -->
+                    <section id="collaboration">
+                        <h2>Role #4: Collaboration</h2>
+                        <p>GitHub allows multiple people to work on the same project without overwriting each other's work.</p>
+                        
+                        <div class="animation-container" id="collaboration-animation"></div>
+                        
+                        <div class="concept-box">
+                            <h4>Transparency</h4>
+                            <p>Open Source means the history of every contribution is visible. You can see exactly who wrote what line of code and when.</p>
+                        </div>
+                    </section>
+
+                    <!-- The Workflow -->
+                    <section id="workflow">
+                        <h2>The Complete Workflow</h2>
+                        <p>This is the cycle you will repeat for every lab and project in this course.</p>
+                        
+                        <div class="checklist">
+                            <div class="checklist-item">
+                                <i data-lucide="edit-3" style="color: var(--soul-red)"></i>
+                                <div>
+                                    <strong>1. Create Locally</strong>
+                                    <p>Write your HTML/CSS in VS Code.</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <i data-lucide="save" style="color: var(--soul-red)"></i>
+                                <div>
+                                    <strong>2. Commit</strong>
+                                    <p>Save your changes to your local git history with a message.</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <i data-lucide="upload-cloud" style="color: var(--soul-red)"></i>
+                                <div>
+                                    <strong>3. Push</strong>
+                                    <p>Upload your creates to GitHub.com (Backup).</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <i data-lucide="globe" style="color: var(--soul-red)"></i>
+                                <div>
+                                    <strong>4. Deploy</strong>
+                                    <p>GitHub Pages automatically updates your live site.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // P5.js Sketches
+        
+        // Sketch 1: Intro
+        let sketch = function(p) {
+            let nodes = [];
+            let connections = [];
+            let commits = [];
+            
+            p.setup = function() {
+                let canvas = p.createCanvas(500, 300);
+                canvas.parent('github-animation');
+                
+                nodes = [
+                    {x: 100, y: 150, label: 'Local', color: [46, 204, 113]},
+                    {x: 250, y: 150, label: 'GitHub', color: [155, 89, 182]},
+                    {x: 400, y: 150, label: 'Live Site', color: [52, 152, 219]}
+                ];
+            };
+            
+            p.draw = function() {
+                p.clear(); // Transparent background
+                
+                // Spawn commits
+                if (p.frameCount % 90 === 0) {
+                    commits.push({ x: nodes[0].x, y: nodes[0].y, progress: 0, stage: 0 });
+                }
+                
+                // Draw Commits
+                for (let i = commits.length - 1; i >= 0; i--) {
+                    let commit = commits[i];
+                    commit.progress += 0.02;
+                    
+                    let startNode = commit.stage === 0 ? nodes[0] : nodes[1];
+                    let endNode = commit.stage === 0 ? nodes[1] : nodes[2];
+                    
+                    let x = p.lerp(startNode.x, startNode.y, commit.progress); // Bug in x lerp?
+                     x = p.lerp(startNode.x, endNode.x, commit.progress);
+                    let y = p.lerp(startNode.y, endNode.y, commit.progress);
+                    
+                    p.noStroke();
+                    p.fill(255);
+                    p.circle(x, y, 8);
+                    
+                    if (commit.progress >= 1) {
+                        commit.progress = 0;
+                        commit.stage++;
+                        if(commit.stage > 1) commits.splice(i, 1);
+                    }
+                }
+                
+                // Draw Nodes
+                for(let node of nodes) {
+                    // Line
+                    if(node !== nodes[nodes.length-1]) {
+                         p.stroke(255, 50);
+                         p.strokeWeight(2);
+                         p.line(node.x, node.y, nodes[nodes.indexOf(node)+1].x, nodes[nodes.indexOf(node)+1].y);
+                    }
+                    
+                    p.noStroke();
+                    p.fill(node.color);
+                    p.circle(node.x, node.y, 40);
+                    
+                    p.fill(255);
+                    p.textAlign(p.CENTER);
+                    p.textSize(12);
+                    p.text(node.label, node.x, node.y + 35);
+                }
+            };
+        };
+        new p5(sketch);
+
+        // Sketch 2: Version Control
+        let versionSketch = function(p) {
+            let commits = [];
+            let timelineY = 50;
+            let currentCommit = 0;
+            
+            p.setup = function() {
+                let canvas = p.createCanvas(400, 200); // Reduced height
+                canvas.parent('version-control-animation');
+                
+                commits = [
+                    {x: 50, y: timelineY, time: '10:00', msg: 'Init', color: [116, 185, 255]},
+                    {x: 120, y: timelineY, time: '10:15', msg: 'Nav', color: [116, 185, 255]},
+                    {x: 190, y: timelineY, time: '10:45', msg: 'Header', color: [116, 185, 255]},
+                    {x: 260, y: timelineY, time: '11:20', msg: 'Fix', color: [46, 204, 113]},
+                    {x: 330, y: timelineY, time: '11:50', msg: 'Footer', color: [116, 185, 255]}
+                ];
+            };
+            
+            p.draw = function() {
+                p.clear();
+                
+                // Draw timeline
+                p.stroke(255, 50);
+                p.strokeWeight(2);
+                p.line(30, timelineY, 370, timelineY);
+                
+                currentCommit = p.floor((p.frameCount / 60) % commits.length);
+                
+                for (let i = 0; i < commits.length; i++) {
+                    let commit = commits[i];
+                    let isActive = i === currentCommit;
+                    
+                    p.noStroke();
+                    if (isActive) {
+                        p.fill(commit.color);
+                        p.circle(commit.x, commit.y, 20);
+                        p.fill(255);
+                        p.text(commit.msg, 200, 100);
+                        p.textSize(10);
+                        p.text("Restoring this version...", 200, 120);
+                    } else {
+                        p.fill(100);
+                        p.circle(commit.x, commit.y, 10);
+                    }
+                }
+                
+                p.textAlign(p.CENTER);
+            };
+        };
+        new p5(versionSketch);
+
+        // Sketch 3: GitHub Pages
+        let hostingSketch = function(p) {
+            let repoNode = {x: 100, y: 100};
+            let serverNode = {x: 300, y: 100};
+            let browsers = [{x: 450, y: 50}, {x: 450, y: 100}, {x: 450, y: 150}];
+            let deploys = [];
+
+            p.setup = function() {
+                let canvas = p.createCanvas(500, 200);
+                canvas.parent('github-pages-animation');
+            };
+
+            p.draw = function() {
+                p.clear();
+
+                // Logic simplified for brevity/stability
+                if(p.frameCount % 100 === 0) deploys.push({x: repoNode.x, y: repoNode.y, stage: 0});
+
+                // Nodes
+                p.fill(116, 185, 255);
+                p.rect(repoNode.x-20, repoNode.y-15, 40, 30);
+                p.fill(255);
+                p.textAlign(p.CENTER);
+                p.text("Repo", repoNode.x, repoNode.y+30);
+
+                p.fill(9, 132, 227);
+                p.circle(serverNode.x, serverNode.y, 50);
+                p.fill(255);
+                p.text("Pages", serverNode.x, serverNode.y+40);
+
+                // Browsers
+                for(let b of browsers) {
+                    p.fill(46, 204, 113);
+                    p.rect(b.x-15, b.y-10, 30, 20);
+                }
+
+                // Traffic
+                for(let d of deploys) {
+                    if(d.stage === 0) {
+                         d.x = p.lerp(d.x, serverNode.x, 0.05);
+                         p.fill(255);
+                         p.circle(d.x, repoNode.y, 5);
+                         if(p.dist(d.x, repoNode.y, serverNode.x, serverNode.y) < 5) d.stage = 1;
+                    } else {
+                        // Fan out
+                        p.fill(46, 204, 113);
+                        for(let b of browsers) {
+                             // abstract visualization of broadcasting
+                             let bx = p.lerp(serverNode.x, b.x, (p.frameCount % 50)/50);
+                             let by = p.lerp(serverNode.y, b.y, (p.frameCount % 50)/50);
+                             p.circle(bx, by, 3);
+                        }
+                    }
+                }
+            }
+        };
+        new p5(hostingSketch);
+
+        // Sketch 4: Collaboration
+        let collaborationSketch = function(p) {
+             let repo = {x: 300, y: 100};
+             let users = [{x: 100, y: 100}, {x: 500, y: 100}, {x: 300, y: 200}];
+             
+             p.setup = function() {
+                  let canvas = p.createCanvas(600, 250);
+                  canvas.parent('collaboration-animation');
+             };
+
+             p.draw = function() {
+                  p.clear();
+                  p.fill(0, 212, 255);
+                  p.circle(repo.x, repo.y, 60);
+                  p.fill(255);
+                  p.textAlign(p.CENTER);
+                  p.text("Central Repo", repo.x, repo.y + 45);
+
+                  for(let u of users) {
+                       p.fill(255, 107, 53);
+                       p.circle(u.x, u.y, 30);
+                       
+                       // Lines
+                       p.stroke(255, 50);
+                       p.line(u.x, u.y, repo.x, repo.y);
+                       p.noStroke();
+
+                       // Dots moving
+                       let prog = (p.frameCount % 100) / 100;
+                       let x = p.lerp(u.x, repo.x, prog);
+                       let y = p.lerp(u.y, repo.y, prog);
+                       p.fill(255);
+                       p.circle(x, y, 4);
+
+                       let x2 = p.lerp(repo.x, u.x, prog);
+                       let y2 = p.lerp(repo.y, u.y, prog);
+                       p.fill(0, 212, 255);
+                       p.circle(x2, y2, 4);
+                  }
+             }
+        };
+        new p5(collaborationSketch);
+
+    </script>
+</body>
+</html>

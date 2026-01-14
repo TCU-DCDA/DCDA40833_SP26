@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Fundamentals | DCDA 40833</title>
+    <link rel="stylesheet" href="../lab-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .tag { color: #e06c75; font-weight: bold; }
+        .attr { color: #d19a66; }
+        .val { color: #98c379; }
+        .comment { color: #5c6370; font-style: italic; }
+        
+        .element-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .element-card {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--soul-red);
+        }
+        
+        .element-card code {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--soul-red-light);
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="lab-page-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="lab-sidebar">
+            <div class="lab-brand">
+                <div class="lab-number">Lecture</div>
+                <p class="lab-designation">HTML Fundamentals</p>
+            </div>
+
+            <nav class="lab-nav">
+                <a href="../index.html" class="back-link">
+                    <i data-lucide="arrow-left" class="icon"></i>
+                    <span>Back to Resources</span>
+                </a>
+            </nav>
+
+            <div class="jump-menu">
+                <h3>Jump To</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#structure">Document Structure</a></li>
+                        <li><a href="#head-body">Head vs Body</a></li>
+                        <li><a href="#text">Text Elements</a></li>
+                        <li><a href="#lists">Lists</a></li>
+                        <li><a href="#links">Links</a></li>
+                        <li><a href="#images">Images</a></li>
+                        <li><a href="#attributes">Attributes</a></li>
+                        <li><a href="#organization">File Organization</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="lab-main-content">
+
+            <!-- Hero Section -->
+            <header class="lab-hero">
+                <div class="lab-hero-content">
+                    <span class="lab-badge">Mini-Lecture</span>
+                    <h1>HTML Fundamentals</h1>
+                    <p class="lab-subtitle">The Foundation of Every Website</p>
+                </div>
+            </header>
+
+            <div class="lab-wrapper">
+                <div class="lab-content">
+
+                    <!-- Document Structure -->
+                    <section id="structure">
+                        <h2>The HTML Structure</h2>
+                        <div class="concept-box">
+                            <h4>Think of HTML like a house</h4>
+                            <ul>
+                                <li><strong>DOCTYPE</strong> = Building permit (declares rules)</li>
+                                <li><strong>html</strong> = The entire property line</li>
+                                <li><strong>head</strong> = The attic (wiring, insulation, not seen by guests)</li>
+                                <li><strong>body</strong> = The living rooms (decoration, furniture, seen by guests)</li>
+                            </ul>
+                        </div>
+
+                        <div class="code-block">
+<pre><code><span class="comment">&lt;!-- This tells the browser to use modern HTML5 --&gt;</span>
+&lt;<span class="tag">!DOCTYPE</span> html&gt;
+
+<span class="comment">&lt;!-- The root element --&gt;</span>
+&lt;<span class="tag">html</span> <span class="attr">lang</span>=<span class="val">"en"</span>&gt;
+
+    <span class="comment">&lt;!-- Meta info (The Attic) --&gt;</span>
+    &lt;<span class="tag">head</span>&gt;
+        &lt;<span class="tag">title</span>&gt;My First Website&lt;/<span class="tag">title</span>&gt;
+    &lt;/<span class="tag">head</span>&gt;
+
+    <span class="comment">&lt;!-- Visible Content (The Living Room) --&gt;</span>
+    &lt;<span class="tag">body</span>&gt;
+        &lt;<span class="tag">h1</span>&gt;Welcome to my site!&lt;/<span class="tag">h1</span>&gt;
+    &lt;/<span class="tag">body</span>&gt;
+
+&lt;/<span class="tag">html</span>&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Head vs Body -->
+                    <section id="head-body">
+                        <h2>Head vs Body</h2>
+                        <div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                            <div class="comparison-box">
+                                <h3>👤 HEAD Section</h3>
+                                <p><strong>Information ABOUT the page</strong></p>
+                                <ul>
+                                    <li>Page title (browser tab)</li>
+                                    <li>Links to CSS files</li>
+                                    <li>Search engine keywords</li>
+                                </ul>
+                                <p><em>Visitors don't read this directly.</em></p>
+                            </div>
+                            <div class="comparison-box">
+                                <h3>🏡 BODY Section</h3>
+                                <p><strong>Content visitors SEE</strong></p>
+                                <ul>
+                                    <li>Headings & Paragraphs</li>
+                                    <li>Images & Videos</li>
+                                    <li>Links & Buttons</li>
+                                </ul>
+                                <p><em>This is your actual content.</em></p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Text Elements -->
+                    <section id="text">
+                        <h2>Essential Text Elements</h2>
+                        <p>These are the tags you will use 90% of the time.</p>
+                        
+                        <div class="element-grid">
+                            <div class="element-card">
+                                <code>&lt;h1&gt; to &lt;h6&gt;</code>
+                                <span>Headings (h1 is main title)</span>
+                            </div>
+                            <div class="element-card">
+                                <code>&lt;p&gt;</code>
+                                <span>Paragraphs of text</span>
+                            </div>
+                            <div class="element-card">
+                                <code>&lt;strong&gt;</code>
+                                <span><strong>Bold</strong> (Important)</span>
+                            </div>
+                            <div class="element-card">
+                                <code>&lt;em&gt;</code>
+                                <span><em>Italic</em> (Emphasized)</span>
+                            </div>
+                        </div>
+
+                        <div class="code-block">
+<pre><code>&lt;<span class="tag">h1</span>&gt;My Portfolio&lt;/<span class="tag">h1</span>&gt;
+&lt;<span class="tag">h2</span>&gt;About Me&lt;/<span class="tag">h2</span>&gt;
+&lt;<span class="tag">p</span>&gt;I am a &lt;<span class="tag">strong</span>&gt;web developer&lt;/<span class="tag">strong</span>&gt; based in Texas.&lt;/<span class="tag">p</span>&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Lists -->
+                    <section id="lists">
+                        <h2>Lists</h2>
+                        <h3>Unordered List (Bullets)</h3>
+                        <div class="code-block">
+<pre><code>&lt;<span class="tag">ul</span>&gt;
+    &lt;<span class="tag">li</span>&gt;Coffee&lt;/<span class="tag">li</span>&gt;
+    &lt;<span class="tag">li</span>&gt;Tea&lt;/<span class="tag">li</span>&gt;
+&lt;/<span class="tag">ul</span>&gt;</code></pre>
+                        </div>
+
+                        <h3>Ordered List (Numbers)</h3>
+                        <div class="code-block">
+<pre><code>&lt;<span class="tag">ol</span>&gt;
+    &lt;<span class="tag">li</span>&gt;Wake up&lt;/<span class="tag">li</span>&gt;
+    &lt;<span class="tag">li</span>&gt;Code&lt;/<span class="tag">li</span>&gt;
+&lt;/<span class="tag">ol</span>&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Links -->
+                    <section id="links">
+                        <h2>Links (Anchors)</h2>
+                        <p>Links connect pages together. They use the <code>href</code> attribute.</p>
+                        
+                        <div class="code-block">
+<pre><code><span class="comment">&lt;!-- External Link --&gt;</span>
+&lt;<span class="tag">a</span> <span class="attr">href</span>=<span class="val">"https://google.com"</span>&gt;Visit Google&lt;/<span class="tag">a</span>&gt;
+
+<span class="comment">&lt;!-- Internal Link (Local File) --&gt;</span>
+&lt;<span class="tag">a</span> <span class="attr">href</span>=<span class="val">"about.html"</span>&gt;About Me&lt;/<span class="tag">a</span>&gt;</code></pre>
+                        </div>
+
+                        <div class="alert alert-warning">
+                            <i data-lucide="alert-triangle"></i>
+                            <div>
+                                <strong>Tip:</strong> Never use "Click Here" as link text. Use descriptive text (e.g., "Read my biography") for accessibility.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Images -->
+                    <section id="images">
+                        <h2>Images</h2>
+                        <p>Images are self-closing tags (no closing tag needed).</p>
+
+                        <div class="code-block">
+<pre><code>&lt;<span class="tag">img</span> <span class="attr">src</span>=<span class="val">"images/profile.jpg"</span> <span class="attr">alt</span>=<span class="val">"Portrait of Jane Smith"</span>&gt;</code></pre>
+                        </div>
+
+                        <div class="concept-box">
+                            <h4>Key Attributes</h4>
+                            <ul>
+                                <li><strong>src</strong> (Source): Where the file is located.</li>
+                                <li><strong>alt</strong> (Alternative Text): Description for screen readers (Crucial for accessibility).</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Attributes -->
+                    <section id="attributes">
+                        <h2>Attributes Explained</h2>
+                        <p>Attributes provide extra info inside the opening tag.</p>
+                        
+                        <div class="element-grid">
+                            <div class="element-card">
+                                <code>id="name"</code>
+                                <span>Unique identifier for ONE element</span>
+                            </div>
+                            <div class="element-card">
+                                <code>class="name"</code>
+                                <span>Group name for styling MANY elements</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Organization -->
+                    <section id="organization">
+                        <h2>File Organization</h2>
+                        <p>Keep your project tidy to avoid broken links.</p>
+
+                        <div class="code-block">
+<pre><code>project-folder/
+├── index.html          <span class="comment">(Homepage - Must be named this!)</span>
+├── about.html
+├── styles.css
+└── images/             <span class="comment">(Store all images here)</span>
+    ├── logo.png
+    └── photo.jpg</code></pre>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            <i data-lucide="info"></i>
+                            <div>
+                                <strong>Rule:</strong> Always use <strong>lowercase</strong> filenames with <strong>no spaces</strong>. <br>
+                                ✅ <code>my-file.html</code> <br>
+                                ❌ <code>My File.html</code>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
