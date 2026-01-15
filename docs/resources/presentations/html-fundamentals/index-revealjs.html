@@ -338,8 +338,12 @@ my-website/
             showSlideNumber: 'all',
             controls: true,
             progress: true,
-            center: true,
+            center: false,  // Disable centering to allow scroll
             transition: 'slide',
+            
+            // Enable scrolling within slides
+            disableLayout: false,
+            
             plugins: [RevealHighlight, RevealNotes]
         });
     </script>

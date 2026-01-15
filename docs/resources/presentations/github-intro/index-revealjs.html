@@ -23,10 +23,7 @@
                 <h1>GitHub as Infrastructure</h1>
                 <h3>Version Control • Backup • Hosting</h3>
                 
-                <div class="key-insight" style="margin-top: 2em;">
-                    <p style="font-size: 0.8em;"><strong>How does code become culture?</strong><br>
-                    Through the infrastructure that stores, tracks, and publishes it.</p>
-                </div>
+                
                 
                 <p class="author">DCDA 40833 • Web Development</p>
             </section>
@@ -507,8 +504,12 @@ Date: Jan 13, 2026
             showSlideNumber: 'all',
             controls: true,
             progress: true,
-            center: true,
+            center: false,  // Disable centering to allow scroll
             transition: 'slide',
+            
+            // Enable scrolling within slides
+            disableLayout: false,
+            
             plugins: [RevealHighlight, RevealNotes]
         });
     </script>

@@ -61,6 +61,40 @@
     color: var(--r-main-color);
 }
 
+/* === ENABLE SCROLLING FOR LONG SLIDES === */
+.reveal .slides > section,
+.reveal .slides > section > section {
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100vh;
+}
+
+/* Custom scrollbar styling */
+.reveal .slides > section::-webkit-scrollbar,
+.reveal .slides > section > section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.reveal .slides > section::-webkit-scrollbar-track,
+.reveal .slides > section > section::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.reveal .slides > section::-webkit-scrollbar-thumb,
+.reveal .slides > section > section::-webkit-scrollbar-thumb {
+    background: var(--soul-red);
+    border-radius: 4px;
+}
+
+.reveal .slides > section::-webkit-scrollbar-thumb:hover,
+.reveal .slides > section > section::-webkit-scrollbar-thumb:hover {
+    background: var(--soul-red-light);
+}
+
 /* === TYPOGRAPHY === */
 .reveal h1,
 .reveal h2,
