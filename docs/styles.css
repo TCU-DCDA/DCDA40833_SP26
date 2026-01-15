@@ -2,14 +2,18 @@
 :root {
     --soul-red: #C1272D;
     --soul-red-dark: #8B1C1F;
-    --soul-red-light: #FF6B75; /* Brightened for better contrast - was #E63946 */
+    --soul-red-light: #E63946;
     --charcoal: #0f0f0f;
     --dark-gray: #1a1a1a;
     --darker-gray: #0a0a0a;
     --light-gray: #e8e8e8;
     --silver: #c0c0c0;
     --text-primary: #ffffff;
-    --text-secondary: #d0d0d0; /* Brightened for WCAG AA compliance - was #b8b8b8 */
+    --text-secondary: #b8b8b8;
+
+    /* Accessible link accents (WCAG AA on dark surfaces) */
+    --link-accent: #FF5A66;
+    --link-accent-hover: #FF8F99;
 }
 
 * {
@@ -386,14 +390,14 @@ nav a.active::before {
 
 .card-link {
     display: inline-block;
-    color: var(--soul-red-light);
+    color: var(--link-accent);
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
 .card-link:hover {
-    color: var(--soul-red);
+    color: var(--link-accent-hover);
     transform: translateX(5px);
 }
 
@@ -478,12 +482,13 @@ footer p {
 }
 
 footer a {
-    color: var(--soul-red);
-    text-decoration: none;
+    color: var(--link-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 footer a:hover {
-    color: var(--soul-red-light);
+    color: var(--link-accent-hover);
 }
 
 /* Responsive Design */
