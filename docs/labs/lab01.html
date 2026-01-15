@@ -372,9 +372,9 @@
                             </li>
                             <li><strong>Uncomment the image code</strong> in <code>index.html</code>:
                                 <ul>
-                                    <li>Find the commented-out <code>&lt;img&gt;</code> tag in the About section</li>
+                                    <li>Find the commented-out <code>&lt;figure&gt;</code> block in the About section</li>
                                     <li>Remove the <code>&lt;!--</code> and <code>--&gt;</code> surrounding it</li>
-                                    <li>Update the <code>src</code> attribute to match your filename</li>
+                                    <li>Update the <code>src</code> attribute to match your filename (e.g., <code>images/profile.jpg</code>)</li>
                                 </ul>
                             </li>
                             <li><strong>Update the <code>alt</code> text</strong> with your actual name (for accessibility)</li>
@@ -382,10 +382,16 @@
 
                         <div class="code-block">
                             <pre><code>&lt;!-- Change this: --&gt;
-&lt;!-- &lt;img src="images/profile.jpg" alt="Your Name" class="profile-photo"&gt; --&gt;
+&lt;!--
+&lt;figure class="viz-container"&gt;
+    &lt;img src="images/profile-photo.jpg" alt="Photo of Your Name"&gt;
+&lt;/figure&gt;
+--&gt;
 
-&lt;!-- To this: --&gt;
-&lt;img src="images/profile.jpg" alt="Your Name" class="profile-photo"&gt;</code></pre>
+&lt;!-- To this (remove the comment markers): --&gt;
+&lt;figure class="viz-container"&gt;
+    &lt;img src="images/profile-photo.jpg" alt="Photo of Your Name"&gt;
+&lt;/figure&gt;</code></pre>
                         </div>
 
                         <h3>Task 5: Write Your Welcome Message (Required)</h3>
