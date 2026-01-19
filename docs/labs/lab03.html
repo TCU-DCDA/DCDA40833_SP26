@@ -171,6 +171,29 @@
         // Initialize Lucide Icons
         lucide.createIcons();
 
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const sidebar = document.querySelector('.lab-sidebar');
+        const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+
+        function toggleMobileMenu() {
+            sidebar.classList.toggle('mobile-open');
+            mobileOverlay.classList.toggle('active');
+            document.body.classList.toggle('mobile-menu-active');
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking a nav link
+        document.querySelectorAll('.lab-sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1024) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
         // Jump Menu Active State
         const jumpLinks = document.querySelectorAll('.jump-menu nav a');
         const sections = document.querySelectorAll('section[id]');

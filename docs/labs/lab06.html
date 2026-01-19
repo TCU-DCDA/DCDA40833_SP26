@@ -10,6 +10,22 @@
 <body>
     <div class="lab-page-container">
 
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <a href="../index.html" class="mobile-back">
+                <i data-lucide="arrow-left" class="icon"></i>
+            </a>
+            <div class="mobile-brand">
+                <span class="mobile-title">Lab 06</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <i data-lucide="menu" class="icon"></i>
+            </button>
+        </header>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay"></div>
+
         <!-- Sidebar Navigation -->
         <aside class="lab-sidebar">
             <!-- Lab Brand -->
@@ -313,6 +329,29 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const sidebar = document.querySelector('.lab-sidebar');
+        const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+
+        function toggleMobileMenu() {
+            sidebar.classList.toggle('mobile-open');
+            mobileOverlay.classList.toggle('active');
+            document.body.classList.toggle('mobile-menu-active');
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking a nav link
+        document.querySelectorAll('.lab-sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1024) {
+                    toggleMobileMenu();
+                }
+            });
+        });
 
         // Jump Menu Active State
         const jumpLinks = document.querySelectorAll('.jump-menu nav a');
