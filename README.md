@@ -29,13 +29,14 @@ This capstone course is the culminating experience for the Digital Culture and D
 │   └── project_prompt_alt.md   # Alternative version for creative projects
 ├── self-reflections/           # Self-reflection templates
 │   └── self-reflection2.md     # Midsemester/Final reflection template
-├── skills_portfolio/           # Portfolio prompt & lab materials (markdown source)
+├── skills_portfolio/           # Portfolio prompt & lab materials
 │   ├── skills_portfolio.md     # Skills portfolio instructions
-│   └── old_labs/               # Lab exercises (lab01-lab06)
-│       ├── lab01.md - lab06.md
-│       ├── lab03_materials/
-│       └── lab06_materials/    # Python mapping notebook & datasets
-└── legacy_materials/           # Previous semester syllabus
+│   └── old_labs/               # Lab source files & datasets
+│       ├── lab01.md - lab06.md # Markdown source for labs
+│       ├── lab03_materials/    # PDF resources
+│       ├── lab04_materials/    # Airbnb dataset
+│       └── lab06_materials/    # Python mapping notebook & GeoJSON
+└── legacy_materials/           # Previous semester reference
 ```
 
 ## Live Site
@@ -103,4 +104,5 @@ This course uses an **"ungrading" model** focused on qualitative assessment:
 AI tools are **permitted with proper citation**. Students must fact-check AI output and cannot use AI to replace critical thinking.
 
 ---
-*TCU - Digital Culture & Data Analytics*
+
+*TCU - Digital Culture & Data Analytics | Spring 2026*

@@ -3,422 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini-Lecture: GitHub as Infrastructure - DCDA 40833</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>GitHub as Infrastructure | DCDA 40833</title>
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    
+    <!-- Custom Soul Red Theme -->
+    <link rel="stylesheet" href="../template/css/soul-red-theme.css">
+    
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
 </head>
 <body>
-    <!-- Slide 1: Title -->
-    <div class="slide-container active">
-        <div class="slide">
-            <h1>GitHub as Infrastructure</h1>
-            <p class="subtitle">Version Control • Backup • Hosting</p>
-            <div id="github-animation" style="width: 500px; height: 300px; margin: 2rem auto; border-radius: 15px; overflow: hidden;"></div>
+    <div class="reveal">
+        <div class="slides">
             
-            <div class="hook-question">
-                <h2 style="font-size: 2rem; margin: 2rem 0;">
-                    How does code become culture?<br>
-                    Through the infrastructure that stores, tracks, and publishes it.
-                </h2>
-            </div>
-            
-            <div class="instructor-info">DCDA 40833 • Web Development</div>
-        </div>
-    </div>
+            <!-- Slide 1: Title -->
+            <section class="title-slide">
+                <h1>GitHub as Infrastructure</h1>
+                <h3>Version Control • Backup • Hosting</h3>
+                
+                
+                
+                <p class="author">DCDA 40833 • Web Development</p>
+            </section>
 
-    <!-- Slide 2: The Problem -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>The Problem We're Solving</h2>
-            
-            <div class="comparison-grid">
-                <div class="comparison-box then">
-                    <h3>❌ Before GitHub</h3>
-                    <ul>
-                        <li>Lost files ("my laptop died")</li>
-                        <li>Version chaos (final_v2_REAL_final.html)</li>
-                        <li>No collaboration history</li>
-                        <li>Manual file hosting</li>
-                        <li>Breaking changes with no undo</li>
-                    </ul>
-                </div>
-                <div class="comparison-box now">
-                    <h3>✅ With GitHub</h3>
-                    <ul>
-                        <li>Cloud backup (automatic)</li>
-                        <li>Clear version history</li>
-                        <li>Tracked changes & authors</li>
-                        <li>Free web hosting</li>
-                        <li>Time machine for your code</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="key-insight">
-                <p><strong>Key Insight:</strong> GitHub solves three problems at once: tracking changes, preserving work, and sharing publicly</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 3: Role 1 - Version Control -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Role #1: Version Control</h2>
-            <p class="subtitle">The Time Machine for Your Code</p>
-            
-            <div class="two-column-layout" style="align-items: flex-start;">
-                <div class="content-column">
-                    <div class="definition-box">
-                        <h3>What it does:</h3>
-                        <p>Tracks <strong>every change</strong> to your code with timestamps, descriptions, and author information</p>
-                    </div>
-
-                    <div class="example-box">
-                        <h4>Why it matters:</h4>
-                        <ul>
-                            <li>See who changed what, when, and why</li>
-                            <li>Revert to any previous version</li>
-                            <li>Understand your project's evolution</li>
-                            <li>Compare versions side-by-side</li>
+            <!-- Slide 2: The Problem -->
+            <section>
+                <h2>The Problem We're Solving</h2>
+                
+                <div class="comparison">
+                    <div class="comparison-box bad">
+                        <h4>❌ Before GitHub</h4>
+                        <ul style="font-size: 0.65em;">
+                            <li>Lost files ("my laptop died")</li>
+                            <li>Version chaos (final_v2_REAL_final.html)</li>
+                            <li>No collaboration history</li>
+                            <li>Manual file hosting</li>
+                            <li>Breaking changes with no undo</li>
                         </ul>
                     </div>
-
-                   
-                </div>
-                <div class="image-column">
-                    <div id="version-control-animation" style="width: 100%; max-width: 400px; height: 400px; border-radius: 15px; overflow: hidden; margin: 0 auto;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 4: Role 2 - Backup -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Role #2: Backup</h2>
-            <p class="subtitle">The Safety Net</p>
-            
-            <div class="evolution-flow">
-                <div class="evolution-step">
-                    <h3>💻 Your Computer</h3>
-                    <p>Work locally on your HTML, CSS, and files</p>
-                </div>
-                
-                <div class="evolution-arrow">↓</div>
-                
-                <div class="evolution-step">
-                    <h3>☁️ GitHub Cloud</h3>
-                    <p>Automatic backup with complete history</p>
-                </div>
-                
-                <div class="evolution-arrow">↓</div>
-                
-                <div class="evolution-step">
-                    <h3>🔄 Recovery</h3>
-                    <p>Laptop breaks? Clone repository to new machine</p>
-                </div>
-            </div>
-
-            
-        </div>
-    </div>
-
-    <!-- Slide 5: Role 3 - Hosting -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Role #3: Web Hosting with GitHub Pages</h2>
-            <p class="subtitle">The Public Stage</p>
-            
-            <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-                <div id="github-pages-animation" style="width: 100%; max-width: 600px; height: 400px; border-radius: 15px; overflow: hidden;"></div>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; width: 100%; max-width: 900px;">
-                    <div class="definition-box">
-                        <h3>What it does:</h3>
-                        <p>Turns your repository into a <strong>live website</strong> accessible to anyone with the URL</p>
-                        <p style="margin-top: 1rem;">GitHub reads your HTML/CSS files and serves them as a functioning website—no server configuration needed</p>
-                    </div>
-
-                    <div class="example-box">
-                        <h4>Benefits:</h4>
-                        <ul>
-                            <li><strong>Free hosting</strong> (no server costs)</li>
-                            <li><strong>Custom URL</strong>: username.github.io/project</li>
-                            <li><strong>Automatic updates</strong> when you push changes</li>
-                            <li><strong>Professional presence</strong> for your portfolio</li>
-                            <li><strong>HTTPS security</strong> built-in</li>
+                    <div class="comparison-box good">
+                        <h4>✅ With GitHub</h4>
+                        <ul style="font-size: 0.65em;">
+                            <li>Cloud backup (automatic)</li>
+                            <li>Clear version history</li>
+                            <li>Tracked changes & authors</li>
+                            <li>Free web hosting</li>
+                            <li>Time machine for your code</li>
                         </ul>
                     </div>
                 </div>
                 
-               
-            </div>
-        </div>
-    </div>
+                <div class="key-insight" style="margin-top: 1em; font-size: 0.8em;">
+                    <p><strong>Key Insight:</strong> GitHub solves three problems at once: tracking changes, preserving work, and sharing publicly</p>
+                </div>
+            </section>
 
-    <!-- Slide 6: The Workflow -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>The Complete Workflow with GitHub Desktop</h2>
-            
-            <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-                <!-- Row 1: Steps 1-3 -->
-                <div class="workflow-diagram" style="grid-template-columns: repeat(5, auto);">
-                    <div class="workflow-step">
-                        <div class="step-number">1</div>
-                        <h3>Create Locally</h3>
-                        <p>Write HTML, CSS, add images</p>
-                        <code>index.html, style.css, images/</code>
+            <!-- Slide 3: Role 1 - Version Control -->
+            <section>
+                <h2>Role #1: Version Control</h2>
+                <p style="font-size: 0.8em;">The Time Machine for Your Code</p>
+                
+                <div class="two-column">
+                    <div class="column">
+                        <div class="definition-box" style="font-size: 0.7em;">
+                            <h4>What it does:</h4>
+                            <p>Tracks <strong>every change</strong> to your code with timestamps, descriptions, and author information</p>
+                        </div>
+                        
+                        <div class="key-insight" style="font-size: 0.65em; margin-top: 0.5em;">
+                            <p><strong>Why it matters:</strong></p>
+                            <ul>
+                                <li>See who changed what, when, and why</li>
+                                <li>Revert to any previous version</li>
+                                <li>Compare versions side-by-side</li>
+                            </ul>
+                        </div>
                     </div>
-                    
-                    <div class="workflow-arrow">→</div>
-                    
-                    <div class="workflow-step">
-                        <div class="step-number">2</div>
-                        <h3>Review </h3>
-                        <p>GH Desktop shows what you modified</p>
-                        <code>See file diffs visually</code>
+                    <div class="column">
+                        <pre><code class="language-bash" data-trim>
+# Every commit is a snapshot
+commit 3a2f1b9
+Author: you@email.com
+Date: Jan 14, 2026
+
+    Add navigation bar
+
+commit 2c8e4d1
+Author: you@email.com  
+Date: Jan 13, 2026
+
+    Initial homepage structure
+                        </code></pre>
                     </div>
-                    
-                    <div class="workflow-arrow">→</div>
-                    
-                    <div class="workflow-step">
-                        <div class="step-number">3</div>
-                        <h3>Commit</h3>
-                        <p>Add message & click "Commit to main"</p>
-                        <code>"Add navigation bar"</code>
+                </div>
+            </section>
+
+            <!-- Slide 4: Role 2 - Backup -->
+            <section>
+                <h2>Role #2: Backup</h2>
+                <p style="font-size: 0.8em;">The Safety Net</p>
+                
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-number">💻</span>
+                        <div class="step-content">
+                            <h4>Your Computer</h4>
+                            <p>Work locally on your HTML, CSS, and files</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">☁️</span>
+                        <div class="step-content">
+                            <h4>GitHub Cloud</h4>
+                            <p>Automatic backup with complete history</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">🔄</span>
+                        <div class="step-content">
+                            <h4>Recovery</h4>
+                            <p>Laptop breaks? Clone repository to new machine</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Role 3 - Hosting -->
+            <section>
+                <h2>Role #3: Web Hosting with GitHub Pages</h2>
+                <p style="font-size: 0.8em;">The Public Stage</p>
+                
+                <div class="two-column">
+                    <div class="column">
+                        <div class="definition-box" style="font-size: 0.7em;">
+                            <h4>What it does:</h4>
+                            <p>Turns your repository into a <strong>live website</strong> accessible to anyone with the URL</p>
+                            <p style="margin-top: 0.5em;">GitHub reads your HTML/CSS files and serves them as a functioning website—no server configuration needed</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="key-insight" style="font-size: 0.65em;">
+                            <p><strong>Benefits:</strong></p>
+                            <ul>
+                                <li><strong>Free hosting</strong> (no server costs)</li>
+                                <li><strong>Custom URL</strong>: username.github.io/project</li>
+                                <li><strong>Automatic updates</strong> when you push</li>
+                                <li><strong>HTTPS security</strong> built-in</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: The Workflow -->
+            <section>
+                <h2>The Complete Workflow</h2>
+                
+                <div class="steps" style="font-size: 0.85em;">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <h4>Create Locally</h4>
+                            <p>Write HTML, CSS, add images</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <h4>Review Changes</h4>
+                            <p>GitHub Desktop shows what you modified</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <h4>Commit</h4>
+                            <p>Add message & click "Commit to main"</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <div class="step-content">
+                            <h4>Push to Origin</h4>
+                            <p>Click "Push origin" → uploads to GitHub cloud</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <div class="step-content">
+                            <h4>Live on Web</h4>
+                            <p>GitHub Pages publishes automatically</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: GitHub Desktop Interface -->
+            <section>
+                <h2>GitHub Desktop: Your Visual Toolkit</h2>
+                
+                <div class="two-column" style="font-size: 0.75em;">
+                    <div class="column">
+                        <div class="definition-box">
+                            <h4>📝 Changes Tab</h4>
+                            <p>View file changes with visual diffs</p>
+                        </div>
+                        <div class="definition-box">
+                            <h4>💬 Commit Message</h4>
+                            <p>Describe your changes clearly</p>
+                        </div>
+                        <div class="definition-box">
+                            <h4>✅ Commit to Main</h4>
+                            <p>Save snapshot locally</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="definition-box">
+                            <h4>⬆️ Push Origin</h4>
+                            <p>Upload to GitHub cloud</p>
+                        </div>
+                        <div class="definition-box">
+                            <h4>⬇️ Fetch/Pull Origin</h4>
+                            <p>Download latest changes</p>
+                        </div>
+                        <div class="definition-box">
+                            <h4>📜 History Tab</h4>
+                            <p>View all previous commits</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div style="font-size: 2rem; color: #00d4ff;">↓</div>
+                <div class="key-insight" style="margin-top: 1em; font-size: 0.75em;">
+                    <p><strong>Remember:</strong> Always fetch/pull before you commit and push to avoid conflicts!</p>
+                </div>
+            </section>
+
+            <!-- Slide 8: How GitHub Pages Works -->
+            <section>
+                <h2>How GitHub Pages Works</h2>
                 
-                <!-- Row 2: Steps 4-5 -->
-                <div class="workflow-diagram" style="grid-template-columns: repeat(3, auto);">
-                    <div class="workflow-step">
-                        <div class="step-number">4</div>
-                        <h3>Push to Origin</h3>
-                        <p>Click "Push origin" button</p>
-                        <code>Uploads to GitHub cloud</code>
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-number">📁</span>
+                        <div class="step-content">
+                            <h4>Your Repository Structure</h4>
+                            <p>HTML files, CSS, images organized in folders</p>
+                        </div>
                     </div>
-                    
-                    <div class="workflow-arrow">→</div>
-                    
-                    <div class="workflow-step">
-                        <div class="step-number">5</div>
-                        <h3>Live on Web</h3>
-                        <p>GH Pages publishes automatically</p>
-                        <code>username.github.io/portfolio</code>
+                    <div class="step">
+                        <span class="step-number">⚙️</span>
+                        <div class="step-content">
+                            <h4>GitHub Pages Activation</h4>
+                            <p>Configure which branch and folder to publish</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="key-point">
-                <p>Each push does <strong>three things</strong>: backs up your code, records the change, and updates your live site</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 7: GitHub Desktop Interface -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>GitHub Desktop: Your Visual Toolkit</h2>
-            
-            <div class="command-grid">
-                <div class="command-box">
-                    <h4>📝 Changes Tab</h4>
-                    <p class="command-description"><strong>See what you modified</strong> — View file changes with visual diffs (green = added, red = removed)</p>
-                </div>
-
-                <div class="command-box">
-                    <h4>💬 Commit Message Box</h4>
-                    <p class="command-description"><strong>Describe your changes</strong> — Write clear summary (required) and optional description</p>
-                </div>
-
-                <div class="command-box">
-                    <h4>✅ Commit to Main Button</h4>
-                    <p class="command-description"><strong>Save snapshot locally</strong> — Records your changes with timestamp and message</p>
-                </div>
-
-                <div class="command-box">
-                    <h4>⬆️ Push Origin Button</h4>
-                    <p class="command-description"><strong>Upload to GitHub</strong> — Sends commits to cloud (backup + deploy)</p>
-                </div>
-
-                <div class="command-box">
-                    <h4>⬇️ Fetch/Pull Origin</h4>
-                    <p class="command-description"><strong>Download updates</strong> — Gets latest changes from GitHub to stay in sync</p>
-                </div>
-
-                <div class="command-box">
-                    <h4>📜 History Tab</h4>
-                    <p class="command-description"><strong>View commit history</strong> — See all previous changes, who made them, and when</p>
-                </div>
-            </div>
-
-            <div class="key-insight">
-                <p><strong>Remember:</strong> Always fetch/pull before you commit and push to avoid conflicts!</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 8: How GitHub Pages Works -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>How GitHub Pages Works</h2>
-            <p class="subtitle">From Repository to Website</p>
-            
-            <div class="evolution-flow">
-                <div class="evolution-step">
-                    <h3>📁 Your Repository Structure</h3>
-                    <p>HTML files, CSS, images organized in folders</p>
-                    <pre><code>semester-project/
-├── index.html
-├── style.css
-└── images/</code></pre>
-                </div>
-                
-                <div class="evolution-arrow">↓</div>
-                
-                <div class="evolution-step">
-                    <h3>⚙️ GitHub Pages Activation</h3>
-                    <p>Configure which branch and folder to publish</p>
-                    <p><em>(We'll walk through this setup together)</em></p>
-                </div>
-                
-                <div class="evolution-arrow">↓</div>
-                
-                <div class="evolution-step">
-                    <h3>🌐 Live Website</h3>
-                    <p>Your URL becomes accessible worldwide</p>
-                    <code>https://yourusername.github.io/semester-project</code>
-                </div>
-            </div>
-
-            <div class="key-insight">
-                <p><strong>The Magic:</strong> Every time you push changes, GitHub automatically rebuilds your site (takes 1-2 minutes)</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 9: Collaboration & Transparency -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Role #4: Collaboration & Transparency</h2>
-            <p class="subtitle">How GitHub Enables Collective Work</p>
-            
-            <div style="display: flex; flex-direction: column; gap: 2rem;">
-                <div id="collaboration-animation" style="width: 100%; max-width: 600px; height: 300px; border-radius: 15px; overflow: hidden; margin: 0 auto;"></div>
-                
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
-                    <div class="definition-box">
-                        <h3>What GitHub Enables:</h3>
-                        <ul>
-                            <li><strong>Transparency:</strong> Anyone can see your code, process, and decisions</li>
-                            <li><strong>Attribution:</strong> Every change is tied to an author with timestamp</li>
-                            <li><strong>Discussion:</strong> Issues, pull requests, comments on specific lines</li>
-                            <li><strong>Forking:</strong> Others can copy and build on your work</li>
-                        </ul>
-                    </div>
-
-                    <div class="example-box">
-                        <h3>Real-World Examples:</h3>
-                        <ul>
-                            <li>📚 Open educational resources</li>
-                            <li>🔬 Reproducible research & data</li>
-                            <li>🌐 Community-built documentation</li>
-                            <li>🎨 Collaborative digital projects</li>
-                        </ul>
+                    <div class="step">
+                        <span class="step-number">🌐</span>
+                        <div class="step-content">
+                            <h4>Live Website</h4>
+                            <p><code>https://yourusername.github.io/project</code></p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="key-insight">
-                    <p><strong>Critical Question:</strong> When code is visible to everyone, who gets credit? Who gets cited? How does this change academic attribution?</p>
+                <div class="key-insight" style="margin-top: 1em; font-size: 0.8em;">
+                    <p><strong>The Magic:</strong> Every time you push changes, GitHub automatically rebuilds your site (1-2 minutes)</p>
                 </div>
-            </div>
-        </div>
-    </div>
+            </section>
 
-    <!-- Slide 10: Collaboration in Practice -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Collaboration Workflows in GitHub</h2>
-            
-            <div class="two-column-layout">
-                <div class="content-column">
-                    <div class="definition-box">
-                        <h3>For This Course:</h3>
-                        <p><strong>Student Projects with Public Transparency</strong></p>
-                        <ul>
-                            <li>You work independently on your semester project</li>
-                            <li>Your repository is public (anyone can view)</li>
-                            <li>Instructor can see your commit history & progress</li>
-                            <li>Classmates can learn from each other's approaches</li>
-                        </ul>
+            <!-- Slide 9: Collaboration & Transparency -->
+            <section>
+                <h2>Role #4: Collaboration & Transparency</h2>
+                
+                <div class="two-column" style="font-size: 0.75em;">
+                    <div class="column">
+                        <div class="definition-box">
+                            <h4>What GitHub Enables:</h4>
+                            <ul>
+                                <li><strong>Transparency:</strong> Anyone can see your code</li>
+                                <li><strong>Attribution:</strong> Changes tied to authors</li>
+                                <li><strong>Discussion:</strong> Issues & pull requests</li>
+                                <li><strong>Forking:</strong> Others can build on your work</li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div class="example-box">
-                        <h3>Beyond This Course:</h3>
-                        <p><strong>True Collaboration Features</strong></p>
-                        <ul>
-                            <li><strong>Issues:</strong> Track bugs, tasks, and discussions</li>
-                            <li><strong>Pull Requests:</strong> Propose changes, get feedback</li>
-                            <li><strong>Branches:</strong> Work on features independently</li>
-                            <li><strong>Team Repos:</strong> Multiple contributors with permissions</li>
-                        </ul>
+                    <div class="column">
+                        <div class="key-insight">
+                            <h4>Real-World Examples:</h4>
+                            <ul>
+                                <li>📚 Open educational resources</li>
+                                <li>🔬 Reproducible research</li>
+                                <li>🌐 Community documentation</li>
+                                <li>🎨 Collaborative projects</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="image-column">
-                    <div class="definition-box" style="background: rgba(0, 212, 255, 0.1); padding: 2rem;">
-                        <h3 style="text-align: center; margin-bottom: 1.5rem;">GitHub as Infrastructure</h3>
-                        <p style="font-size: 1.2rem; line-height: 1.8;">
-                            🔄 <strong>Version Control</strong><br>
-                            ☁️ <strong>Backup & Recovery</strong><br>
-                            🌐 <strong>Web Hosting</strong><br>
-                            👥 <strong>Collaboration & Transparency</strong>
-                        </p>
-                        <p style="margin-top: 2rem; font-style: italic; color: #00d4ff;">
-                            Four roles, one platform—that's infrastructure.
-                        </p>
-                    </div>
+                
+                <div class="key-insight" style="margin-top: 1em; font-size: 0.75em;">
+                    <p><strong>Critical Question:</strong> When code is visible to everyone, who gets credit? How does this change academic attribution?</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="key-point">
-                <p><strong>Remember:</strong> Even working solo, you benefit from GitHub's collaborative nature—your work is visible, citeable, and part of the public scholarly record</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 11: Cultural Connection -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Cultural Connection: "Sacred Boundaries"</h2>
-            
-            <div class="parallel-container">
-                <div class="parallel-item">
-                    <div class="parallel-box privacy">
-                        <h3>🔒 Private</h3>
-                        <p><strong>Never commit:</strong></p>
-                        <ul>
+            <!-- Slide 10: Sacred Boundaries -->
+            <section>
+                <h2>Public vs Private: Know the Boundaries</h2>
+                
+                <div class="comparison">
+                    <div class="comparison-box bad">
+                        <h4>🔒 Never Commit</h4>
+                        <ul style="font-size: 0.65em;">
                             <li>Passwords</li>
                             <li>API keys</li>
                             <li>Personal data</li>
-                            <li>Sensitive info</li>
+                            <li>Sensitive information</li>
                             <li>Private notes</li>
                         </ul>
                     </div>
-                </div>
-                
-                <div class="parallel-arrow">⟷</div>
-                
-                <div class="parallel-item">
-                    <div class="parallel-box taboo">
-                        <h3>🌐 Public</h3>
-                        <p><strong>Always commit:</strong></p>
-                        <ul>
+                    <div class="comparison-box good">
+                        <h4>🌐 Always Commit</h4>
+                        <ul style="font-size: 0.65em;">
                             <li>HTML/CSS code</li>
                             <li>Documentation</li>
                             <li>Public images</li>
@@ -427,884 +333,185 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-
-            <div class="key-point">
-                <p><strong>The Boundary:</strong> Understanding what belongs in public repositories vs. what should stay private</p>
-                <p style="margin-top: 1rem; font-size: 1.2rem;">GitHub makes your code <em>public by default</em>. This is a feature, not a bug—but it requires conscious decision-making about digital boundaries.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 12: Common Pitfalls -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Common Pitfalls & Solutions</h2>
-            
-            <div class="pitfalls-grid">
-                <div class="pitfall-box">
-                    <h3>❌ Problem</h3>
-                    <p>"My changes aren't showing on the live site"</p>
-                    <h4>✅ Solution:</h4>
-                    <ul>
-                        <li>Check commit history—did you push?</li>
-                        <li>Wait 1-2 minutes for Pages rebuild</li>
-                        <li>Hard refresh browser (Cmd+Shift+R)</li>
-                        <li>Check Pages settings are correct</li>
-                    </ul>
+                
+                <div class="key-insight" style="margin-top: 1em; font-size: 0.75em;">
+                    <p>GitHub makes your code <strong>public by default</strong>. This is a feature, not a bug—but it requires conscious decision-making about digital boundaries.</p>
                 </div>
+            </section>
 
-                <div class="pitfall-box">
-                    <h3>❌ Problem</h3>
-                    <p>"I got merge conflicts"</p>
-                    <h4>✅ Solution:</h4>
-                    <ul>
-                        <li>Always "Fetch origin" before making changes</li>
-                        <li>Don't edit files directly on GitHub.com</li>
-                        <li>If conflicts occur, GitHub Desktop will alert you</li>
-                        <li>Open the conflicted file in your editor and choose which version to keep</li>
-                    </ul>
+            <!-- Slide 11: Common Pitfalls -->
+            <section>
+                <h2>Common Pitfalls & Solutions</h2>
+                
+                <div class="two-column" style="font-size: 0.7em;">
+                    <div class="column">
+                        <div class="definition-box">
+                            <h4>❌ "Changes aren't showing"</h4>
+                            <p>✅ Check if you pushed • Wait 1-2 min • Hard refresh browser</p>
+                        </div>
+                        <div class="definition-box">
+                            <h4>❌ "Merge conflicts"</h4>
+                            <p>✅ Always fetch before making changes • Don't edit on GitHub.com</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="definition-box">
+                            <h4>❌ "Site shows 404"</h4>
+                            <p>✅ Ensure <code>index.html</code> exists • Check Pages settings</p>
+                        </div>
+                        <div class="definition-box">
+                            <h4>❌ "Committed sensitive data"</h4>
+                            <p>✅ Delete file, commit, push • Change exposed passwords immediately</p>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <div class="pitfall-box">
-                    <h3>❌ Problem</h3>
-                    <p>"My site shows 404 error"</p>
-                    <h4>✅ Solution:</h4>
-                    <ul>
-                        <li>Ensure <code>index.html</code> is in correct folder</li>
-                        <li>Check Pages source settings</li>
-                        <li>Verify repository name in URL</li>
-                        <li>Make sure repository is public</li>
-                    </ul>
-                </div>
-
-                <div class="pitfall-box">
-                    <h3>❌ Problem</h3>
-                    <p>"I accidentally committed sensitive data"</p>
-                    <h4>✅ Solution:</h4>
-                    <ul>
-                        <li>Don't panic—but act quickly</li>
-                        <li>Delete the file, commit, push</li>
-                        <li>Change any exposed passwords immediately</li>
-                        <li>For thorough removal, use BFG Repo-Cleaner</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 13: Best Practices -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Best Practices</h2>
-            
-            <div class="practices-grid">
-                <div class="practice-box good">
-                    <h3>✅ Do This</h3>
-                    <ul>
-                        <li><strong>Commit often</strong> with clear messages<br>
-                        <span class="example-text">"Add navigation bar"</span> not <span class="example-text">"update"</span></li>
-                        <li><strong>Use README.md</strong> to document your project</li>
-                        <li><strong>Organize files</strong> in folders (images/, css/, js/)</li>
-                        <li><strong>Test locally</strong> in browser before committing</li>
-                        <li><strong>Fetch origin</strong> regularly to stay in sync</li>
-                        <li><strong>Review changes</strong> in GitHub Desktop before committing</li>
-                    </ul>
-                </div>
-
-                <div class="practice-box bad">
-                    <h3>❌ Don't Do This</h3>
-                    <ul>
-                        <li><strong>Never commit</strong> passwords or API keys</li>
-                        <li><strong>Don't</strong> use vague commit messages<br>
-                        <span class="example-text">"fixed stuff"</span>, <span class="example-text">"asdf"</span></li>
-                        <li><strong>Avoid</strong> committing large files (&gt;100MB)</li>
-                        <li><strong>Don't</strong> edit directly on GitHub.com (use local editor)</li>
-                        <li><strong>Don't</strong> commit personal information</li>
-                        <li><strong>Avoid</strong> messy file structures</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="key-point">
-                <p><strong>Remember:</strong> Your GitHub repository is both your backup and your public portfolio—treat it professionally</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 14: Putting It All Together -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Putting It All Together</h2>
-            <p class="subtitle">The Complete Development Cycle</p>
-            
-            <div class="evolution-flow">
-                <div class="evolution-step">
-                    <h3>🎨 Design & Code</h3>
-                    <p>Create HTML structure and CSS styling on your computer</p>
-                    <p class="example-text">Your creative workspace—experiment freely</p>
+            <!-- Slide 12: Best Practices -->
+            <section>
+                <h2>Best Practices</h2>
+                
+                <div class="comparison">
+                    <div class="comparison-box good">
+                        <h4>✅ Do This</h4>
+                        <ul style="font-size: 0.6em;">
+                            <li><strong>Commit often</strong> with clear messages</li>
+                            <li><strong>Use README.md</strong> to document</li>
+                            <li><strong>Organize files</strong> in folders</li>
+                            <li><strong>Test locally</strong> before committing</li>
+                            <li><strong>Fetch origin</strong> regularly</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-box bad">
+                        <h4>❌ Avoid This</h4>
+                        <ul style="font-size: 0.6em;">
+                            <li>Committing passwords or API keys</li>
+                            <li>Vague messages: "fixed stuff"</li>
+                            <li>Large files (>100MB)</li>
+                            <li>Editing directly on GitHub.com</li>
+                            <li>Messy file structures</li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <div class="evolution-arrow">↓</div>
-                
-                <div class="evolution-step">
-                    <h3>💾 Version Control (GitHub Desktop)</h3>
-                    <p>Review changes → Write meaningful commit message → Save snapshot</p>
-                    <p class="example-text">Build a history of your decisions</p>
+                <div class="key-insight" style="margin-top: 1em; font-size: 0.75em;">
+                    <p>Your GitHub repository is both your <strong>backup</strong> and your <strong>public portfolio</strong>—treat it professionally</p>
                 </div>
-                
-                <div class="evolution-arrow">↓</div>
-                
-                <div class="evolution-step">
-                    <h3>☁️ Backup (Push to GitHub)</h3>
-                    <p>Upload commits to the cloud repository</p>
-                    <p class="example-text">Your work is now safe and accessible from anywhere</p>
-                </div>
-                
-                <div class="evolution-arrow">↓</div>
-                
-                <div class="evolution-step">
-                    <h3>🌐 Publish (GitHub Pages)</h3>
-                    <p>Your code becomes a live, public website</p>
-                    <p class="example-text">From personal project to public scholarship</p>
-                </div>
-            </div>
+            </section>
 
-            <div class="key-point">
-                <p><strong>This is infrastructure:</strong> The technical systems that make digital culture possible</p>
-                <p style="margin-top: 1rem;">GitHub isn't just a tool—it's the foundation that enables collaborative, versioned, public code</p>
-            </div>
-        </div>
-    </div>
+            <!-- Slide 13: Putting It All Together -->
+            <section>
+                <h2>The Complete Development Cycle</h2>
+                
+                <div class="steps" style="font-size: 0.8em;">
+                    <div class="step">
+                        <span class="step-number">🎨</span>
+                        <div class="step-content">
+                            <h4>Design & Code</h4>
+                            <p>Create HTML structure and CSS styling locally</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">💾</span>
+                        <div class="step-content">
+                            <h4>Version Control</h4>
+                            <p>Review → Commit with meaningful message</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">☁️</span>
+                        <div class="step-content">
+                            <h4>Backup</h4>
+                            <p>Push to GitHub cloud</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">🌐</span>
+                        <div class="step-content">
+                            <h4>Publish</h4>
+                            <p>GitHub Pages makes it live</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="key-insight" style="margin-top: 1em; font-size: 0.75em;">
+                    <p><strong>This is infrastructure:</strong> The technical systems that make digital culture possible</p>
+                </div>
+            </section>
 
-    <!-- Slide 15: Resources -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Resources & Next Steps</h2>
-            
-            <div class="resources-grid">
-                <div class="resource-box">
-                    <h3>📚 Documentation</h3>
-                    <ul>
-                        <li><a href="https://docs.github.com/en/desktop" target="_blank">GitHub Desktop Docs</a></li>
-                        <li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages Guide</a></li>
-                        <li><a href="https://desktop.github.com/" target="_blank">Download GitHub Desktop</a></li>
+            <!-- Slide 14: Resources -->
+            <section>
+                <h2>Resources & Next Steps</h2>
+                
+                <div class="two-column" style="font-size: 0.75em;">
+                    <div class="column">
+                        <div class="definition-box">
+                            <h4>📚 Documentation</h4>
+                            <ul>
+                                <li><a href="https://docs.github.com/en/desktop">GitHub Desktop Docs</a></li>
+                                <li><a href="https://docs.github.com/en/pages">GitHub Pages Guide</a></li>
+                                <li><a href="https://desktop.github.com/">Download GitHub Desktop</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="key-insight">
+                            <h4>🛠️ Practice</h4>
+                            <ul>
+                                <li>Create your first repository</li>
+                                <li>Make commits with good messages</li>
+                                <li>Enable GitHub Pages</li>
+                                <li>Share your live URL!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 15: Closing -->
+            <section class="closing-slide">
+                <h2>Questions?</h2>
+                
+                <div class="closing-content">
+                    <p><strong>GitHub's Four Roles:</strong></p>
+                    <ul style="font-size: 0.7em; text-align: left;">
+                        <li>🔄 <strong>Version Control</strong> — Track every change</li>
+                        <li>☁️ <strong>Backup</strong> — Safe in the cloud</li>
+                        <li>🌐 <strong>Hosting</strong> — Live website with Pages</li>
+                        <li>👥 <strong>Collaboration</strong> — Public, transparent, citable</li>
                     </ul>
                 </div>
-
-                <div class="resource-box">
-                    <h3>🛠️ Practice</h3>
-                    <ul>
-                        <li><strong>HW6:</strong> HTML Portfolio Structure</li>
-                        <li><strong>HW7:</strong> CSS Portfolio Styling</li>
-                        <li><strong>HW8:</strong> Portfolio Deployment</li>
-                    </ul>
+                
+                <div class="key-insight" style="margin-top: 1em; font-size: 0.75em;">
+                    <p>GitHub isn't just a tool—it's the <strong>foundation</strong> that enables collaborative, versioned, public code.</p>
                 </div>
+                
+                <p class="next-steps">Next: Setting up your portfolio repository</p>
+            </section>
 
-                <div class="resource-box">
-                    <h3>💬 Support</h3>
-                    <ul>
-                        <li>Office hours for technical help</li>
-                        <li>Peer collaboration encouraged</li>
-                        <li>GitHub documentation is extensive</li>
-                    </ul>
-                </div>
-
-                <div class="resource-box">
-                    <h3>🎨 Preview</h3>
-                    <ul>
-                        <li><strong>Next Session:</strong> CSS Styling</li>
-                        <li>Making your portfolio beautiful</li>
-                        <li>Layout, typography, color theory</li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 
-    <!-- Slide 16: Reflection -->
-    <div class="slide-container">
-        <div class="slide">
-            <h2>Reflection Question</h2>
-            
-            <div class="reflection-prompt">
-                <div class="prompt-box">
-                    <p>"How does making your code public change the way you write it?"</p>
-                    <p style="margin-top: 1.5rem; font-size: 1.3rem;">"What does 'public scholarship' mean in the context of digital humanities?"</p>
-                </div>
-            </div>
-
-            <div class="key-point" style="margin-top: 3rem;">
-                <p><strong>Consider:</strong></p>
-                <ul style="text-align: left; max-width: 700px; margin: 1rem auto; font-size: 1.2rem;">
-                    <li>Does knowing others can see your code make you more careful?</li>
-                    <li>Is GitHub's default "public" setting empowering or concerning?</li>
-                    <li>What's the difference between open-source code and public scholarship?</li>
-                    <li>Who benefits from making academic work publicly accessible?</li>
-                </ul>
-            </div>
-
-            <div class="transition-next">
-                <p>Your portfolio is now live infrastructure—code that has become culture</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <div class="inter-lecture-nav">
-        <div class="lecture-nav">
-            <a href="../../../index.html" class="lecture-nav-btn series-home">Mini-Lectures Home</a>
-        </div>
-    </div>
-
-    <div class="navigation-container">
-        <div class="navigation">
-            <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">◄</button>
-            <span class="nav-counter"><span id="currentSlide">1</span> / <span id="totalSlides">15</span></span>
-            <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">►</button>
-        </div>
-    </div>
-
+    <!-- Reveal.js Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide-container');
-        const totalSlides = slides.length;
-
-        document.getElementById('totalSlides').textContent = totalSlides;
-
-        function showSlide(n) {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (n + totalSlides) % totalSlides;
-            slides[currentSlide].classList.add('active');
-            document.getElementById('currentSlide').textContent = currentSlide + 1;
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            showSlideNumber: 'all',
+            controls: true,
+            progress: true,
+            center: false,  // Disable centering to allow scroll
+            transition: 'slide',
             
-            // Update button states
-            document.getElementById('prevBtn').disabled = currentSlide === 0;
-            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
-        }
-
-        function changeSlide(direction) {
-            showSlide(currentSlide + direction);
-        }
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') changeSlide(-1);
-            if (e.key === 'ArrowRight') changeSlide(1);
+            // Enable scrolling within slides
+            disableLayout: false,
+            
+            plugins: [RevealHighlight, RevealNotes]
         });
-
-        // Initialize
-        showSlide(0);
-    </script>
-
-    <script>
-        // P5.js animation for Slide 1 - GitHub workflow visualization
-        let sketch = function(p) {
-            let nodes = [];
-            let commits = [];
-            
-            p.setup = function() {
-                let canvas = p.createCanvas(500, 300);
-                canvas.parent('github-animation');
-                
-                // Create 3 main nodes representing: Local, GitHub, Web
-                nodes.push({x: 100, y: 150, label: 'Local', color: [116, 185, 255]});
-                nodes.push({x: 250, y: 150, label: 'GitHub', color: [9, 132, 227]});
-                nodes.push({x: 400, y: 150, label: 'Live Site', color: [108, 92, 231]});
-            };
-            
-            p.draw = function() {
-                p.background(44, 62, 80);
-                
-                // Draw connections between nodes
-                p.stroke(116, 185, 255, 100);
-                p.strokeWeight(2);
-                p.line(nodes[0].x, nodes[0].y, nodes[1].x, nodes[1].y);
-                p.line(nodes[1].x, nodes[1].y, nodes[2].x, nodes[2].y);
-                
-                // Animated "commit" traveling across
-                if (p.frameCount % 120 === 0) {
-                    commits.push({
-                        progress: 0,
-                        stage: 0 // 0: local->github, 1: github->web
-                    });
-                }
-                
-                // Update and draw commits
-                for (let i = commits.length - 1; i >= 0; i--) {
-                    let commit = commits[i];
-                    commit.progress += 0.02;
-                    
-                    if (commit.stage === 0) {
-                        // Moving from Local to GitHub
-                        let x = p.lerp(nodes[0].x, nodes[1].x, commit.progress);
-                        let y = p.lerp(nodes[0].y, nodes[1].y, commit.progress);
-                        
-                        p.noStroke();
-                        p.fill(116, 185, 255);
-                        p.circle(x, y, 8);
-                        
-                        if (commit.progress >= 1) {
-                            commit.progress = 0;
-                            commit.stage = 1;
-                        }
-                    } else if (commit.stage === 1) {
-                        // Moving from GitHub to Live Site
-                        let x = p.lerp(nodes[1].x, nodes[2].x, commit.progress);
-                        let y = p.lerp(nodes[1].y, nodes[2].y, commit.progress);
-                        
-                        p.noStroke();
-                        p.fill(108, 92, 231);
-                        p.circle(x, y, 8);
-                        
-                        if (commit.progress >= 1) {
-                            commits.splice(i, 1);
-                        }
-                    }
-                }
-                
-                // Draw nodes
-                for (let i = 0; i < nodes.length; i++) {
-                    let node = nodes[i];
-                    
-                    // Special folder icon for "Local"
-                    if (node.label === 'Local') {
-                        // Draw folder shape
-                        p.noStroke();
-                        p.fill(node.color[0], node.color[1], node.color[2]);
-                        
-                        // Folder tab
-                        p.beginShape();
-                        p.vertex(node.x - 25, node.y - 15);
-                        p.vertex(node.x - 15, node.y - 15);
-                        p.vertex(node.x - 10, node.y - 20);
-                        p.vertex(node.x + 10, node.y - 20);
-                        p.vertex(node.x + 15, node.y - 15);
-                        p.endShape(p.CLOSE);
-                        
-                        // Folder body
-                        p.rect(node.x - 25, node.y - 15, 50, 30, 0, 0, 5, 5);
-                        
-                        // Folder details (lines to show files inside)
-                        p.stroke(44, 62, 80);
-                        p.strokeWeight(1.5);
-                        p.line(node.x - 15, node.y - 5, node.x + 15, node.y - 5);
-                        p.line(node.x - 15, node.y, node.x + 10, node.y);
-                        p.line(node.x - 15, node.y + 5, node.x + 12, node.y + 5);
-                    } else {
-                        // Draw circle for GitHub and Live Site
-                        p.noStroke();
-                        p.fill(node.color[0], node.color[1], node.color[2]);
-                        p.circle(node.x, node.y, 60);
-                    }
-                    
-                    // Node label
-                    p.fill(255);
-                    p.textAlign(p.CENTER, p.CENTER);
-                    p.textSize(12);
-                    p.textStyle(p.BOLD);
-                    p.text(node.label, node.x, node.y + 25);
-                }
-                
-                // Draw arrows
-                p.stroke(116, 185, 255, 150);
-                p.strokeWeight(2);
-                p.fill(116, 185, 255, 150);
-                
-                // Arrow 1: Local -> GitHub
-                p.push();
-                p.translate(175, 150);
-                p.rotate(0);
-                p.triangle(-5, -5, -5, 5, 0, 0);
-                p.pop();
-                
-                // Arrow 2: GitHub -> Live Site
-                p.push();
-                p.translate(325, 150);
-                p.rotate(0);
-                p.triangle(-5, -5, -5, 5, 0, 0);
-                p.pop();
-            };
-        };
-        
-        new p5(sketch);
-    </script>
-
-    <script>
-        // P5.js animation for Slide 3 - Version Control timeline
-        let versionSketch = function(p) {
-            let commits = [];
-            let timelineY = 50;
-            let currentCommit = 0;
-            
-            p.setup = function() {
-                let canvas = p.createCanvas(400, 400);
-                canvas.parent('version-control-animation');
-                
-                // Create commit history
-                commits = [
-                    {x: 50, y: timelineY, time: '10:00', msg: 'Initial commit', color: [116, 185, 255]},
-                    {x: 120, y: timelineY, time: '10:15', msg: 'Add navigation', color: [116, 185, 255]},
-                    {x: 190, y: timelineY, time: '10:45', msg: 'Style header', color: [116, 185, 255]},
-                    {x: 260, y: timelineY, time: '11:20', msg: 'Fix layout bug', color: [46, 204, 113]},
-                    {x: 330, y: timelineY, time: '11:50', msg: 'Add footer', color: [116, 185, 255]}
-                ];
-            };
-            
-            p.draw = function() {
-                p.background(44, 62, 80);
-                
-                // Draw timeline
-                p.stroke(116, 185, 255, 100);
-                p.strokeWeight(3);
-                p.line(30, timelineY, 370, timelineY);
-                
-                // Animate through commits
-                currentCommit = p.floor((p.frameCount / 60) % commits.length);
-                
-                // Draw all commits
-                for (let i = 0; i < commits.length; i++) {
-                    let commit = commits[i];
-                    let isActive = i === currentCommit;
-                    
-                    // Draw commit dot
-                    p.noStroke();
-                    if (isActive) {
-                        p.fill(commit.color[0], commit.color[1], commit.color[2], 255);
-                        // Pulse effect
-                        let pulseSize = 18 + p.sin(p.frameCount * 0.1) * 3;
-                        p.circle(commit.x, commit.y, pulseSize);
-                        
-                        // Highlight ring
-                        p.noFill();
-                        p.stroke(commit.color[0], commit.color[1], commit.color[2], 100);
-                        p.strokeWeight(2);
-                        p.circle(commit.x, commit.y, pulseSize + 10);
-                    } else {
-                        p.fill(commit.color[0], commit.color[1], commit.color[2], i < currentCommit ? 200 : 100);
-                        p.circle(commit.x, commit.y, 12);
-                    }
-                    
-                    // Draw time label
-                    p.fill(isActive ? 255 : 200);
-                    p.noStroke();
-                    p.textAlign(p.CENTER);
-                    p.textSize(10);
-                    p.text(commit.time, commit.x, commit.y - 25);
-                }
-                
-                // Draw current commit details
-                let activeCommit = commits[currentCommit];
-                p.fill(255);
-                p.textAlign(p.CENTER);
-                p.textSize(14);
-                p.textStyle(p.BOLD);
-                p.text('Current Commit:', 200, 120);
-                
-                p.textSize(16);
-                p.fill(116, 185, 255);
-                p.text('"' + activeCommit.msg + '"', 200, 150);
-                
-                // Show code diff visualization
-                p.textAlign(p.LEFT);
-                p.textSize(12);
-                p.textStyle(p.NORMAL);
-                
-                // Simulated code changes
-                p.fill(231, 76, 60, 150); // Red for removed
-                p.rect(50, 180, 300, 25, 4);
-                p.fill(255);
-                p.text('- <div class="old-header">', 60, 198);
-                
-                p.fill(46, 204, 113, 150); // Green for added
-                p.rect(50, 210, 300, 25, 4);
-                p.fill(255);
-                p.text('+ <nav class="navigation">', 60, 228);
-                
-                // Timeline indicator
-                p.fill(200);
-                p.textAlign(p.CENTER);
-                p.textSize(11);
-                p.text('← Earlier                                Later →', 200, 280);
-                
-                // Info text
-                p.textSize(10);
-                p.fill(150);
-                p.textAlign(p.CENTER);
-                p.text('Every change is tracked with:', 200, 320);
-                p.text('✓ Timestamp  ✓ Message  ✓ Author', 200, 340);
-                p.text('✓ What changed (diff)', 200, 360);
-            };
-        };
-        
-        new p5(versionSketch);
-    </script>
-
-    <script>
-        // P5.js animation for Slide 5 - GitHub Pages hosting
-        let hostingSketch = function(p) {
-            let repoNode = {x: 100, y: 200};
-            let serverNode = {x: 300, y: 200};
-            let browsers = [
-                {x: 500, y: 120},
-                {x: 500, y: 200},
-                {x: 500, y: 280}
-            ];
-            let deploys = [];
-            
-            p.setup = function() {
-                let canvas = p.createCanvas(600, 400);
-                canvas.parent('github-pages-animation');
-            };
-            
-            p.draw = function() {
-                p.background(44, 62, 80);
-                
-                // Draw connections
-                p.stroke(116, 185, 255, 100);
-                p.strokeWeight(3);
-                // Repo to Server
-                p.line(repoNode.x + 35, repoNode.y, serverNode.x - 30, serverNode.y);
-                
-                // Server to all 3 browsers (branching lines)
-                p.stroke(46, 204, 113, 100);
-                for (let browser of browsers) {
-                    p.line(serverNode.x + 30, serverNode.y, browser.x - 40, browser.y);
-                }
-                
-                // Animated "deploy" traveling across
-                if (p.frameCount % 120 === 0) {
-                    deploys.push({
-                        progress: 0,
-                        stage: 0, // 0: repo->server, 1: server->browsers
-                        targetBrowser: -1
-                    });
-                }
-                
-                // Update and draw deploys
-                for (let i = deploys.length - 1; i >= 0; i--) {
-                    let deploy = deploys[i];
-                    deploy.progress += 0.015;
-                    
-                    if (deploy.stage === 0) {
-                        // Moving from Repository to GitHub Pages
-                        let x = p.lerp(repoNode.x + 35, serverNode.x - 30, deploy.progress);
-                        let y = repoNode.y;
-                        
-                        p.noStroke();
-                        p.fill(108, 92, 231);
-                        p.circle(x, y, 10);
-                        
-                        // Label
-                        p.fill(108, 92, 231);
-                        p.textAlign(p.CENTER);
-                        p.textSize(9);
-                        p.text('building...', x, y - 15);
-                        
-                        if (deploy.progress >= 1) {
-                            deploy.progress = 0;
-                            deploy.stage = 1;
-                        }
-                    } else if (deploy.stage === 1) {
-                        // Moving from GitHub Pages to all 3 browsers simultaneously
-                        for (let j = 0; j < browsers.length; j++) {
-                            let browser = browsers[j];
-                            let x = p.lerp(serverNode.x + 30, browser.x - 40, deploy.progress);
-                            let y = p.lerp(serverNode.y, browser.y, deploy.progress);
-                            
-                            p.noStroke();
-                            p.fill(46, 204, 113);
-                            p.circle(x, y, 8);
-                        }
-                        
-                        if (deploy.progress >= 1) {
-                            deploys.splice(i, 1);
-                        }
-                    }
-                }
-                
-                // Draw Repository folder
-                p.noStroke();
-                p.fill(116, 185, 255);
-                
-                // Folder tab
-                p.beginShape();
-                p.vertex(repoNode.x - 30, repoNode.y - 20);
-                p.vertex(repoNode.x - 15, repoNode.y - 20);
-                p.vertex(repoNode.x - 10, repoNode.y - 27);
-                p.vertex(repoNode.x + 10, repoNode.y - 27);
-                p.vertex(repoNode.x + 15, repoNode.y - 20);
-                p.endShape(p.CLOSE);
-                
-                // Folder body
-                p.rect(repoNode.x - 30, repoNode.y - 20, 60, 40, 0, 0, 5, 5);
-                
-                // File lines inside
-                p.stroke(44, 62, 80);
-                p.strokeWeight(1.5);
-                p.line(repoNode.x - 20, repoNode.y - 8, repoNode.x + 20, repoNode.y - 8);
-                p.line(repoNode.x - 20, repoNode.y, repoNode.x + 15, repoNode.y);
-                p.line(repoNode.x - 20, repoNode.y + 8, repoNode.x + 18, repoNode.y + 8);
-                
-                // Label
-                p.noStroke();
-                p.fill(255);
-                p.textAlign(p.CENTER);
-                p.textSize(12);
-                p.textStyle(p.BOLD);
-                p.text('Local Repository', repoNode.x, repoNode.y + 45);
-                
-                // Draw GitHub Pages server
-                p.noStroke();
-                p.fill(9, 132, 227);
-                p.circle(serverNode.x, serverNode.y, 60);
-                
-                // Server details
-                p.fill(255);
-                p.textAlign(p.CENTER, p.CENTER);
-                p.textSize(10);
-                p.textStyle(p.BOLD);
-                p.text('Pages', serverNode.x, serverNode.y);
-                
-                // Label
-                p.fill(255);
-                p.textAlign(p.CENTER);
-                p.textSize(12);
-                p.textStyle(p.BOLD);
-                p.text('GitHub / GH Pages', serverNode.x, serverNode.y + 45);
-                
-                // Draw 3 browser windows (stacked)
-                for (let browser of browsers) {
-                    // Draw browser window
-                    p.noStroke();
-                    p.fill(46, 204, 113);
-                    p.rect(browser.x - 35, browser.y - 25, 70, 50, 6);
-                    
-                    // Browser chrome
-                    p.fill(44, 62, 80);
-                    p.rect(browser.x - 33, browser.y - 23, 66, 8, 4, 4, 0, 0);
-                    
-                    // Content area
-                    p.fill(255);
-                    p.rect(browser.x - 30, browser.y - 10, 60, 30, 2);
-                    
-                    // Lines representing content
-                    p.fill(46, 204, 113);
-                    p.rect(browser.x - 25, browser.y - 5, 50, 3, 1);
-                    p.rect(browser.x - 25, browser.y + 2, 35, 3, 1);
-                    p.rect(browser.x - 25, browser.y + 9, 45, 3, 1);
-                }
-                
-                // Shared label for all browsers
-                p.fill(255);
-                p.textAlign(p.CENTER);
-                p.textSize(12);
-                p.textStyle(p.BOLD);
-                p.text('Site Visitors', browsers[1].x, browsers[2].y + 45);
-                
-                // Draw arrows
-                p.stroke(116, 185, 255, 150);
-                p.strokeWeight(2);
-                p.fill(116, 185, 255, 150);
-                
-                // Arrow: Repository -> GitHub Pages
-                p.push();
-                p.translate(200, 200);
-                p.rotate(0);
-                p.triangle(-5, -5, -5, 5, 0, 0);
-                p.pop();
-                
-                // Arrows: GitHub Pages -> Browsers
-                p.fill(46, 204, 113, 150);
-                p.stroke(46, 204, 113, 150);
-                for (let browser of browsers) {
-                    p.push();
-                    let arrowX = p.lerp(serverNode.x + 30, browser.x - 40, 0.5);
-                    let arrowY = p.lerp(serverNode.y, browser.y, 0.5);
-                    p.translate(arrowX, arrowY);
-                    let angle = p.atan2(browser.y - serverNode.y, browser.x - serverNode.x);
-                    p.rotate(angle);
-                    p.triangle(0, 0, -8, -4, -8, 4);
-                    p.pop();
-                }
-                
-                // Top status text
-                p.fill(200);
-                p.textAlign(p.CENTER);
-                p.textSize(11);
-                p.textStyle(p.NORMAL);
-                p.text('One Repository → Accessible to All Visitors', 300, 30);
-                
-                // Bottom URL
-                p.fill(150);
-                p.textSize(10);
-                p.text('username.github.io/portfolio', 300, 370);
-            };
-        };
-        
-        new p5(hostingSketch);
-    </script>
-
-    <script>
-        // P5.js animation for Slide 9 - Collaboration
-        let collaborationSketch = function(p) {
-            let repo = {x: 300, y: 150};
-            let users = [];
-            let actions = []; // Both pushes and pulls
-            let time = 0;
-            
-            p.setup = function() {
-                let canvas = p.createCanvas(600, 300);
-                canvas.parent('collaboration-animation');
-                
-                // Create 3 users positioned around the repository
-                users = [
-                    {
-                        x: 100, 
-                        y: 150, 
-                        color: [255, 107, 53],
-                        lastAction: -60,
-                        name: 'Alice'
-                    },
-                    {
-                        x: 300, 
-                        y: 50, 
-                        color: [100, 181, 246],
-                        lastAction: -40,
-                        name: 'Bob'
-                    },
-                    {
-                        x: 500, 
-                        y: 150, 
-                        color: [129, 199, 132],
-                        lastAction: -80,
-                        name: 'Carol'
-                    }
-                ];
-            };
-            
-            p.draw = function() {
-                p.background(26, 26, 46);
-                time++;
-                
-                // Draw repository in center
-                p.noStroke();
-                p.fill(0, 212, 255);
-                p.circle(repo.x, repo.y, 80);
-                
-                p.fill(26, 26, 46);
-                p.textAlign(p.CENTER, p.CENTER);
-                p.textSize(12);
-                p.textStyle(p.BOLD);
-                p.text('Repository', repo.x, repo.y);
-                
-                // Trigger random push or pull
-                if (p.frameCount % 50 === 0) {
-                    let user = users[p.floor(p.random(users.length))];
-                    let isPush = p.random() > 0.5; // 50/50 push or pull
-                    
-                    if (isPush) {
-                        // Push: user → repo
-                        actions.push({
-                            startX: user.x,
-                            startY: user.y,
-                            endX: repo.x,
-                            endY: repo.y,
-                            progress: 0,
-                            color: user.color,
-                            type: 'push',
-                            label: 'push'
-                        });
-                    } else {
-                        // Pull: repo → user
-                        actions.push({
-                            startX: repo.x,
-                            startY: repo.y,
-                            endX: user.x,
-                            endY: user.y,
-                            progress: 0,
-                            color: user.color,
-                            type: 'pull',
-                            label: 'pull'
-                        });
-                    }
-                    user.lastAction = time;
-                }
-                
-                // Update and draw actions (pushes and pulls)
-                for (let i = actions.length - 1; i >= 0; i--) {
-                    let action = actions[i];
-                    action.progress += 0.025;
-                    
-                    let x = p.lerp(action.startX, action.endX, action.progress);
-                    let y = p.lerp(action.startY, action.endY, action.progress);
-                    
-                    // Draw action dot
-                    p.noStroke();
-                    p.fill(action.color[0], action.color[1], action.color[2]);
-                    p.circle(x, y, 10);
-                    
-                    // Draw label
-                    p.fill(action.color[0], action.color[1], action.color[2]);
-                    p.textSize(9);
-                    p.textStyle(p.BOLD);
-                    p.text(action.label, x, y - 15);
-                    
-                    if (action.progress >= 1) {
-                        actions.splice(i, 1);
-                    }
-                }
-                
-                // Draw users
-                for (let user of users) {
-                    // Connection line to repo
-                    p.stroke(user.color[0], user.color[1], user.color[2], 30);
-                    p.strokeWeight(2);
-                    p.line(user.x, user.y, repo.x, repo.y);
-                    
-                    // User icon
-                    p.noStroke();
-                    p.fill(user.color[0], user.color[1], user.color[2]);
-                    p.circle(user.x, user.y, 45);
-                    
-                    // User emoji
-                    p.textSize(22);
-                    p.text('👤', user.x, user.y - 2);
-                    
-                    // User name
-                    p.fill(255);
-                    p.textSize(12);
-                    p.textStyle(p.NORMAL);
-                    p.text(user.name, user.x, user.y + 35);
-                    
-                    // Activity pulse
-                    if (time - user.lastAction < 25) {
-                        p.noFill();
-                        p.stroke(user.color[0], user.color[1], user.color[2], 150);
-                        p.strokeWeight(2);
-                        let pulseSize = 45 + p.sin((time - user.lastAction) * 0.3) * 6;
-                        p.circle(user.x, user.y, pulseSize);
-                    }
-                }
-                
-                // Info text
-                p.fill(200);
-                p.textAlign(p.CENTER);
-                p.textSize(11);
-                p.textStyle(p.NORMAL);
-                p.text('🔼 Push: Send your changes to repository', 300, 240);
-                p.text('🔽 Pull: Get latest changes from repository', 300, 255);
-                
-                // Public indicator
-                p.fill(0, 255, 0);
-                p.textSize(10);
-                p.textStyle(p.BOLD);
-                p.text('🌐 ALL ACTIVITY VISIBLE TO PUBLIC', 300, 280);
-            };
-        };
-        
-        new p5(collaborationSketch);
     </script>
 </body>
 </html>
-```
