@@ -7,7 +7,7 @@
 
 ## The Task
 
-Experiment with AI in ways that go beyond typical productivity uses. Your goal is to probe, question, or creatively misuse these tools—not to get a "good" output, but to learn something about how they work, what they assume, and where they break down.
+Experiment with AI in ways that go beyond typical productivity uses. Your goal is to probe, question, or creatively stretch these tools—not to get a "good" output, but to learn something about how they work, what they assume, and where they break down.
 
 ### Requirements
 
@@ -24,8 +24,14 @@ These are suggestions, not requirements. You may pursue something else entirely.
 - **Probe for assumptions:** What does the tool assume about you, your task, or "good" output? How do those assumptions surface?
 - **Find the edges:** Where does the tool fail, refuse, or produce nonsense? What triggers those moments?
 - **Compare responses:** Give multiple tools the same unusual prompt. What differs? What does that reveal?
-- **Misuse deliberately:** Use a tool for something it clearly wasn't built for. What happens?
+- **Stretch creatively:** Use a tool for something it clearly wasn't built for. What happens?
 - **Interrogate the interface:** How does the tool's design shape what you can ask and how you ask it?
+
+### A Note on Boundaries
+
+This assignment asks you to probe and experiment—but within professional and academic norms. Your experiments and documentation should be appropriate for a classroom setting and a public portfolio. Testing a tool's content moderation by attempting to generate explicit, hateful, or illegal content is not the kind of "edge-finding" this assignment values or your instructors will accept.
+
+Remember: your reflection will be published to your public portfolio. Document experiments you'd be comfortable sharing with future employers or graduate programs.
 
 ---
 
