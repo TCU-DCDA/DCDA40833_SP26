@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 2: AI Tool Evaluation | DCDA 40833</title>
+    <title>Lab 2: AI Experimentation & Evaluation | DCDA 40833</title>
     <link rel="stylesheet" href="../lab-styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Tab Styles */
+        .approach-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .approach-tab {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+        .approach-tab:hover {
+            color: #333;
+            background: #eee;
+            border-color: #ccc;
+        }
+        .approach-tab.active {
+            color: #fff;
+            background: #C1272D;
+            border-color: #C1272D;
+        }
+        .approach-tab .tab-label {
+            display: block;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .approach-tab .tab-desc {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        .approach-tab.active .tab-desc {
+            opacity: 0.85;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .approach-intro {
+            background: #f8f9fa;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #C1272D;
+        }
+        .approach-intro p {
+            margin: 0;
+            color: #555;
+        }
+        @media (max-width: 600px) {
+            .approach-tabs {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .approach-tab {
+                text-align: left;
+                padding: 1.25rem 1.5rem;
+            }
+            .approach-tab .tab-label {
+                font-size: 1.1rem;
+            }
+            .approach-tab.active {
+                color: #fff;
+                background: #C1272D;
+                border-color: #C1272D;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="lab-page-container">
@@ -31,7 +112,7 @@
             <!-- Lab Brand -->
             <div class="lab-brand">
                 <div class="lab-number">Lab 02</div>
-                <p class="lab-designation">AI Evaluation</p>
+                <p class="lab-designation">AI Experimentation</p>
             </div>
 
             <!-- Navigation -->
@@ -42,19 +123,36 @@
                 </a>
             </nav>
 
-            <!-- Jump Menu -->
-            <div class="jump-menu">
+            <!-- Jump Menu - Framework -->
+            <div class="jump-menu" id="jump-menu-framework">
                 <h3>Jump To</h3>
                 <nav>
                     <ul>
                         <li><a href="#overview">Overview</a></li>
-                        <li><a href="#part1">Part 1: Evaluation Framework</a></li>
-                        <li><a href="#part2">Part 2: Hands-On Exploration</a></li>
-                        <li><a href="#part3">Part 3: Reflection & Analysis</a></li>
-                        <li><a href="#part4">Part 4: Portfolio Page</a></li>
-                        <li><a href="#submission">Submission</a></li>
+                        <li><a href="#part1">Evaluation Framework</a></li>
+                        <li><a href="#part2">Hands-On Exploration</a></li>
+                        <li><a href="#part3">Reflection & Analysis</a></li>
+                        <li><a href="#part4">Portfolio Page</a></li>
+                        <li><a href="#submission-a">Submission</a></li>
                         <li><a href="#resources">Resources</a></li>
-                        <li><a href="#looking-ahead">Looking Ahead</a></li>
+                        <li><a href="#looking-ahead-a">Looking Ahead</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Jump Menu - Experimentation -->
+            <div class="jump-menu" id="jump-menu-experiment" style="display: none;">
+                <h3>Jump To</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#task">The Task</a></li>
+                        <li><a href="#directions">Possible Directions</a></li>
+                        <li><a href="#tools">Tools to Consider</a></li>
+                        <li><a href="#reflection">Your Reflection</a></li>
+                        <li><a href="#ethics">Ethical Considerations</a></li>
+                        <li><a href="#portfolio">Portfolio Page</a></li>
+                        <li><a href="#submission-b">Submission</a></li>
+                        <li><a href="#looking-ahead-b">Looking Ahead</a></li>
                     </ul>
                 </nav>
             </div>
@@ -66,8 +164,8 @@
     <!-- Hero Section -->
     <header class="lab-hero" style="background-image: url('images/lab02.png')">
         <div class="lab-hero-content">
-            <h1>Evaluating AI Tools</h1>
-            <p class="lab-subtitle">Building an Evergreen Framework for Critical Assessment</p>
+            <h1>AI Experimentation & Evaluation</h1>
+            <p class="lab-subtitle">Choose Your Approach</p>
         </div>
     </header>
 
@@ -76,165 +174,388 @@
 
         <main class="lab-content">
 
-        <!-- Overview -->
-        <section class="overview" id="overview">
-            <h2>Overview</h2>
-            <p>AI tools are rapidly reshaping how we create, analyze, and communicate. In this lab, you will explore and critically evaluate AI tools relevant to your work as a DCDA student — including text generation, image creation, and code assistance. The goal is not to master any single tool, but to develop a <strong>framework for evaluation</strong> that you can apply as tools evolve.</p>
-        </section>
+        <!-- Approach Selector -->
+        <section id="approach-selector">
+            <h2>Select Your Approach</h2>
+            <p>This lab offers two paths to the same destination: developing critical perspective on AI tools. Choose the approach that fits your learning style.</p>
 
-        <!-- Part 1 -->
-        <section id="part1">
-            <h2>Part 1: The Evaluation Framework</h2>
-            <p>When assessing any AI tool, consider these dimensions:</p>
-
-            <div class="concept-box">
-                <h4>Capabilities</h4>
-                <ul>
-                    <li>What can this tool do well?</li>
-                    <li>What are its limitations (what it can't do, or does poorly)?</li>
-                    <li>How does output quality vary based on input/prompting?</li>
-                </ul>
-            </div>
-
-            <div class="concept-box">
-                <h4>Appropriate Use</h4>
-                <ul>
-                    <li>What tasks is this tool well-suited for?</li>
-                    <li>When might using this tool be inappropriate or counterproductive?</li>
-                    <li>How does it fit into a larger workflow (not replacing human judgment)?</li>
-                </ul>
-            </div>
-
-            <div class="concept-box">
-                <h4>Ethical Considerations</h4>
-                <ul>
-                    <li>How was the tool trained? On what data?</li>
-                    <li>What biases might be present in its outputs?</li>
-                    <li>What are the implications for intellectual property, attribution, and authenticity?</li>
-                    <li>What safeguards exist, and what gaps remain?</li>
-                </ul>
-            </div>
-
-            <div class="concept-box">
-                <h4>Transparency & Citation</h4>
-                <ul>
-                    <li>How do you disclose AI use in your work?</li>
-                    <li>What does proper attribution look like?</li>
-                    <li>How do you verify/fact-check AI-generated content?</li>
-                </ul>
+            <div class="approach-tabs">
+                <button class="approach-tab active" data-tab="framework">
+                    <span class="tab-label">Option A: Framework</span>
+                    <span class="tab-desc">Structured evaluation with guided dimensions</span>
+                </button>
+                <button class="approach-tab" data-tab="experiment">
+                    <span class="tab-label">Option B: Experimentation</span>
+                    <span class="tab-desc">Open-ended exploration and probing</span>
+                </button>
             </div>
         </section>
 
-        <!-- Part 2 -->
-        <section id="part2">
-            <h2>Part 2: Hands-On Exploration</h2>
-            <p>Choose <strong>at least two AI tools</strong> from different categories to explore. At least one should be a tool you haven't used before — this is your chance to discover something new and bring fresh perspective to your evaluation.</p>
+        <!-- ==================== OPTION A: FRAMEWORK ==================== -->
+        <div class="tab-content active" id="content-framework">
 
-            <h3>Tool Categories</h3>
-            <p>AI tools span many domains. Consider exploring tools from categories like:</p>
+            <div class="approach-intro">
+                <p><strong>Framework Approach:</strong> You'll develop a structured evaluation framework with four dimensions (Capabilities, Appropriate Use, Ethics, Transparency) and apply it systematically to AI tools.</p>
+            </div>
 
-            <ul>
-                <li><strong>Text/Chat Assistants</strong> — <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, <a href="https://claude.ai/" target="_blank">Claude</a>, <a href="https://gemini.google.com/" target="_blank">Gemini</a>, <a href="https://www.perplexity.ai/" target="_blank">Perplexity</a>, <a href="https://grok.com/" target="_blank">Grok</a></li>
-                <li><strong>Image Generation</strong> — <a href="https://www.adobe.com/products/firefly.html" target="_blank">Adobe Firefly</a>, <a href="https://www.midjourney.com/" target="_blank">Midjourney</a>, <a href="https://stability.ai/" target="_blank">Stable Diffusion</a>, <a href="https://leonardo.ai/" target="_blank">Leonardo.AI</a></li>
-                <li><strong>Code Assistance</strong> — <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a>, <a href="https://cursor.sh/" target="_blank">Cursor</a>, <a href="https://replit.com/" target="_blank">Replit AI</a>, <a href="https://aws.amazon.com/codewhisperer/" target="_blank">Amazon CodeWhisperer</a></li>
-                <li><strong>Writing & Research</strong> — <a href="https://www.grammarly.com/" target="_blank">Grammarly</a>, <a href="https://notebooklm.google.com/" target="_blank">NotebookLM</a>, <a href="https://elicit.com/" target="_blank">Elicit</a>, <a href="https://consensus.app/" target="_blank">Consensus</a></li>
-                <li><strong>Audio & Voice</strong> — <a href="https://suno.com/" target="_blank">Suno</a>, <a href="https://elevenlabs.io/" target="_blank">ElevenLabs</a>, <a href="https://www.descript.com/" target="_blank">Descript</a>, <a href="https://podcast.adobe.com/" target="_blank">Adobe Podcast</a></li>
-                <li><strong>Video Production</strong> — <a href="https://openai.com/sora/" target="_blank">Sora</a>, <a href="https://runwayml.com/" target="_blank">Runway</a>, <a href="https://pika.art/" target="_blank">Pika</a></li>
-                <li><strong>Presentation & Design</strong> — <a href="https://www.canva.com/magic/" target="_blank">Canva Magic Studio</a>, <a href="https://tome.app/" target="_blank">Tome</a></li>
-            </ul>
+            <!-- Overview -->
+            <section class="overview" id="overview">
+                <h2>Overview</h2>
+                <p>AI tools are rapidly reshaping how we create, analyze, and communicate. In this lab, you will explore and critically evaluate AI tools relevant to your work as a DCDA student — including text generation, image creation, and code assistance. The goal is not to master any single tool, but to develop a <strong>framework for evaluation</strong> that you can apply as tools evolve.</p>
+            </section>
 
-            <p>All tools listed above have free tiers. You're welcome to explore tools not on this list — the AI landscape changes rapidly, and discovering emerging tools is part of developing your evaluation skills.</p>
+            <!-- Part 1 -->
+            <section id="part1">
+                <h2>Part 1: The Evaluation Framework</h2>
+                <p>When assessing any AI tool, consider these dimensions:</p>
 
-            <h3>Exploration Tasks</h3>
-            <p>For each tool you explore:</p>
-            <ol>
-                <li><strong>Test its capabilities</strong> — Give it tasks relevant to your interests or coursework</li>
-                <li><strong>Push its limits</strong> — Find where it struggles or fails</li>
-                <li><strong>Document your process</strong> — Save prompts, outputs, and observations</li>
-            </ol>
-        </section>
-
-        <!-- Part 3 -->
-        <section id="part3">
-            <h2>Part 3: Reflection & Analysis</h2>
-            <p>Write a <strong>500-750 word analysis</strong> addressing:</p>
-
-            <h3>For Each Tool You Explored:</h3>
-            <ol>
-                <li><strong>Capabilities:</strong> What did the tool do well? Where did it fall short? Include specific examples (screenshots, copied outputs, etc.)</li>
-                <li><strong>Appropriate Use:</strong> Based on your exploration, what would be a good use case for this tool? What would be a poor use case?</li>
-                <li><strong>Ethical Considerations:</strong> What concerns arise from using this tool? How is the developer addressing (or not addressing) these concerns?</li>
-            </ol>
-
-            <h3>Broader Questions:</h3>
-            <ol start="4">
-                <li><strong>Personal Use:</strong> How do you imagine using AI tools appropriately in your own academic and professional work?</li>
-                <li><strong>DCDA Context:</strong> How might AI tools affect the skills taught in the DCDA program — both positively and negatively? What remains uniquely human in digital culture and data analytics work?</li>
-                <li><strong>Evolving Landscape:</strong> These tools change rapidly. What questions should you ask when evaluating a <em>new</em> AI tool in the future?</li>
-            </ol>
-        </section>
-
-        <!-- Part 4 -->
-        <section id="part4">
-            <h2>Part 4: Create Portfolio Page</h2>
-            <p>Create a new HTML page in your portfolio called <code>lab02.html</code> that includes:</p>
-            <ul>
-                <li>Your 500-750 word analysis (addressing all prompts from Part 3)</li>
-                <li>Evidence of exploration (embedded screenshots, example outputs, or links)</li>
-                <li>Proper HTML structure and styling consistent with your portfolio</li>
-            </ul>
-            <p>Make sure to link this new page from your main portfolio <code>index.html</code> navigation.</p>
-        </section>
-
-        <!-- Submission -->
-        <section class="deliverables" id="submission">
-            <h2>Submission</h2>
-
-            <div class="checklist">
-                <div class="checklist-item">
-                    <input type="checkbox" id="check1">
-                    <label for="check1">Push your updated portfolio to your GitHub repository</label>
+                <div class="concept-box">
+                    <h4>Capabilities</h4>
+                    <ul>
+                        <li>What can this tool do well?</li>
+                        <li>What are its limitations (what it can't do, or does poorly)?</li>
+                        <li>How does output quality vary based on input/prompting?</li>
+                    </ul>
                 </div>
-                <div class="checklist-item">
-                    <input type="checkbox" id="check2">
-                    <label for="check2">Verify your GitHub Pages site displays the new AI evaluation page correctly</label>
+
+                <div class="concept-box">
+                    <h4>Appropriate Use</h4>
+                    <ul>
+                        <li>What tasks is this tool well-suited for?</li>
+                        <li>When might using this tool be inappropriate or counterproductive?</li>
+                        <li>How does it fit into a larger workflow (not replacing human judgment)?</li>
+                    </ul>
                 </div>
-                <div class="checklist-item">
-                    <input type="checkbox" id="check3">
-                    <label for="check3">Submit to D2L dropbox:
-                        <ul>
-                            <li>Link to your GitHub repository</li>
-                            <li>Link to your live GitHub Pages site</li>
-                        </ul>
-                    </label>
+
+                <div class="concept-box">
+                    <h4>Ethical Considerations</h4>
+                    <ul>
+                        <li>How was the tool trained? On what data?</li>
+                        <li>What biases might be present in its outputs?</li>
+                        <li>What are the implications for intellectual property, attribution, and authenticity?</li>
+                        <li>What safeguards exist, and what gaps remain?</li>
+                    </ul>
                 </div>
+
+                <div class="concept-box">
+                    <h4>Transparency & Citation</h4>
+                    <ul>
+                        <li>How do you disclose AI use in your work?</li>
+                        <li>What does proper attribution look like?</li>
+                        <li>How do you verify/fact-check AI-generated content?</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Part 2 -->
+            <section id="part2">
+                <h2>Part 2: Hands-On Exploration</h2>
+                <p>Choose <strong>at least two AI tools</strong> from different categories to explore. At least one should be a tool you haven't used before — this is your chance to discover something new and bring fresh perspective to your evaluation.</p>
+
+                <h3>Tool Categories</h3>
+                <p>AI tools span many domains. Consider exploring tools from categories like:</p>
+
+                <ul>
+                    <li><strong>Text/Chat Assistants</strong> — <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, <a href="https://claude.ai/" target="_blank">Claude</a>, <a href="https://gemini.google.com/" target="_blank">Gemini</a>, <a href="https://www.perplexity.ai/" target="_blank">Perplexity</a>, <a href="https://grok.com/" target="_blank">Grok</a></li>
+                    <li><strong>Image Generation</strong> — <a href="https://www.adobe.com/products/firefly.html" target="_blank">Adobe Firefly</a>, <a href="https://www.midjourney.com/" target="_blank">Midjourney</a>, <a href="https://stability.ai/" target="_blank">Stable Diffusion</a>, <a href="https://leonardo.ai/" target="_blank">Leonardo.AI</a></li>
+                    <li><strong>Writing & Research</strong> — <a href="https://www.grammarly.com/" target="_blank">Grammarly</a>, <a href="https://notebooklm.google.com/" target="_blank">NotebookLM</a>, <a href="https://elicit.com/" target="_blank">Elicit</a>, <a href="https://consensus.app/" target="_blank">Consensus</a></li>
+                    <li><strong>Audio & Voice</strong> — <a href="https://suno.com/" target="_blank">Suno</a>, <a href="https://elevenlabs.io/" target="_blank">ElevenLabs</a>, <a href="https://www.descript.com/" target="_blank">Descript</a>, <a href="https://podcast.adobe.com/" target="_blank">Adobe Podcast</a></li>
+                    <li><strong>Video Production</strong> — <a href="https://runwayml.com/" target="_blank">Runway</a>, <a href="https://pika.art/" target="_blank">Pika</a></li>
+                    <li><strong>Presentation & Design</strong> — <a href="https://www.canva.com/magic/" target="_blank">Canva Magic Studio</a>, <a href="https://tome.app/" target="_blank">Tome</a>, <a href="https://gamma.app/" target="_blank">Gamma</a></li>
+                </ul>
+
+                <p>All tools listed above have free tiers. You're welcome to explore tools not on this list — the AI landscape changes rapidly, and discovering emerging tools is part of developing your evaluation skills.</p>
+
+                <h3>Exploration Tasks</h3>
+                <p>For each tool you explore:</p>
+                <ol>
+                    <li><strong>Test its capabilities</strong> — Give it tasks relevant to your interests or coursework</li>
+                    <li><strong>Push its limits</strong> — Find where it struggles or fails</li>
+                    <li><strong>Document your process</strong> — Save prompts, outputs, and observations</li>
+                </ol>
+            </section>
+
+            <!-- Part 3 -->
+            <section id="part3">
+                <h2>Part 3: Reflection & Analysis</h2>
+                <p>Write a <strong>500-750 word analysis</strong> addressing:</p>
+
+                <h3>For Each Tool You Explored:</h3>
+                <ol>
+                    <li><strong>Capabilities:</strong> What did the tool do well? Where did it fall short? Include specific examples (screenshots, copied outputs, etc.)</li>
+                    <li><strong>Appropriate Use:</strong> Based on your exploration, what would be a good use case for this tool? What would be a poor use case?</li>
+                    <li><strong>Ethical Considerations:</strong> What concerns arise from using this tool? How is the developer addressing (or not addressing) these concerns?</li>
+                </ol>
+
+                <h3>Broader Questions:</h3>
+                <ol start="4">
+                    <li><strong>Personal Use:</strong> How do you imagine using AI tools appropriately in your own academic and professional work?</li>
+                    <li><strong>DCDA Context:</strong> How might AI tools affect the skills taught in the DCDA program — both positively and negatively? What remains uniquely human in digital culture and data analytics work?</li>
+                    <li><strong>Evolving Landscape:</strong> These tools change rapidly. What questions should you ask when evaluating a <em>new</em> AI tool in the future?</li>
+                </ol>
+            </section>
+
+            <!-- Part 4 -->
+            <section id="part4">
+                <h2>Part 4: Create Portfolio Page</h2>
+                <p>Create a new HTML page in your portfolio called <code>lab02.html</code> that includes:</p>
+                <ul>
+                    <li>Your 500-750 word analysis (addressing all prompts from Part 3)</li>
+                    <li>Evidence of exploration (embedded screenshots, example outputs, or links)</li>
+                    <li>Proper HTML structure and styling consistent with your portfolio</li>
+                </ul>
+                <p>Make sure to link this new page from your main portfolio <code>index.html</code> navigation.</p>
+            </section>
+
+            <!-- Submission -->
+            <section class="deliverables" id="submission-a">
+                <h2>Submission</h2>
+
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1a">
+                        <label for="check1a">Push your updated portfolio to your GitHub repository</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2a">
+                        <label for="check2a">Verify your GitHub Pages site displays the new AI evaluation page correctly</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3a">
+                        <label for="check3a">Submit to D2L dropbox:
+                            <ul>
+                                <li>Link to your GitHub repository</li>
+                                <li>Link to your live GitHub Pages site</li>
+                            </ul>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources -->
+            <section id="resources">
+                <h2>Resources</h2>
+                <p>Rather than linking to specific tools (which change frequently), here are strategies for staying current:</p>
+                <ul>
+                    <li>Search "[tool category] comparison [current year]" for up-to-date reviews</li>
+                    <li>Check tool documentation for current capabilities and limitations</li>
+                    <li>Look for academic or journalistic analysis of AI ethics and bias</li>
+                    <li>Review your institution's AI use policies</li>
+                </ul>
+
+                <div class="alert alert-info">
+                    <i data-lucide="book-open"></i>
+                    <div>
+                        <strong>Citation guidance:</strong> <a href="https://apastyle.apa.org/blog/how-to-cite-chatgpt" target="_blank">APA Style: How to Cite ChatGPT</a> (applies to other AI tools as well)
+                    </div>
+                </div>
+            </section>
+
+            <!-- Looking Ahead -->
+            <section class="looking-ahead" id="looking-ahead-a">
+                <h2>Looking Ahead</h2>
+                <p>The evaluation framework you develop here will serve you throughout the semester and beyond. As we integrate AI tools into later labs, you'll apply critical judgment about when and how to use them effectively.</p>
+            </section>
+
+        </div>
+
+        <!-- ==================== OPTION B: EXPERIMENTATION ==================== -->
+        <div class="tab-content" id="content-experiment">
+
+            <div class="approach-intro">
+                <p><strong>Experimentation Approach:</strong> You'll probe, question, and creatively stretch AI tools—focusing on what they reveal about themselves through unconventional use, failures, and surprises.</p>
             </div>
-        </section>
 
-        <!-- Resources -->
-        <section id="resources">
-            <h2>Resources</h2>
-            <p>Rather than linking to specific tools (which change frequently), here are strategies for staying current:</p>
-            <ul>
-                <li>Search "[tool category] comparison [current year]" for up-to-date reviews</li>
-                <li>Check tool documentation for current capabilities and limitations</li>
-                <li>Look for academic or journalistic analysis of AI ethics and bias</li>
-                <li>Review your institution's AI use policies</li>
-            </ul>
+            <!-- The Task -->
+            <section id="task">
+                <h2>The Task</h2>
+                <p>Experiment with AI in ways that go beyond typical productivity uses. Your goal is to <strong>probe, question, or creatively stretch</strong> these tools—not to get a "good" output, but to learn something about how they work, what they assume, and where they break down.</p>
 
-            <div class="alert alert-info">
-                <i data-lucide="book-open"></i>
-                <div>
-                    <strong>Citation guidance:</strong> <a href="https://apastyle.apa.org/blog/how-to-cite-chatgpt" target="_blank">APA Style: How to Cite ChatGPT</a> (applies to other AI tools as well)
+                <h3>Requirements</h3>
+                <ul>
+                    <li>Use <strong>at least two AI tools</strong>, at least one you haven't worked with before</li>
+                    <li>Try something unconventional—something the tool wasn't designed or marketed for</li>
+                    <li>Document your process, including dead ends, failures, and surprises</li>
+                </ul>
+            </section>
+
+            <!-- Possible Directions -->
+            <section id="directions">
+                <h2>Possible Directions</h2>
+                <p>These are suggestions, not requirements. You may pursue something else entirely.</p>
+
+                <div class="concept-box">
+                    <h4>Probe for Assumptions</h4>
+                    <p>What does the tool assume about you, your task, or "good" output? How do those assumptions surface?</p>
                 </div>
-            </div>
-        </section>
 
-        <!-- Looking Ahead -->
-        <section class="looking-ahead" id="looking-ahead">
-            <h2>Looking Ahead</h2>
-            <p>The evaluation framework you develop here will serve you throughout the semester and beyond. As we integrate AI tools into later labs, you'll apply critical judgment about when and how to use them effectively.</p>
-        </section>
+                <div class="concept-box">
+                    <h4>Find the Edges</h4>
+                    <p>Where does the tool fail, refuse, or produce nonsense? What triggers those moments?</p>
+                </div>
+
+                <div class="concept-box">
+                    <h4>Compare Responses</h4>
+                    <p>Give multiple tools the same unusual prompt. What differs? What does that reveal?</p>
+                </div>
+
+                <div class="concept-box">
+                    <h4>Stretch Creatively</h4>
+                    <p>Use a tool for something it clearly wasn't built for. What happens?</p>
+                </div>
+
+                <div class="concept-box">
+                    <h4>Interrogate the Interface</h4>
+                    <p>How does the tool's design shape what you can ask and how you ask it?</p>
+                </div>
+
+                <div class="alert alert-warning" style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem 1.25rem; margin-top: 1.5rem;">
+                    <h4 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="alert-triangle" class="icon"></i>
+                        A Note on Boundaries
+                    </h4>
+                    <p style="margin-bottom: 0.75rem;">This assignment asks you to probe and experiment—but within professional and academic norms. Your experiments and documentation should be appropriate for a classroom setting and a public portfolio. Testing a tool's content moderation by attempting to generate explicit, hateful, or illegal content is not the kind of "edge-finding" this assignment values or your instructors will accept.</p>
+                    <p style="margin-bottom: 0;"><strong>Remember:</strong> your reflection will be published to your public portfolio. Document experiments you'd be comfortable sharing with future employers or graduate programs.</p>
+                </div>
+            </section>
+
+            <!-- Tools to Consider -->
+            <section id="tools">
+                <h2>Tools to Consider</h2>
+                <p>All have free tiers. You're welcome to explore tools not listed here.</p>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Text/Chat</td>
+                            <td><a href="https://claude.ai/" target="_blank">Claude</a>, <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, <a href="https://gemini.google.com/" target="_blank">Gemini</a>, <a href="https://www.perplexity.ai/" target="_blank">Perplexity</a>, <a href="https://grok.com/" target="_blank">Grok</a></td>
+                        </tr>
+                        <tr>
+                            <td>Image</td>
+                            <td><a href="https://www.adobe.com/products/firefly.html" target="_blank">Adobe Firefly</a>, <a href="https://www.midjourney.com/" target="_blank">Midjourney</a>, <a href="https://leonardo.ai/" target="_blank">Leonardo.AI</a></td>
+                        </tr>
+                        <tr>
+                            <td>Research</td>
+                            <td><a href="https://notebooklm.google.com/" target="_blank">NotebookLM</a>, <a href="https://elicit.com/" target="_blank">Elicit</a>, <a href="https://consensus.app/" target="_blank">Consensus</a></td>
+                        </tr>
+                        <tr>
+                            <td>Audio/Voice</td>
+                            <td><a href="https://suno.com/" target="_blank">Suno</a>, <a href="https://elevenlabs.io/" target="_blank">ElevenLabs</a>, <a href="https://www.descript.com/" target="_blank">Descript</a></td>
+                        </tr>
+                        <tr>
+                            <td>Video</td>
+                            <td><a href="https://runwayml.com/" target="_blank">Runway</a>, <a href="https://pika.art/" target="_blank">Pika</a></td>
+                        </tr>
+                        <tr>
+                            <td>Presentations</td>
+                            <td><a href="https://gamma.app/" target="_blank">Gamma</a>, <a href="https://tome.app/" target="_blank">Tome</a>, <a href="https://www.canva.com/magic/" target="_blank">Canva Magic Studio</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Your Reflection -->
+            <section id="reflection">
+                <h2>Your Reflection</h2>
+                <p>Write a <strong>500–750 word analysis</strong> that includes:</p>
+
+                <h3>What You Tried</h3>
+                <ul>
+                    <li>What tools did you explore and why?</li>
+                    <li>What experiments did you run? What were you trying to discover?</li>
+                </ul>
+
+                <h3>What Happened</h3>
+                <ul>
+                    <li>What worked, what didn't, what surprised you?</li>
+                    <li>Include specific evidence: screenshots, prompts, outputs, failures</li>
+                </ul>
+
+                <h3>What You Learned</h3>
+                <ul>
+                    <li>What did your experiments reveal about how these tools work?</li>
+                    <li>What assumptions or biases did you notice?</li>
+                    <li>What questions emerged that you couldn't answer?</li>
+                </ul>
+
+                <h3>Looking Forward</h3>
+                <ul>
+                    <li>How might you use (or deliberately avoid) AI tools in your academic and professional work?</li>
+                    <li>What questions should you ask when evaluating a <em>new</em> AI tool in the future?</li>
+                </ul>
+            </section>
+
+            <!-- Ethical Considerations -->
+            <section id="ethics">
+                <h2>Ethical Considerations</h2>
+                <p>As you experiment, pay attention to:</p>
+
+                <ul>
+                    <li><strong>Training & bias:</strong> What data shaped this tool? Whose perspectives might be missing or overrepresented?</li>
+                    <li><strong>Transparency:</strong> Does the tool explain its reasoning? Can you verify its outputs?</li>
+                    <li><strong>Attribution:</strong> If you use AI-generated content in your work, how should you cite it?</li>
+                </ul>
+
+                <p>You don't need a separate section on ethics—weave these observations into your reflection where relevant.</p>
+
+                <div class="alert alert-info">
+                    <i data-lucide="book-open"></i>
+                    <div>
+                        <strong>Citation guidance:</strong> <a href="https://apastyle.apa.org/blog/how-to-cite-chatgpt" target="_blank">APA Style: How to Cite ChatGPT</a> (applies to other AI tools)
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Page -->
+            <section id="portfolio">
+                <h2>Portfolio Page</h2>
+                <p>Create <code>lab02.html</code> in your portfolio that includes:</p>
+                <ul>
+                    <li>Your 500–750 word reflection</li>
+                    <li>Evidence of your exploration (embedded screenshots, example outputs, or links)</li>
+                    <li>Consistent styling with your portfolio</li>
+                </ul>
+                <p>Link this page from your main <code>index.html</code> navigation.</p>
+            </section>
+
+            <!-- Submission -->
+            <section class="deliverables" id="submission-b">
+                <h2>Submission</h2>
+
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1b">
+                        <label for="check1b">Push your updated portfolio to GitHub</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2b">
+                        <label for="check2b">Verify your GitHub Pages site displays correctly</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3b">
+                        <label for="check3b">Submit to D2L dropbox:
+                            <ul>
+                                <li>Link to your GitHub repository</li>
+                                <li>Link to your live GitHub Pages site</li>
+                            </ul>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Looking Ahead -->
+            <section class="looking-ahead" id="looking-ahead-b">
+                <h2>Looking Ahead</h2>
+                <p>The critical habits you develop here—questioning assumptions, finding edges, documenting failures—will serve you throughout the semester. As AI tools become embedded in later labs, you'll need this instinct to probe rather than just use.</p>
+            </section>
+
+        </div>
 
         </main>
     </div>
@@ -272,6 +593,42 @@
                 if (window.innerWidth <= 1024) {
                     toggleMobileMenu();
                 }
+            });
+        });
+
+        // Tab Switching
+        const tabs = document.querySelectorAll('.approach-tab');
+        const contents = document.querySelectorAll('.tab-content');
+        const jumpMenuFramework = document.getElementById('jump-menu-framework');
+        const jumpMenuExperiment = document.getElementById('jump-menu-experiment');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.dataset.tab;
+
+                // Update active tab
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Update content visibility
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === `content-${targetTab}`) {
+                        content.classList.add('active');
+                    }
+                });
+
+                // Update jump menu visibility
+                if (targetTab === 'framework') {
+                    jumpMenuFramework.style.display = 'block';
+                    jumpMenuExperiment.style.display = 'none';
+                } else {
+                    jumpMenuFramework.style.display = 'none';
+                    jumpMenuExperiment.style.display = 'block';
+                }
+
+                // Scroll to top of content
+                document.getElementById('approach-selector').scrollIntoView({ behavior: 'smooth' });
             });
         });
 
