@@ -10,19 +10,6 @@
 <body>
     <div class="app-container">
 
-        <!-- Mobile Header -->
-        <header class="mobile-header">
-            <div class="mobile-brand">
-                <span class="mobile-title">DCDA 40833</span>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-                <i data-lucide="menu" class="icon"></i>
-            </button>
-        </header>
-
-        <!-- Mobile Navigation Overlay -->
-        <div class="mobile-nav-overlay"></div>
-
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <!-- Brand -->
@@ -136,7 +123,7 @@
                                 <span class="badge lab">Lab</span>
                             </div>
                             <p>Develop an evergreen framework for evaluating AI tools and apply it to current tools of your choice.</p>
-                            <a href="labs/lab02.html" class="card-link">View Instructions</a>
+                            <span class="card-link" style="opacity: 0.6; cursor: default;">Coming Soon</span>
                         </div>
 
                         <div class="card" data-search="lab 3 visualization critique tufte infographic" style="background-image: url('labs/images/lab03.png')">
@@ -370,29 +357,6 @@
 
         // Initialize Lucide Icons
         lucide.createIcons();
-
-        // Mobile Menu Toggle
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const sidebar = document.querySelector('.sidebar');
-        const mobileOverlay = document.querySelector('.mobile-nav-overlay');
-
-        function toggleMobileMenu() {
-            sidebar.classList.toggle('mobile-open');
-            mobileOverlay.classList.toggle('active');
-            document.body.classList.toggle('mobile-menu-active');
-        }
-
-        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-        mobileOverlay.addEventListener('click', toggleMobileMenu);
-
-        // Close mobile menu when clicking a nav link
-        document.querySelectorAll('.sidebar nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 1024) {
-                    toggleMobileMenu();
-                }
-            });
-        });
 
         // Active Navigation State - only target sidebar nav links
         const navLinks = document.querySelectorAll('.sidebar nav ul a');
