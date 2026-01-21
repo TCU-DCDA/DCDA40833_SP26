@@ -37,7 +37,6 @@ All have free tiers. You're welcome to explore tools not listed here.
 |----------|----------|
 | Text/Chat | Claude, ChatGPT, Gemini, Perplexity, Grok |
 | Image | Adobe Firefly, Midjourney, Leonardo.AI |
-| Code | GitHub Copilot, Cursor, Replit AI |
 | Research | NotebookLM, Elicit, Consensus |
 | Audio/Voice | Suno, ElevenLabs, Descript |
 | Video | Runway, Pika |
