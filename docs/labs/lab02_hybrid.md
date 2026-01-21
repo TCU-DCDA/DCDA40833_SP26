@@ -27,11 +27,11 @@ These are suggestions, not requirements. You may pursue something else entirely.
 - **Stretch creatively:** Use a tool for something it clearly wasn't built for. What happens?
 - **Interrogate the interface:** How does the tool's design shape what you can ask and how you ask it?
 
-### A Note on Boundaries
-
-This assignment asks you to probe and experiment—but within professional and academic norms. Your experiments and documentation should be appropriate for a classroom setting and a public portfolio. Testing a tool's content moderation by attempting to generate explicit, hateful, or illegal content is not the kind of "edge-finding" this assignment values or your instructors will accept.
-
-Remember: your reflection will be published to your public portfolio. Document experiments you'd be comfortable sharing with future employers or graduate programs.
+> **⚠️ A Note on Boundaries**
+>
+> This assignment asks you to probe and experiment—but within professional and academic norms. Your experiments and documentation should be appropriate for a classroom setting and a public portfolio. Testing a tool's content moderation by attempting to generate explicit, hateful, or illegal content is not the kind of "edge-finding" this assignment values or your instructors will accept.
+>
+> **Remember:** your reflection will be published to your public portfolio. Document experiments you'd be comfortable sharing with future employers or graduate programs.
 
 ---
 
