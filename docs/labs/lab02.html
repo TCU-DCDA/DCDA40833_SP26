@@ -86,6 +86,43 @@
                 border-color: #C1272D;
             }
         }
+
+        /* Copy Button Styles */
+        .code-block-wrapper {
+            position: relative;
+            margin: 1.5rem 0;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #C1272D;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background 0.2s ease;
+            z-index: 10;
+        }
+        .copy-btn:hover {
+            background: #a01f25;
+        }
+        .copy-btn.copied {
+            background: #166534;
+        }
+        .copy-btn .icon {
+            width: 16px;
+            height: 16px;
+        }
+        .code-block-wrapper .code-block {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -298,13 +335,107 @@
             <!-- Part 4 -->
             <section id="part4">
                 <h2>Part 4: Create Portfolio Page</h2>
-                <p>Create a new HTML page in your portfolio called <code>lab02.html</code> that includes:</p>
+                <p>Add a new page to your portfolio for this lab's analysis.</p>
+
+                <h3>Step 1: Create the File</h3>
+                <ol>
+                    <li>In VS Code, create a new file in your portfolio's root folder called <code>lab02.html</code></li>
+                    <li>Copy the starter template below into your new file</li>
+                    <li>Save the file</li>
+                </ol>
+
+                <h3>Step 2: Use This Starter Template</h3>
+                <p>Copy this structure and customize it with your content:</p>
+
+                <div class="code-block-wrapper">
+                    <button class="copy-btn" data-target="template-framework">
+                        <i data-lucide="copy" class="icon"></i>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-block">
+                        <pre><code id="template-framework">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;AI Evaluation | Your Name&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+            &lt;a href="lab02.html" class="active"&gt;Lab 2: AI Evaluation&lt;/a&gt;
+            &lt;!-- Add more lab links as the semester progresses --&gt;
+        &lt;/nav&gt;
+        &lt;h1&gt;AI Tool Evaluation&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Introduction&lt;/h2&gt;
+            &lt;p&gt;Brief intro to what you explored and why...&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Tool 1: [Tool Name]&lt;/h2&gt;
+            &lt;h3&gt;Capabilities&lt;/h3&gt;
+            &lt;p&gt;What the tool does well, where it falls short...&lt;/p&gt;
+
+            &lt;h3&gt;Appropriate Use&lt;/h3&gt;
+            &lt;p&gt;Good use cases vs. poor use cases...&lt;/p&gt;
+
+            &lt;h3&gt;Ethical Considerations&lt;/h3&gt;
+            &lt;p&gt;Concerns and how they're addressed...&lt;/p&gt;
+
+            &lt;!-- Add screenshots or examples --&gt;
+            &lt;figure&gt;
+                &lt;img src="images/tool1-example.png" alt="Description of screenshot"&gt;
+                &lt;figcaption&gt;Caption explaining what this shows&lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Tool 2: [Tool Name]&lt;/h2&gt;
+            &lt;!-- Same structure as Tool 1 --&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Broader Reflections&lt;/h2&gt;
+            &lt;p&gt;Personal use, DCDA context, evolving landscape...&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2026 Your Name | &lt;a href="https://github.com/yourusername/dcda-portfolio"&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+
+                <h3>Step 3: Link from Your Homepage</h3>
+                <p>Update your <code>index.html</code> navigation to include a link to your new page:</p>
+                <ol>
+                    <li>Open <code>index.html</code></li>
+                    <li>Find your navigation section (inside <code>&lt;nav&gt;</code> or your header)</li>
+                    <li>Add a link: <code>&lt;a href="lab02.html"&gt;Lab 2: AI Evaluation&lt;/a&gt;</code></li>
+                </ol>
+
+                <h3>Step 4: Add Your Content</h3>
                 <ul>
-                    <li>Your 500-750 word analysis (addressing all prompts from Part 3)</li>
-                    <li>Evidence of exploration (embedded screenshots, example outputs, or links)</li>
-                    <li>Proper HTML structure and styling consistent with your portfolio</li>
+                    <li>Replace placeholder text with your 500-750 word analysis</li>
+                    <li>Add screenshots to your <code>images/</code> folder and embed them</li>
+                    <li>Update the page title, header, and footer with your name</li>
+                    <li>Your existing <code>css/styles.css</code> will automatically style this page</li>
                 </ul>
-                <p>Make sure to link this new page from your main portfolio <code>index.html</code> navigation.</p>
+
+                <div class="alert alert-info">
+                    <i data-lucide="lightbulb"></i>
+                    <div>
+                        <strong>Tip:</strong> Preview your page locally before pushing. Open <code>lab02.html</code> directly in your browser to check formatting and images.
+                    </div>
+                </div>
             </section>
 
             <!-- Submission -->
@@ -515,13 +646,100 @@
             <!-- Portfolio Page -->
             <section id="portfolio">
                 <h2>Portfolio Page</h2>
-                <p>Create <code>lab02.html</code> in your portfolio that includes:</p>
+                <p>Add a new page to your portfolio documenting your experiments.</p>
+
+                <h3>Step 1: Create the File</h3>
+                <ol>
+                    <li>In VS Code, create a new file in your portfolio's root folder called <code>lab02.html</code></li>
+                    <li>Copy the starter template below into your new file</li>
+                    <li>Save the file</li>
+                </ol>
+
+                <h3>Step 2: Use This Starter Template</h3>
+                <p>Copy this structure and customize it with your content:</p>
+
+                <div class="code-block-wrapper">
+                    <button class="copy-btn" data-target="template-experiment">
+                        <i data-lucide="copy" class="icon"></i>
+                        <span>Copy</span>
+                    </button>
+                    <div class="code-block">
+                        <pre><code id="template-experiment">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;AI Experimentation | Your Name&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+            &lt;a href="lab02.html" class="active"&gt;Lab 2: AI Experimentation&lt;/a&gt;
+            &lt;!-- Add more lab links as the semester progresses --&gt;
+        &lt;/nav&gt;
+        &lt;h1&gt;AI Experimentation&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;What I Tried&lt;/h2&gt;
+            &lt;p&gt;Tools explored, experiments run, what you were trying to discover...&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;What Happened&lt;/h2&gt;
+            &lt;p&gt;What worked, what didn't, what surprised you...&lt;/p&gt;
+
+            &lt;!-- Add screenshots or examples --&gt;
+            &lt;figure&gt;
+                &lt;img src="images/experiment1.png" alt="Description of screenshot"&gt;
+                &lt;figcaption&gt;Caption explaining what this shows&lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;What I Learned&lt;/h2&gt;
+            &lt;p&gt;Insights about how tools work, assumptions or biases noticed, unanswered questions...&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Looking Forward&lt;/h2&gt;
+            &lt;p&gt;How you might use or avoid AI tools, questions for evaluating new tools...&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2026 Your Name | &lt;a href="https://github.com/yourusername/dcda-portfolio"&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+
+                <h3>Step 3: Link from Your Homepage</h3>
+                <p>Update your <code>index.html</code> navigation to include a link to your new page:</p>
+                <ol>
+                    <li>Open <code>index.html</code></li>
+                    <li>Find your navigation section (inside <code>&lt;nav&gt;</code> or your header)</li>
+                    <li>Add a link: <code>&lt;a href="lab02.html"&gt;Lab 2: AI Experimentation&lt;/a&gt;</code></li>
+                </ol>
+
+                <h3>Step 4: Add Your Content</h3>
                 <ul>
-                    <li>Your 500–750 word reflection</li>
-                    <li>Evidence of your exploration (embedded screenshots, example outputs, or links)</li>
-                    <li>Consistent styling with your portfolio</li>
+                    <li>Replace placeholder text with your 500–750 word reflection</li>
+                    <li>Add screenshots to your <code>images/</code> folder and embed them</li>
+                    <li>Update the page title, header, and footer with your name</li>
+                    <li>Your existing <code>css/styles.css</code> will automatically style this page</li>
                 </ul>
-                <p>Link this page from your main <code>index.html</code> navigation.</p>
+
+                <div class="alert alert-info">
+                    <i data-lucide="lightbulb"></i>
+                    <div>
+                        <strong>Tip:</strong> Preview your page locally before pushing. Open <code>lab02.html</code> directly in your browser to check formatting and images.
+                    </div>
+                </div>
             </section>
 
             <!-- Submission -->
@@ -651,6 +869,37 @@
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
                     link.classList.add('active');
+                }
+            });
+        });
+
+        // Copy Button Functionality
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const targetId = btn.dataset.target;
+                const codeElement = document.getElementById(targetId);
+
+                // Decode HTML entities to get actual code
+                const textarea = document.createElement('textarea');
+                textarea.innerHTML = codeElement.innerHTML;
+                const code = textarea.value;
+
+                try {
+                    await navigator.clipboard.writeText(code);
+
+                    // Update button to show success
+                    const span = btn.querySelector('span');
+                    const originalText = span.textContent;
+                    span.textContent = 'Copied!';
+                    btn.classList.add('copied');
+
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        span.textContent = originalText;
+                        btn.classList.remove('copied');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
                 }
             });
         });
