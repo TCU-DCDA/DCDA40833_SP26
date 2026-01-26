@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 3: Tufte Critique | DCDA 40833</title>
+    <title>Lab 3: Visualization Critique | DCDA 40833</title>
     <link rel="stylesheet" href="../lab-styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Copy Button Styles */
+        .code-block-wrapper {
+            position: relative;
+            margin: 1.5rem 0;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #C1272D;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background 0.2s ease;
+            z-index: 10;
+        }
+        .copy-btn:hover {
+            background: #a01f25;
+        }
+        .copy-btn.copied {
+            background: #166534;
+        }
+        .copy-btn .icon {
+            width: 16px;
+            height: 16px;
+        }
+        .code-block-wrapper .code-block {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="lab-page-container">
@@ -31,7 +69,7 @@
             <!-- Lab Brand -->
             <div class="lab-brand">
                 <div class="lab-number">Lab 03</div>
-                <p class="lab-designation">Tufte Critique</p>
+                <p class="lab-designation">Visualization Critique</p>
             </div>
 
             <!-- Navigation -->
@@ -64,7 +102,7 @@
     <!-- Hero Section -->
     <header class="lab-hero" style="background-image: url('images/lab03.png')">
         <div class="lab-hero-content">
-            <h1>Tufte Critique</h1>
+            <h1>Visualization Critique</h1>
             <p class="lab-subtitle">Evaluating Data Visualization</p>
         </div>
     </header>
@@ -83,46 +121,240 @@
         <!-- Step 1 -->
         <section id="step1">
             <h2>Step 1: Select an Infographic</h2>
-            <p>Find one example from the "Beautiful News" section of the Information is Beautiful site:</p>
-            <p><a href="https://informationisbeautiful.net/beautifulnews/" target="_blank">https://informationisbeautiful.net/beautifulnews/</a></p>
-            <p>Read closely one infographic of your choice and its supporting article (provided as a link below the graphic).</p>
+            <p>Explore these data visualization galleries and select one infographic that interests you:</p>
+            <p><a href="https://informationisbeautiful.net/beautifulnews/" target="_blank">Information is Beautiful - Beautiful News</a> | 
+            <a href="https://feelingdata.studio/" target="_blank">Feeling Data Studio</a> | 
+            <a href="https://www.data-to-art.com/" target="_blank">Data to Art</a></p>
+            <p>Once you've selected a visualization, read it closely along with any supporting article or documentation provided.</p>
         </section>
 
         <!-- Step 2 -->
         <section id="step2">
             <h2>Step 2: Write Your Critique (500+ words)</h2>
-            <p>Analyze the visualization using Tufte's framework:</p>
+            
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" onclick="switchTab(event, 'optionA')">Option A: Unified Approach</button>
+                    <button class="tab-button" onclick="switchTab(event, 'optionB')">Option B: Artistic Focus</button>
+                </div>
 
-            <div class="concept-box">
-                <h4>Required Analysis</h4>
-                <p>Critique the visualization in terms of what Tufte describes as information <strong>"resolution"</strong> (169-176). Put another way, how comprehensive and complete is the graphic regarding the information it provides? Is there important information from the article you feel is missing in the graphic?</p>
+                <!-- Option A Tab -->
+                <div id="optionA" class="tab-content active">
+                    <p>Analyze the visualization using Tufte's framework:</p>
+
+                    <div class="concept-box">
+                        <h4>Required Analysis</h4>
+                        <p>Critique the visualization in terms of what Tufte describes as information <strong>"resolution"</strong> (169-176). Put another way, how comprehensive and complete is the graphic regarding the information it provides?</p>
+                        
+                        <p>If your chosen visualization has an accompanying article or documentation, consider: Is there important information from the source material that is missing in the graphic? If your visualization doesn't have a traditional article (such as artistic data interpretations), consider: What additional context, data, or explanation would enhance understanding? What questions does the visualization leave unanswered?</p>
+                    </div>
+
+                    <div class="concept-box">
+                        <h4>Additional Concerns (choose at least two)</h4>
+                        <ul>
+                            <li><strong>Effects without causes</strong> - Does the visualization show outcomes without explaining what produced them?</li>
+                            <li><strong>Cherry-picking</strong> - Has data been selectively chosen to support a particular narrative?</li>
+                            <li><strong>Overreaching</strong> - Do the conclusions extend beyond what the data actually supports?</li>
+                            <li><strong>Rage to Conclude</strong> - Does the visualization rush to conclusions without sufficient evidence?</li>
+                        </ul>
+                    </div>
+
+                    <p>Your critique should be <strong>at least 500 words</strong> and demonstrate close reading of the visualization and any available source material, documentation, or artistic statement.</p>
+                </div>
+
+                <!-- Option B Tab -->
+                <div id="optionB" class="tab-content">
+                    <p><em>Use this approach if you selected from Feeling Data Studio or Data to Art:</em></p>
+                    
+                    <p>Analyze the artistic data visualization using adapted Tufte principles alongside considerations for creative interpretation:</p>
+
+                    <div class="concept-box">
+                        <h4>Required Analysis: Data Translation & Representation</h4>
+                        <p>Evaluate how effectively the artwork translates data into visual or sensory form:</p>
+                        <ul>
+                            <li>What data is being represented, and how clear is this translation?</li>
+                            <li>What is gained through the artistic interpretation? What might be lost?</li>
+                            <li>Does the aesthetic approach enhance or obscure the data's meaning?</li>
+                            <li>How does the work balance artistic expression with informational integrity?</li>
+                        </ul>
+                    </div>
+
+                    <div class="concept-box">
+                        <h4>Additional Critical Perspectives (choose at least two)</h4>
+                        <ul>
+                            <li><strong>Metaphor & Meaning</strong> - Are the visual metaphors appropriate for the data? Do they clarify or confuse?</li>
+                            <li><strong>Emotional Manipulation vs. Engagement</strong> - Does the work use emotion to deepen understanding or to override critical thinking?</li>
+                            <li><strong>Accessibility</strong> - Can diverse audiences interpret the visualization, or is it overly abstract/exclusive?</li>
+                            <li><strong>Context & Completeness</strong> - Is sufficient context provided to understand what data is shown and why it matters?</li>
+                        </ul>
+                    </div>
+
+                    <p>Your critique should be <strong>at least 500 words</strong> and demonstrate thoughtful analysis of how the artwork functions as both art and information.</p>
+                </div>
             </div>
 
-            <div class="concept-box">
-                <h4>Additional Concerns (choose at least two)</h4>
-                <ul>
-                    <li>Effects without causes</li>
-                    <li>Cherry-picking</li>
-                    <li>Overreaching</li>
-                    <li>Rage to Conclude</li>
-                </ul>
-            </div>
+            <style>
+                .tab-container {
+                    margin: 2rem 0;
+                }
+                
+                .tab-buttons {
+                    display: flex;
+                    gap: 0.5rem;
+                    border-bottom: 2px solid #ddd;
+                    margin-bottom: 1.5rem;
+                }
+                
+                .tab-button {
+                    padding: 0.75rem 1.5rem;
+                    background: none;
+                    border: none;
+                    border-bottom: 3px solid transparent;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #666;
+                    transition: all 0.3s ease;
+                }
+                
+                .tab-button:hover {
+                    color: #333;
+                    background: #f5f5f5;
+                }
+                
+                .tab-button.active {
+                    color: #2563eb;
+                    border-bottom-color: #2563eb;
+                }
+                
+                .tab-content {
+                    display: none;
+                    animation: fadeIn 0.3s ease;
+                }
+                
+                .tab-content.active {
+                    display: block;
+                }
+                
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+            </style>
 
-            <p>Your critique should be <strong>at least 500 words</strong> and demonstrate close reading of both the infographic and its source material.</p>
+            <script>
+                function switchTab(event, tabId) {
+                    // Hide all tab content
+                    const tabContents = document.querySelectorAll('.tab-content');
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Remove active class from all buttons
+                    const tabButtons = document.querySelectorAll('.tab-button');
+                    tabButtons.forEach(button => button.classList.remove('active'));
+                    
+                    // Show selected tab and mark button as active
+                    document.getElementById(tabId).classList.add('active');
+                    event.currentTarget.classList.add('active');
+                }
+            </script>
         </section>
 
         <!-- Step 3 -->
         <section id="step3">
             <h2>Step 3: Create Portfolio Page</h2>
-            <p>Create a new HTML page in your portfolio called <code>tufte-critique.html</code> that includes:</p>
-            <ul>
-                <li>Your written critique</li>
-                <li>The infographic itself (embedded as an image)</li>
-                <li>A link to the original source</li>
-                <li>Proper HTML structure and styling consistent with your portfolio</li>
-            </ul>
-            <p>Make sure to link this new page from your main portfolio <code>index.html</code> navigation.</p>
-        </section>
+            <p>Add a new page to your portfolio documenting your critique.</p>
+
+            <h3>Step 1: Create the File</h3>
+            <ol>
+                <li>In VS Code, create a new file in your portfolio's root folder called <code>lab03.html</code></li>
+                <li>Copy the starter template below into your new file</li>
+                <li>Save the file</li>
+            </ol>
+
+            <h3>Step 2: Use This Starter Template</h3>
+            <p>Copy this structure and customize it with your content:</p>
+
+            <div class="code-block-wrapper">
+                <button class="copy-btn" data-target="template-lab03">
+                    <i data-lucide="copy" class="icon"></i>
+                    <span>Copy</span>
+                </button>
+                <div class="code-block">
+                    <pre><code id="template-lab03">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Visualization Critique | Your Name&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+            &lt;a href="lab02.html"&gt;Lab 2: AI Evaluation&lt;/a&gt;
+            &lt;a href="lab03.html" class="active"&gt;Lab 3: Visualization Critique&lt;/a&gt;
+            &lt;!-- Add more lab links as the semester progresses --&gt;
+        &lt;/nav&gt;
+        &lt;h1&gt;Visualization Critique&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Visualization&lt;/h2&gt;
+            &lt;figure&gt;
+                &lt;img src="images/infographic.png" alt="Description of the infographic"&gt;
+                &lt;figcaption&gt;
+                    &lt;strong&gt;Title:&lt;/strong&gt; [Infographic Title]&lt;br&gt;
+                    &lt;strong&gt;Source:&lt;/strong&gt; &lt;a href="[URL]" target="_blank"&gt;[Source Name]&lt;/a&gt;
+                &lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Critique&lt;/h2&gt;
+            
+            &lt;h3&gt;Information Resolution&lt;/h3&gt;
+            &lt;p&gt;Your analysis of how comprehensive and complete the visualization is...&lt;/p&gt;
+
+            &lt;h3&gt;[Additional Concern 1]&lt;/h3&gt;
+            &lt;p&gt;Your analysis of the first additional concern you selected...&lt;/p&gt;
+
+            &lt;h3&gt;[Additional Concern 2]&lt;/h3&gt;
+            &lt;p&gt;Your analysis of the second additional concern you selected...&lt;/p&gt;
+
+            &lt;h3&gt;Conclusion&lt;/h3&gt;
+            &lt;p&gt;Your overall assessment of the visualization's effectiveness and integrity...&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2026 Your Name&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+
+                <h3>Step 3: Add Content and Style</h3>
+                <ol>
+                    <li><strong>Save the infographic:</strong> Download or screenshot the visualization you're critiquing and save it in your portfolio's <code>images/</code> folder</li>
+                    <li><strong>Replace placeholder text:</strong> Add your 500+ word critique, filling in each section with your analysis</li>
+                    <li><strong>Update the image path:</strong> Make sure the <code>src</code> attribute points to your saved image</li>
+                    <li><strong>Add the source link:</strong> Include the URL to the original visualization</li>
+                    <li><strong>Style consistently:</strong> Ensure your page uses the same CSS as the rest of your portfolio</li>
+                </ol>
+
+                <h3>Step 4: Link from Homepage</h3>
+                <p>Update your portfolio's <code>index.html</code> navigation to include a link to this new page:</p>
+                <div class="code-block">
+                    <pre><code>&lt;nav&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;a href="lab02.html"&gt;Lab 2: AI Evaluation&lt;/a&gt;
+    &lt;a href="lab03.html"&gt;Lab 3: Visualization Critique&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+                </div>
+            </section>
 
         <!-- Submission -->
         <section class="deliverables" id="submission">
@@ -213,6 +445,37 @@
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
                     link.classList.add('active');
+                }
+            });
+        });
+
+        // Copy Button Functionality
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const targetId = btn.dataset.target;
+                const codeElement = document.getElementById(targetId);
+
+                // Decode HTML entities to get actual code
+                const textarea = document.createElement('textarea');
+                textarea.innerHTML = codeElement.innerHTML;
+                const code = textarea.value;
+
+                try {
+                    await navigator.clipboard.writeText(code);
+
+                    // Update button to show success
+                    const span = btn.querySelector('span');
+                    const originalText = span.textContent;
+                    span.textContent = 'Copied!';
+                    btn.classList.add('copied');
+
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        span.textContent = originalText;
+                        btn.classList.remove('copied');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
                 }
             });
         });
