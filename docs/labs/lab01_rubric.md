@@ -1,87 +1,49 @@
 # Lab 1: Portfolio Setup - Evaluation Rubric
 
 ## Overview
-This rubric uses an ungrading approach to help you understand expectations and assess your own work. Focus on learning the tools, following technical steps accurately, and building a foundation for the semester.
+This rubric uses an ungrading approach to help you understand expectations and assess your own work. Evaluation is based on submitted evidence: your GitHub repository, live site, and reflection. Focus on creating observable results that demonstrate your technical competence and understanding.
 
 ---
 
-## 1. Tool Setup & Account Creation
+## 1. Repository Structure & Account Setup
 
 ### Exceeds Expectations
-- Successfully sets up all three required tools with professional GitHub username
-- Configures optional but recommended settings (e.g., VS Code integration in GitHub Desktop)
-- Demonstrates understanding of why each tool is used and how they work together
+- GitHub repository is professionally named and well-organized
+- Commit history shows thoughtful, incremental work with clear messages
+- Repository structure is clean and all required files are present and properly organized
 
 ### Meets Expectations
-- Successfully creates GitHub account with appropriate username
-- Installs and configures GitHub Desktop and VS Code correctly
-- All tools are functional and properly linked
+- GitHub repository exists with appropriate name and public visibility
+- Repository contains all required template files intact
+- Commit history shows evidence of work (multiple commits with basic messages)
 
 ### Does Not Meet Expectations
-- Missing one or more required tools
-- GitHub username is unprofessional or tools not properly configured
-- Unable to demonstrate that tools are working
+- Repository is incorrectly named, private, or inaccessible
+- Missing files or broken repository structure
+- Minimal or missing commit history
 
 ---
 
-## 2. Repository Creation & Management
+## 2. Live Site Deployment & Functionality
 
 ### Exceeds Expectations
-- Creates repository from template with thoughtful naming and description
-- Successfully clones repository to appropriate local location
-- Demonstrates understanding of the relationship between local and remote repositories
+- Site is fully functional, loads quickly, and displays perfectly across different browsers/devices
+- All navigation and links work correctly throughout the site
+- GitHub Pages is properly configured; deployment is successful
 
 ### Meets Expectations
-- Successfully creates repository using "Use this template" feature (named appropriately, set to public)
-- Successfully clones repository to computer using GitHub Desktop
-- Can locate and navigate repository files on local machine
+- Live site is accessible at correct GitHub Pages URL
+- Site displays correctly and core functionality works
+- No major broken links or display issues
 
 ### Does Not Meet Expectations
-- Repository creation incomplete or set to private (preventing GitHub Pages deployment)
-- Failed to clone repository or cannot locate files locally
-- Repository structure is broken or files are missing
+- Site is not deployed or URL is inaccessible
+- Major functionality issues or broken elements
+- Site does not load or displays significant errors
 
 ---
 
-## 3. GitHub Pages Deployment
-
-### Exceeds Expectations
-- Correctly enables GitHub Pages and understands deployment process
-- Proactively checks deployment status and troubleshoots issues
-- Understands the relationship between pushes and site updates
-
-### Meets Expectations
-- Successfully enables GitHub Pages with correct settings
-- Site deploys and is accessible at correct URL
-- Understands that changes require commits and pushes to appear online
-
-### Does Not Meet Expectations
-- GitHub Pages not enabled or configured incorrectly
-- Site does not deploy or is inaccessible
-- Does not understand deployment process
-
----
-
-## 4. Template Exploration & Understanding
-
-### Exceeds Expectations
-- Thoroughly explores and can explain the purpose of each template file
-- Makes connections between HTML structure and what appears in browser
-- Asks insightful questions about code or design choices
-
-### Meets Expectations
-- Opens and reviews key template files (index.html, styles.css)
-- Understands basic file structure and can identify where content appears
-- Recognizes which files to edit vs. which to leave alone
-
-### Does Not Meet Expectations
-- Does not explore template files before editing
-- Cannot identify basic file purposes
-- Makes changes without understanding what they affect
-
----
-
-## 5. Personalization & Customization
+## 3. Personalization & Customization
 
 ### Exceeds Expectations
 - Makes thoughtful, meaningful personalizations throughout portfolio with accurate personal information
@@ -100,26 +62,7 @@ This rubric uses an ungrading approach to help you understand expectations and a
 
 ---
 
-## 6. Version Control Practice (Commit & Push)
-
-### Exceeds Expectations
-- Makes multiple logical commits with clear, descriptive messages representing meaningful chunks of work
-- Pushes changes successfully and verifies deployment
-- Demonstrates good version control habits and understands its purpose
-
-### Meets Expectations
-- Successfully commits changes with somewhat descriptive messages
-- Successfully pushes changes to GitHub and live site updates
-- Demonstrates basic understanding of commit/push workflow
-
-### Does Not Meet Expectations
-- Changes not committed or commit messages missing/unclear
-- Unable to push changes or live site does not reflect changes
-- Does not understand commit/push process
-
----
-
-## 7. Reflection & Metacognition
+## 4. Reflection & Metacognition
 
 ### Exceeds Expectations
 - Provides thoughtful, substantive reflection identifying specific challenges and how they were overcome
@@ -138,7 +81,7 @@ This rubric uses an ungrading approach to help you understand expectations and a
 
 ---
 
-## 8. Deliverables & Submission
+## 5. Deliverables & Submission
 
 ### Exceeds Expectations
 - Submits all required elements on time with well-organized, professional repository
@@ -159,28 +102,26 @@ This rubric uses an ungrading approach to help you understand expectations and a
 
 ## Self-Assessment Questions
 
-As you complete this assignment, consider:
+Before submitting, review your work against what evaluators can actually see:
 
-1. **Technical Competence**: Can I successfully use GitHub, GitHub Desktop, and VS Code? What do I still need to practice?
+1. **Repository Check**: Is my GitHub repository public, properly named, and containing all required files?
 
-2. **Problem Solving**: When I encountered issues, how did I troubleshoot? What resources did I use?
+2. **Live Site Check**: Is my portfolio accessible online? Does everything work when I visit the GitHub Pages URL?
 
-3. **Attention to Detail**: Did I follow instructions carefully? Are all my links working and content accurate?
+3. **Personalization**: Is my content unique to me (not placeholder text)? Does my site reflect my personality while remaining professional?
 
-4. **Professionalism**: Would I be comfortable sharing this portfolio with a potential employer?
-
-5. **Understanding**: Do I understand *why* we're using these tools, not just *how* to use them?
-
-6. **Growth Areas**: What aspects of this lab were most challenging? What do I need to revisit?
+4. **Reflection**: Does my reflection demonstrate genuine engagement with the learning process?
 
 ---
 
 ## Notes on Ungrading Approach
 
 This rubric is designed to help you:
-- Understand what successful technical setup and portfolio creation looks like
+- Understand what successful portfolio setup looks like
 - Self-assess your readiness to build on this foundation throughout the semester
 - Identify areas where you need additional support or practice
 - Take ownership of your learning and skill development
 
 Remember: This lab establishes the infrastructure for the entire semester. Solid work here makes everything else easier. The goal is not perfection, but functional tools and understanding of the workflow.
+
+## 5. Deliverables & Submission
