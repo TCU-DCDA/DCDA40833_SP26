@@ -23,19 +23,21 @@ This capstone course is the culminating experience for the Digital Culture and D
 │   ├── lab-styles.css          # Lab page styling
 │   └── labs/                   # Lab instruction pages (HTML)
 │       ├── lab01.html - lab06.html
+│       ├── lab01_rubric.md - lab03_rubric.md  # Ungrading rubrics
 │       └── images/             # Lab hero images
 ├── project/                    # Semester project prompts & guidelines
-│   ├── project_prompt.md       # Main project proposal prompt
-│   └── project_prompt_alt.md   # Alternative version for creative projects
+│   └── project_prompt.md       # Main project proposal prompt
 ├── self-reflections/           # Self-reflection templates
 │   └── self-reflection2.md     # Midsemester/Final reflection template
 ├── skills_portfolio/           # Portfolio prompt & lab materials
 │   ├── skills_portfolio.md     # Skills portfolio instructions
-│   └── old_labs/               # Lab source files & datasets
-│       ├── lab01.md - lab06.md # Markdown source for labs
-│       ├── lab03_materials/    # PDF resources
+│   └── lab_references/         # Lab markdown source files & datasets
+│       ├── lab01.md - lab06.md # Markdown reference versions
 │       ├── lab04_materials/    # Airbnb dataset
 │       └── lab06_materials/    # Python mapping notebook & GeoJSON
+├── archive/                    # Archived iterations & experiments
+│   ├── lab_iterations/         # Alternate lab versions
+│   └── project_iterations/     # Alternate project prompts
 └── legacy_materials/           # Previous semester reference
 ```
 
@@ -63,10 +65,10 @@ Features:
 - **Labs 1-6** — Skill-building exercises that build portfolio iteratively:
   - Lab 1: Portfolio setup (GitHub, HTML/CSS fundamentals)
   - Lab 2: AI tool evaluation (evergreen framework)
-  - Lab 3: Visualization critique (Tufte principles)
+  - Lab 3: Visualization critique (data viz analysis)
   - Lab 4: Data visualization with Tableau Public
-  - Lab 5: Python mapping with Folium/GeoPy
-  - Lab 6: Vibe coding & AI-assisted development
+  - Lab 5: Vibe coding & AI-assisted development
+  - Lab 6: Python mapping with Folium/GeoPy
 - **Skills Portfolio** — Web-based showcase built incrementally throughout semester
 - **Self-Reflections (3)** — Baseline, Midsemester & Final reflections with grade justification
 - **Project Proposal** — Research question, methodology, and annotated bibliography
