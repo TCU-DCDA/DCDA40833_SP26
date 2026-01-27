@@ -35,12 +35,10 @@
 ## Medium Priority
 
 ### Lab Content Review
-- [ ] Review Lab 6 (Vibe Coding) content and finalize approach
-  - Pedagogical placement as portfolio polish/capstone
-  - Relationship to Lab 2 (AI evaluation framework)
-  - Confirm: standalone deep dive vs. distributed AI integration
+- [ ] Review Lab 6 (Python Mapping) content and finalize approach
 - [ ] Add portfolio integration guidance to each lab
 - [ ] Consider adding example student portfolios
+- [ ] Create rubrics for Labs 4, 5, 6 (Labs 1-3 complete)
 
 ### Website Enhancements
 - [ ] Mobile responsive testing across devices
@@ -56,7 +54,7 @@
 - [ ] Consider "getting started" guide for students
 
 ### GitHub Workflow
-- [ ] Clean up tracked files per .gitignore
+- [x] Clean up tracked files per .gitignore (completed Jan 27, 2026)
 - [ ] Consider GitHub Actions for automated checks
 - [ ] Student repo template creation
 
@@ -94,14 +92,14 @@
 ### Lab Organization - FINALIZED
 | Lab | Title | Portfolio Page |
 |-----|-------|----------------|
-| 1 | Portfolio Setup (GitHub, HTML/CSS) | `index.html` |
-| 2 | AI Tool Evaluation (evergreen framework) | `ai-evaluation.html` |
-| 3 | Tufte Critique (visualization analysis) | `tufte-critique.html` |
-| 4 | Tableau Visualization (Tableau Public) | `tableau-visualization.html` |
-| 5 | Python Mapping (Folium/GeoPy) | `hometown-map.html` |
-| 6 | Vibe Coding (AI-assisted development) | TBD |
+| 1 | Portfolio Setup (GitHub, HTML/CSS) | `lab01.html` |
+| 2 | AI Tool Evaluation (evergreen framework) | `lab02.html` |
+| 3 | Visualization Critique (data viz analysis) | `lab03.html` |
+| 4 | Tableau Visualization (Tableau Public) | `lab04.html` |
+| 5 | Vibe Coding (AI-assisted development) | `lab05.html` |
+| 6 | Python Mapping (Folium/GeoPy) | `lab06.html` |
 
-*Rationale: Students gain Python fundamentals before AI-assisted capstone*
+*Note: Labs 5 & 6 can be taught in either order based on instructor preference*
 
 ### Lab Consistency Updates
 - ✅ Portfolio integration with specific HTML page names
@@ -117,7 +115,7 @@
 
 ## Questions for Reflection
 
-1. Does the Lab 5→6 progression (Python→AI-assisted) achieve the right pedagogical flow?
+1. Does the Lab 5→6 progression (AI-assisted→Python mapping) achieve the right pedagogical flow?
 2. Is the resource website design effective for student navigation?
 3. Do students need more structured project prep time between labs and semester project?
 4. Is the portfolio-building approach clear enough in each lab?
