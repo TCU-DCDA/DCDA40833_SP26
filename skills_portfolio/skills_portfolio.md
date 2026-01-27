@@ -18,25 +18,27 @@ By this point in the semester, your portfolio should contain:
    - Introduction and navigation to all other pages
    - Professional presentation of who you are
 
-2. **AI Tool Evaluation** (`ai-evaluation.html`) — Lab 2
-   - Your analysis of AI tools (500-750 words)
-   - Evidence of exploration (screenshots, examples)
+2. **AI Experimentation & Evaluation** (`lab02.html`) — Lab 2
+   - Your analysis of AI tools using either the framework approach or experimentation approach (500-750 words)
+   - Evidence of exploration (screenshots, examples, prompts, outputs)
+   - Reflection on appropriate use and ethical considerations
 
-3. **Tufte Critique** (`tufte-critique.html`) — Lab 3
-   - Your visualization critique (500+ words)
-   - Embedded infographic and link to source
+3. **Visualization Critique** (`lab03.html`) — Lab 3
+   - Your critique of a data visualization from Information is Beautiful, Feeling Data Studio, or Data to Art (500+ words)
+   - Analysis using Tufte's principles (Option A) or artistic evaluation criteria (Option B)
+   - Embedded visualization and link to source
 
 4. **Tableau Visualization** (`tableau-visualization.html`) — Lab 4
    - Embedded Tableau Public visualization
    - Reflection and analysis (500+ words)
 
-5. **[Lab 5 Content]** — Lab 5
-   - *Content TBD based on Lab 5 assignment*
-
-6. **Hometown Map** (`hometown-map.html`) — Lab 6
-   - Interactive Folium map (embedded)
+5. **Python Mapping** (`hometown-map.html`) — Lab 5
+   - Interactive Folium map of your hometown
    - Reflection (300+ words)
-   - Link to Google Colab notebook
+   - Documentation of Python code and mapping process
+
+6. **[Lab 6 Content]** — Lab 6
+   - *Content TBD based on Lab 6 assignment*
 
 ---
 
@@ -99,9 +101,9 @@ Your instructors will review both your live site and your repository code (inclu
 
 ---
 
-## Connection to Self-Reflection
+## Connection to Self-Reflection 2
 
-Your Skills Portfolio will be a key piece of evidence in your **Final Self-Reflection** (submitted separately). Use your portfolio to demonstrate:
+Your Skills Portfolio will be a key piece of evidence in your **Self-Reflection 2** (submitted separately). Use your portfolio to demonstrate:
 
 - **Digital Culture proficiency** — Web development, design, digital communication
 - **Data Analytics proficiency** — Visualization, critique, mapping, data storytelling

@@ -1,52 +1,145 @@
-# Lab 1: Skills Portfolio Setup — GitHub, HTML & CSS Foundations
+# Lab 1: Portfolio Setup
+
+**Current Version:** See [docs/labs/lab01.html](../../docs/labs/lab01.html)  
+**Due:** January 21, 2026 by 11:30 PM
 
 ## Overview
 
-In this lab, you will set up the foundation for your **Skills Portfolio** — a website that will grow throughout the semester as you add artifacts from each lab assignment. By the end of this lab, you will have:
+Your **Skills Portfolio** is a website that will grow throughout the semester. Each lab adds a new page showcasing your work, and by the end of the course, you'll have a polished collection demonstrating your DCDA skills.
 
-- A GitHub account and repository
-- A live website hosted on GitHub Pages
-- A basic HTML/CSS structure ready for future content
+**Mini-Lecture:** Before starting, view the [GitHub Infrastructure Lecture](../../docs/resources/presentations/github-intro/index.html) to understand why we use these tools.
 
----
-
-## Part 1: GitHub Setup
-
-### Create a GitHub Account
-
-1. Go to [github.com](https://github.com) and sign up for a free account
-2. Use your TCU email or personal email (your choice)
-3. Choose a professional username — this will be visible in your portfolio URL
-
-### Create Your Repository
-
-1. Click the **+** icon (top right) → **New repository**
-2. Name it: `dcda40833-portfolio` (or similar — lowercase, no spaces)
-3. Set to **Public** (required for GitHub Pages free hosting)
-4. Check **Add a README file**
-5. Click **Create repository**
-
-### Enable GitHub Pages
-
-1. In your repo, go to **Settings** → **Pages** (left sidebar)
-2. Under "Source," select **Deploy from a branch**
-3. Choose **main** branch and **/ (root)** folder
-4. Click **Save**
-5. Your live URL will be: `https://yourusername.github.io/dcda40833-portfolio/`
-
-> ⚠️ **Note:** The URL won't work until you push an `index.html` file. First-time deployment can take 5-10 minutes. If your site doesn't appear, check **Settings → Pages** for status or error messages.
+In this lab, you will:
+- Create your own portfolio repository from a provided template
+- Customize the template with your personal information
+- Make design choices that reflect your style
+- Deploy your site live on the web via GitHub Pages
 
 ---
 
-## Part 2: Tools & Local Setup
+## Part 1: Setup Your Tools
 
-### Install VS Code
+### Step 1: Create a GitHub Account
+1. Go to [github.com](https://github.com) and click **Sign up**
+2. Use your TCU email (for GitHub Education benefits)
+3. Choose a **professional username** — this appears in your portfolio URL
+4. Verify your email address
 
-1. Download [Visual Studio Code](https://code.visualstudio.com/)
-2. Install and open it
-3. This will be your code editor for HTML, CSS, and other files throughout the course
+### Step 2: Download and Install GitHub Desktop
+1. Go to [desktop.github.com](https://desktop.github.com)
+2. Download and install for your OS
+3. Open GitHub Desktop and sign in with your GitHub account
 
-### Install GitHub Desktop
+### Step 3: Download and Install Visual Studio Code
+1. Go to [code.visualstudio.com](https://code.visualstudio.com)
+2. Download and install for your OS
+3. Optional: In GitHub Desktop preferences, set VS Code as external editor
+
+---
+
+## Part 2: Create Your Portfolio Repository
+
+1. Go to the template: [DCDA40833-portfolio-template](https://github.com/TCU-DCDA/DCDA40833-portfolio-template)
+2. Click **"Use this template"** → **"Create a new repository"**
+3. Configure:
+   - **Owner:** Your GitHub account
+   - **Repository name:** `dcda-portfolio` (lowercase, no spaces)
+   - **Visibility:** **Public** (required for free GitHub Pages)
+4. Click **"Create repository"**
+
+---
+
+## Part 3: Clone to Your Computer
+
+1. Open GitHub Desktop
+2. **File → Clone Repository**
+3. Find your `dcda-portfolio` repository
+4. Choose a local folder (e.g., `Documents/DCDA`)
+5. Click **Clone**
+6. Click **"Open in Visual Studio Code"**
+
+---
+
+## Part 4: Enable GitHub Pages
+
+1. Go to your repository on GitHub.com
+2. Click **Settings → Pages**
+3. Under "Source," select **Deploy from a branch**
+4. Choose **main** branch and **/ (root)** folder
+5. Click **Save**
+
+Your site URL: `https://yourusername.github.io/dcda-portfolio/`
+
+**Note:** First deployment takes 2-5 minutes. Check Settings → Pages for status.
+
+---
+
+## Part 5: Explore the Template
+
+Open these files in VS Code:
+
+| File | Purpose |
+|------|---------|
+| `index.html` | Main homepage — your portfolio landing page |
+| `css/styles.css` | All visual styling (colors, fonts, layout) |
+| `images/` | Folder for photos and graphics |
+| `README.md` | Project documentation (visible on GitHub) |
+
+---
+
+## Part 6: Make It Yours
+
+### Required Personalizations:
+1. **Update personal information** in `index.html`:
+   - Your name
+   - Bio/introduction
+   - Contact information or links
+
+2. **Customize visual design** in `css/styles.css`:
+   - Colors (background, text, accent colors)
+   - Fonts (try Google Fonts)
+   - Any layout adjustments you prefer
+
+### Tips:
+- Make small changes and preview often
+- Keep backups of working code
+- Use browser DevTools to experiment (F12 or right-click → Inspect)
+
+---
+
+## Part 7: Commit & Push
+
+### In GitHub Desktop:
+1. Review changes in the left panel
+2. Write a descriptive commit message (e.g., "Update bio and customize colors")
+3. Click **Commit to main**
+4. Click **Push origin**
+
+### Verify Deployment:
+Visit your GitHub Pages URL to see your changes live (may take 1-2 minutes).
+
+---
+
+## Part 8: Reflect
+
+In your portfolio or as a separate document, briefly reflect:
+1. What was most challenging about this setup?
+2. What did you learn about GitHub, HTML, or CSS?
+3. What design choices did you make and why?
+
+---
+
+## Deliverables
+
+Submit to D2L dropbox:
+1. Link to your GitHub repository
+2. Link to your live GitHub Pages site
+
+---
+
+## Looking Ahead
+
+Each subsequent lab will ask you to add a new page to this portfolio. By the end of the semester, you'll have a complete showcase of your DCDA skills ready to share with future employers or graduate programs.
 
 1. Download [GitHub Desktop](https://desktop.github.com/)
 2. Sign in with your GitHub account

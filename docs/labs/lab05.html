@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 5: Python Mapping | DCDA 40833</title>
+    <title>Lab 5: Vibe Coding | DCDA 40833</title>
     <link rel="stylesheet" href="../lab-styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -31,7 +31,7 @@
             <!-- Lab Brand -->
             <div class="lab-brand">
                 <div class="lab-number">Lab 05</div>
-                <p class="lab-designation">Python Mapping</p>
+                <p class="lab-designation">Vibe Coding</p>
             </div>
 
             <!-- Navigation -->
@@ -47,11 +47,14 @@
                 <h3>Jump To</h3>
                 <nav>
                     <ul>
-                        <li><a href="#preparation">Preparation</a></li>
-                        <li><a href="#task">Task</a></li>
-                        <li><a href="#reflection">Reflection</a></li>
-                        <li><a href="#portfolio">Create Portfolio Page</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#part1">Part 1: AI Coding Spectrum</a></li>
+                        <li><a href="#part2">Part 2: Experiments</a></li>
+                        <li><a href="#part3">Part 3: Critical Reflection</a></li>
+                        <li><a href="#part4">Part 4: Portfolio Integration</a></li>
+                        <li><a href="#self-assessment">Self-Assessment</a></li>
                         <li><a href="#submission">Submission</a></li>
+                        <li><a href="#looking-ahead">Looking Ahead</a></li>
                     </ul>
                 </nav>
             </div>
@@ -60,142 +63,316 @@
         <!-- Main Content Area -->
         <main class="lab-main-content">
 
-    <!-- Hero Section -->
-    <header class="lab-hero" style="background-image: url('images/lab05.png')">
-        <div class="lab-hero-content">
-            <h1>Creating an Interactive Map of Your Hometown</h1>
-            <p class="lab-subtitle">Python, Folium & GeoPy</p>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="lab-wrapper">
-
-        <main class="lab-content">
-
-        <!-- Preparation -->
-        <section id="preparation">
-            <h2>Preparation</h2>
-            <p>Complete the Lab 5 training notebook to refresh and/or learn the skills needed for this lab:</p>
-
-            <div class="concept-box">
-                <h4>Training Materials</h4>
-                <ul>
-                    <li><strong>Training Notebook:</strong> <code>DCDA_Capstone_Python_mapping_2025_V3.ipynb</code></li>
-                    <li><strong>Sample Data:</strong> <code>lab06_materials/Lab_6_data/</code></li>
-                </ul>
-            </div>
-
-            <p>The training covers geocoding with GeoPy, creating point maps with Folium, custom basemaps, and exporting maps as HTML.</p>
-        </section>
-
-        <!-- Task -->
-        <section id="task">
-            <h2>Task</h2>
-            <p>Create an interactive online map of your hometown. The map should:</p>
-
-            <ul>
-                <li>Use a <strong>custom basemap</strong> (create one on <a href="https://mapbox.com" target="_blank">mapbox.com</a>, or use pre-made options from Folium, ESRI, CartoDB, or other sources)</li>
-                <li>Include <strong>point-markers for at least 10 locations</strong> unique to your hometown (parks, mom-and-pop restaurants, your church, school, etc.)</li>
-                <li><strong>Do not include</strong> your actual house or other private information</li>
-                <li>Think of it as highlighting places for someone visiting your hometown for the first time, or places meaningful to you personally</li>
-            </ul>
-
-            <h3>Data Preparation</h3>
-            <p>You will need to create a <code>.csv</code> file with those locations to either:</p>
-            <ol>
-                <li>Geocode using the Nominatim geocoding service, or</li>
-                <li>Plot using lat/long coordinates you include yourself</li>
-            </ol>
-
-            <h3>Required Pop-ups</h3>
-            <p>The map must have <strong>pop-ups</strong> (tooltips) that include:</p>
-            <ul>
-                <li>Placename</li>
-                <li>Description</li>
-                <li>Image URL (when possible)</li>
-            </ul>
-
-            <h3>CSV Format</h3>
-            <div class="code-block">
-                <pre><code>Loc_ID,PlaceName,Address,City,State,Zip,Lat,Lon,About,Image_Url
-1,Example Place,123 Main St,Yourtown,TX,76109,32.7555,-97.3308,Description here,https://...</code></pre>
-            </div>
-        </section>
-
-        <!-- Reflection -->
-        <section id="reflection">
-            <h2>Reflection (300+ words)</h2>
-            <p>Write a brief reflection addressing the following:</p>
-
-            <div class="concept-box">
-                <ol>
-                    <li><strong>Challenges:</strong> What elements of this exercise were most challenging for you, and why?</li>
-                    <li><strong>Final Project:</strong> How do you see yourself using web-mapping in your final project?</li>
-                    <li><strong>Professional Application:</strong> How do you see yourself using web-mapping in your professional life post-graduation?</li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- Create Portfolio Page -->
-        <section id="portfolio">
-            <h2>Create Portfolio Page</h2>
-            <p>Create a new HTML page in your portfolio called <code>hometown-map.html</code> that includes:</p>
-
-            <ul>
-                <li>Your interactive map (the exported <code>.html</code> file from Folium can be embedded using an <code>&lt;iframe&gt;</code> or integrated directly)</li>
-                <li>Your reflection (300+ words addressing the prompts above)</li>
-                <li>Link to your Google Colab notebook (Share → General access → Anyone with the link → Viewer)</li>
-                <li>Proper HTML structure and styling consistent with your portfolio</li>
-            </ul>
-
-            <p>Make sure to link this new page from your main portfolio <code>index.html</code> navigation.</p>
-
-            <div class="alert alert-info">
-                <i data-lucide="lightbulb"></i>
-                <div>
-                    <strong>Tip:</strong> To embed your Folium map, you can either:
-                    <ul>
-                        <li>Use an iframe: <code>&lt;iframe src="your-map.html" width="100%" height="600px"&gt;&lt;/iframe&gt;</code></li>
-                        <li>Or copy the Folium HTML directly into your portfolio page</li>
-                    </ul>
+            <!-- Hero Section -->
+            <header class="lab-hero" style="background-image: url('images/lab05.png')">
+                <div class="lab-hero-content">
+                    <h1>Vibe Coding</h1>
+                    <p class="lab-subtitle">AI-Assisted Development</p>
                 </div>
-            </div>
-        </section>
+            </header>
 
-        <!-- Submission -->
-        <section class="deliverables" id="submission">
-            <h2>Submission</h2>
+            <!-- Main Content -->
+            <div class="lab-wrapper">
 
-            <div class="checklist">
-                <div class="checklist-item">
-                    <input type="checkbox" id="check1">
-                    <label for="check1">Push your updated portfolio (including the map HTML file) to your GitHub repository</label>
-                </div>
-                <div class="checklist-item">
-                    <input type="checkbox" id="check2">
-                    <label for="check2">Verify your GitHub Pages site displays the map and reflection correctly</label>
-                </div>
-                <div class="checklist-item">
-                    <input type="checkbox" id="check3">
-                    <label for="check3">Submit to D2L dropbox:
+                <div class="lab-content">
+
+                    <!-- Overview -->
+                    <section class="overview" id="overview">
+                        <h2>Overview</h2>
+                        <p>"Vibe coding" refers to AI-assisted code generation where you describe what you want in natural language and the AI produces working code. By now, you've learned HTML/CSS fundamentals (Lab 1), explored AI capabilities critically (Lab 2), and built analysis and visualization skills (Labs 3-4).</p>
+                        
+                        <p>In this lab, you'll explore AI as a <strong>coding collaborator</strong> — learning when it's helpful, when it's problematic, and how to maintain your understanding while leveraging AI assistance.</p>
+
+                        <div class="alert alert-info">
+                            <i data-lucide="lightbulb"></i>
+                            <div>
+                                <strong>Key Principle:</strong> You must be able to <strong>read, explain, and modify</strong> any code you use, regardless of who (or what) wrote it.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Part 1: AI Coding Spectrum -->
+                    <section id="part1">
+                        <h2>Part 1: The AI Coding Spectrum</h2>
+                        <p>AI coding tools exist on a spectrum:</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Approach</th>
+                                    <th>Human Role</th>
+                                    <th>AI Role</th>
+                                    <th>Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Fundamentals First</strong></td>
+                                    <td>Write all code; AI explains errors</td>
+                                    <td>Teacher/debugger</td>
+                                    <td>Learning new concepts</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Collaborative</strong></td>
+                                    <td>Design logic; AI implements</td>
+                                    <td>Co-pilot</td>
+                                    <td>Familiar patterns, new syntax</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vibe Coding</strong></td>
+                                    <td>Describe outcome; AI generates</td>
+                                    <td>Generator</td>
+                                    <td>Rapid prototyping, repetitive tasks</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Full Automation</strong></td>
+                                    <td>Minimal involvement</td>
+                                    <td>Black box</td>
+                                    <td>⚠️ Risky - no understanding</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="alert alert-warning">
+                            <i data-lucide="alert-triangle"></i>
+                            <div>
+                                <strong>Remember:</strong> You must be able to <strong>read, explain, and modify</strong> any code you use.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Part 2: Experiments -->
+                    <section id="part2">
+                        <h2>Part 2: Experiments in AI-Assisted Development</h2>
+                        <p>Complete <strong>at least two</strong> of the following experiments:</p>
+
+                        <div class="concept-box">
+                            <h3>Experiment A: Portfolio Enhancement</h3>
+                            <p>Use AI to add a feature to your Skills Portfolio.</p>
+
+                            <h4>Options:</h4>
+                            <ul>
+                                <li>Responsive navigation menu (hamburger menu on mobile)</li>
+                                <li>Dark mode toggle</li>
+                                <li>Image gallery or carousel</li>
+                                <li>CSS animations or transitions</li>
+                                <li>Accessibility improvements (ARIA labels, keyboard navigation)</li>
+                            </ul>
+
+                            <h4>Process:</h4>
+                            <ol>
+                                <li><strong>Plan first</strong> — sketch what you want, identify the components</li>
+                                <li><strong>Prompt the AI</strong> — describe the feature clearly</li>
+                                <li><strong>Review the code</strong> — read every line; add comments explaining what each part does</li>
+                                <li><strong>Test thoroughly</strong> — does it work? Is it accessible? Does it break anything?</li>
+                                <li><strong>Refine</strong> — ask AI to modify, or make changes yourself</li>
+                            </ol>
+                        </div>
+
+                        <div class="concept-box">
+                            <h3>Experiment B: Python Code Generation</h3>
+                            <p>Use AI to generate Python code for a data analysis task.</p>
+
+                            <h4>Options:</h4>
+                            <ul>
+                                <li>Clean/transform a messy dataset</li>
+                                <li>Create a specific type of visualization</li>
+                                <li>Perform statistical analysis</li>
+                                <li>Scrape data from a website</li>
+                                <li>Process text or perform sentiment analysis</li>
+                            </ul>
+
+                            <h4>Process:</h4>
+                            <ol>
+                                <li><strong>Define the task</strong> — be specific about inputs, outputs, and requirements</li>
+                                <li><strong>Generate code</strong> — prompt AI with clear instructions</li>
+                                <li><strong>Review line-by-line</strong> — add comments explaining the logic</li>
+                                <li><strong>Test with sample data</strong> — does it produce expected results?</li>
+                                <li><strong>Handle edge cases</strong> — what breaks it? Ask AI to fix, or fix yourself</li>
+                            </ol>
+                        </div>
+
+                        <div class="concept-box">
+                            <h3>Experiment C: Debug with AI</h3>
+                            <p>Take broken code and use AI to fix it.</p>
+
+                            <h4>Options:</h4>
+                            <ul>
+                                <li>Find a buggy code snippet online (or write intentionally broken code)</li>
+                                <li>Use AI to identify and fix the issue</li>
+                                <li>Compare AI's solution to your own debugging process</li>
+                            </ul>
+
+                            <h4>Process:</h4>
+                            <ol>
+                                <li><strong>Describe the problem</strong> to the AI</li>
+                                <li><strong>Evaluate the fix</strong> — does it actually solve the problem?</li>
+                                <li><strong>Understand the root cause</strong> — why was the code broken?</li>
+                                <li><strong>Document</strong> — what did you learn about debugging with AI?</li>
+                            </ol>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <i data-lucide="info"></i>
+                            <div>
+                                <strong>Tip:</strong> Document your prompts and AI responses as you go — you'll need them for your reflection and submission.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Part 3: Critical Reflection -->
+                    <section id="part3">
+                        <h2>Part 3: Critical Reflection</h2>
+                        <p>Write a <strong>400-600 word reflection</strong> addressing the following prompts:</p>
+
+                        <div class="concept-box">
+                            <h3>Technical Understanding</h3>
+                            <ol>
+                                <li><strong>What code did the AI generate?</strong> Describe the feature/function in your own words.</li>
+                                <li><strong>How does it work?</strong> Explain the key logic or mechanisms. If you can't explain it, that's a red flag.</li>
+                                <li><strong>What did you modify?</strong> Did you need to fix bugs, adjust styling, or change functionality? Why?</li>
+                            </ol>
+                        </div>
+
+                        <div class="concept-box">
+                            <h3>Process Evaluation</h3>
+                            <ol start="4">
+                                <li><strong>When was AI helpful?</strong> What tasks did it accelerate or simplify?</li>
+                                <li><strong>When was AI problematic?</strong> Where did it produce incorrect, inefficient, or unnecessarily complex code?</li>
+                                <li><strong>What's your role?</strong> In an AI-assisted workflow, what remains uniquely human? What can't (or shouldn't) be automated?</li>
+                            </ol>
+                        </div>
+
+                        <div class="concept-box">
+                            <h3>Ethical & Pedagogical Considerations</h3>
+                            <ol start="7">
+                                <li><strong>Learning trade-offs:</strong> Does vibe coding help or hinder your development as a programmer? Under what conditions?</li>
+                                <li><strong>Attribution:</strong> When using AI-generated code, what does proper citation look like? (Consider academic vs. professional contexts)</li>
+                                <li><strong>Your guidelines:</strong> What personal rules will you follow for using AI in coding? When will you use it? When won't you?</li>
+                            </ol>
+                        </div>
+
+                        <div class="alert alert-warning">
+                            <i data-lucide="alert-circle"></i>
+                            <div>
+                                <strong>Important:</strong> Do not use AI to write your reflection. This must be your own critical thinking and personal voice.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Part 4: Portfolio Integration -->
+                    <section id="part4">
+                        <h2>Part 4: Portfolio Integration</h2>
+                        <p>Add a <strong>Lab 5 entry</strong> to your Skills Portfolio that includes:</p>
+
                         <ul>
-                            <li>Link to your GitHub repository</li>
-                            <li>Link to your live GitHub Pages site</li>
+                            <li>Description of what you built/analyzed with AI assistance</li>
+                            <li>Key code snippet with detailed comments</li>
+                            <li>Brief discussion of your vibe coding guidelines</li>
+                            <li>Screenshot or demo of the working feature</li>
                         </ul>
-                    </label>
+
+                        <div class="alert alert-info">
+                            <i data-lucide="code-2"></i>
+                            <div>
+                                <strong>Note:</strong> If you used AI to enhance your portfolio (Experiment A), your Lab 5 entry should explain the new feature and your process.
+                            </div>
+                        </div>
+
+                        <p>Create a new page called <code>lab05.html</code> in your portfolio that showcases your work. Include appropriate navigation links so visitors can find it.</p>
+                    </section>
+
+                    <!-- Self-Assessment -->
+                    <section id="self-assessment">
+                        <h2>Self-Assessment</h2>
+                        <p>Before submitting, take a moment to reflect on your work:</p>
+
+                        <div class="concept-box">
+                            <h4>Questions to Consider</h4>
+                            <ul>
+                                <li><strong>Code Understanding:</strong> Can I explain how every part of my AI-generated code works?</li>
+                                <li><strong>Documentation:</strong> Did I thoroughly comment my code and document my process?</li>
+                                <li><strong>Critical Thinking:</strong> Did my reflection demonstrate genuine engagement with the ethical and pedagogical implications?</li>
+                                <li><strong>Completeness:</strong> Did I complete at least two experiments and address all reflection prompts?</li>
+                                <li><strong>Evidence:</strong> Did I save my prompts and AI outputs to submit?</li>
+                                <li><strong>Technical Execution:</strong> Does my code work properly? Is my portfolio page professional and functional?</li>
+                            </ul>
+                        </div>
+
+                        <p>Use these questions to guide final revisions before submission. Honest self-assessment helps you identify areas of strength and opportunities for growth.</p>
+                    </section>
+
+                    <!-- Submission -->
+                    <section class="deliverables" id="submission">
+                        <h2>Submission</h2>
+
+                        <div class="checklist">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check1">
+                                <label for="check1">Push your updated portfolio (including lab05.html) to your GitHub repository</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check2">
+                                <label for="check2">Verify your GitHub Pages site displays the new lab page correctly</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check3">
+                                <label for="check3">Submit to D2L dropbox:
+                                    <ul>
+                                        <li>Critical Reflection (400-600 words) — as PDF or Word document</li>
+                                        <li>Code + Documentation — your final code with extensive comments</li>
+                                        <li>Original AI prompts you used</li>
+                                        <li>Examples of AI output (before your modifications)</li>
+                                        <li>Links: GitHub Pages URL and GitHub repository URL</li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-warning">
+                            <i data-lucide="alert-triangle"></i>
+                            <div>
+                                <strong>Guidelines for AI Use in This Lab</strong><br><br>
+                                <strong>✅ Encouraged:</strong>
+                                <ul>
+                                    <li>Using AI to generate initial code</li>
+                                    <li>Asking AI to explain code concepts</li>
+                                    <li>Requesting debugging help</li>
+                                    <li>Exploring multiple AI-generated approaches</li>
+                                </ul>
+                                <strong>❌ Not Allowed:</strong>
+                                <ul>
+                                    <li>Submitting AI code you don't understand</li>
+                                    <li>Skipping the commenting/documentation process</li>
+                                    <li>Using AI to write your reflection</li>
+                                    <li>Copying code without attribution</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Looking Ahead -->
+                    <section id="looking-ahead">
+                        <h2>Looking Ahead</h2>
+                        <p>The skills you develop here — prompting effectively, evaluating AI output, maintaining code literacy — will serve you in Lab 6 (Python mapping) and your Semester Project.</p>
+                        
+                        <p>The question isn't <em>"Should I use AI?"</em> but <em>"How do I use AI responsibly and effectively?"</em></p>
+
+                        <div class="alert alert-info">
+                            <i data-lucide="compass"></i>
+                            <div>
+                                <strong>Remember:</strong> The point isn't to avoid AI, but to use it thoughtfully while maintaining your understanding and agency.
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </div>
-        </section>
 
-        </main>
-    </div>
-
-    <!-- Footer -->
-    <footer class="lab-footer">
-        <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
-        <p><a href="../index.html">Back to Resources</a></p>
-    </footer>
+            <footer class="lab-footer">
+                <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
+                <p><a href="../index.html">Back to Resources</a></p>
+            </footer>
 
         </main>
     </div>
