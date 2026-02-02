@@ -327,6 +327,16 @@ section {
     margin-top: 1rem;
 }
 
+.overview a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.overview a:hover {
+    color: #ffffff;
+    opacity: 0.85;
+}
+
 /* Typography */
 h2 {
     font-size: 1.75rem;
