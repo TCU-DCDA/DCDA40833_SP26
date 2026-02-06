@@ -6,6 +6,44 @@
     <title>Lab 4: Tableau Visualization | DCDA 40833</title>
     <link rel="stylesheet" href="../lab-styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Copy Button Styles */
+        .code-block-wrapper {
+            position: relative;
+            margin: 1.5rem 0;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #C1272D;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background 0.2s ease;
+            z-index: 10;
+        }
+        .copy-btn:hover {
+            background: #a01f25;
+        }
+        .copy-btn.copied {
+            background: #166534;
+        }
+        .copy-btn .icon {
+            width: 16px;
+            height: 16px;
+        }
+        .code-block-wrapper .code-block {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="lab-page-container">
