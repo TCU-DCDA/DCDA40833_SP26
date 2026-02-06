@@ -3,6 +3,10 @@
 ## Overview
 This rubric uses an ungrading approach to help you understand expectations and assess your own work. Focus on growth, engagement, and critical thinking rather than points.
 
+> **Note for future review:** The Lab 4 rubric introduces a hybrid structure that separates binary completion items (done/not done) from quality dimensions (Exceeds/Meets/Does Not Meet). Consider adopting this approach here — portfolio implementation in particular is largely binary and may not benefit from tiered quality evaluation.
+>
+> Also: The self-assessment questions in Lab 3's HTML are generic (Depth of Analysis, Evidence & Examples, etc.). Replace with lab-specific questions that are harder to dodge — see Lab 4's rubric and HTML for examples (e.g., "Did I reverse-engineer my expectations?"). Questions should force honest reflection, not just confirm completion.
+
 ---
 
 ## 1. Visualization Selection & Source Engagement

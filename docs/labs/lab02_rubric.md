@@ -3,6 +3,10 @@
 ## Overview
 This rubric uses an ungrading approach to help you understand expectations for critical engagement with AI tools. The lab offers two approaches—structured framework (Option A) or open experimentation (Option B)—which are evaluated using adapted criteria.
 
+> **Note for future review:** The Lab 4 rubric introduces a hybrid structure that separates binary completion items (done/not done) from quality dimensions (Exceeds/Meets/Does Not Meet). Consider adopting this approach here — items like portfolio implementation and evidence/documentation may work better as checklist items rather than tiered categories.
+>
+> Also: Lab 2 has no self-assessment questions. When adding them, develop lab-specific questions that are harder to dodge — see Lab 4's rubric and HTML for examples (e.g., "Did I reverse-engineer my expectations?"). Avoid generic prompts like "Completeness" or "Technical Execution" that students can check off without genuine reflection.
+
 ---
 
 ## 1. Tool Selection & Exploration Depth

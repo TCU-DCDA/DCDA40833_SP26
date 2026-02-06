@@ -3,6 +3,10 @@
 ## Overview
 This rubric uses an ungrading approach to help you understand expectations and assess your own work. Evaluation is based on submitted evidence: your GitHub repository, live site, and reflection. Focus on creating observable results that demonstrate your technical competence and understanding.
 
+> **Note for future review:** The Lab 4 rubric introduces a hybrid structure that separates binary completion items (done/not done) from quality dimensions (Exceeds/Meets/Does Not Meet). Consider adopting this approach here — several categories in this rubric (e.g., repository setup, live site deployment) are essentially binary and don't benefit from tiered quality evaluation.
+>
+> Also: Lab 1 has no self-assessment questions. When adding them, develop lab-specific questions that are harder to dodge — see Lab 4's rubric and HTML for examples (e.g., "Did I reverse-engineer my expectations?"). Avoid generic prompts like "Completeness" or "Technical Execution" that students can check off without genuine reflection.
+
 ---
 
 ## 1. Repository Structure & Account Setup
