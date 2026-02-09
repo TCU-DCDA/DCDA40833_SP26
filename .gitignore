@@ -26,6 +26,12 @@ venv/
 node_modules/
 package-lock.json
 
+# Slidev source assets (images copied into dist/ at build time)
+docs/lectures/*/public/
+
+# Orphaned build output
+docs/lectures/data-collection-viz/
+
 # Backup files
 *_original.md
 *_backup.md
