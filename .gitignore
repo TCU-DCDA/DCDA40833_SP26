@@ -22,6 +22,10 @@ env/
 venv/
 *.egg-info/
 
+# Node
+node_modules/
+package-lock.json
+
 # Backup files
 *_original.md
 *_backup.md
