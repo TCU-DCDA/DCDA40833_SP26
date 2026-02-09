@@ -6,6 +6,17 @@
     <title>Lab 5: Vibe Coding | DCDA 40833</title>
     <link rel="stylesheet" href="../lab-styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .setup-accordion summary {
+            cursor: pointer;
+            list-style: none;
+            padding: 0.25rem 0;
+        }
+        .setup-accordion summary::-webkit-details-marker { display: none; }
+        .setup-accordion summary::marker { display: none; content: ""; }
+        .setup-accordion summary h2 { pointer-events: none; }
+        .setup-accordion[open] summary span { display: none; }
+    </style>
 </head>
 <body>
     <div class="lab-page-container">
@@ -48,6 +59,7 @@
                 <nav>
                     <ul>
                         <li><a href="#overview">Overview</a></li>
+                        <li><a href="#github-setup">GitHub Education Setup</a></li>
                         <li><a href="#part1">Part 1: AI Coding Spectrum</a></li>
                         <li><a href="#part2">Part 2: Experiments</a></li>
                         <li><a href="#part3">Part 3: Critical Reflection</a></li>
@@ -89,6 +101,93 @@
                                 <strong>Key Principle:</strong> You must be able to <strong>read, explain, and modify</strong> any code you use, regardless of who (or what) wrote it.
                             </div>
                         </div>
+                    </section>
+
+                    <!-- GitHub Education Setup -->
+                    <section id="github-setup">
+                        <details class="setup-accordion">
+                            <summary>
+                                <h2 style="display:inline; border-bottom:none; padding-bottom:0; margin-bottom:0;">
+                                    <i data-lucide="graduation-cap" class="icon" style="vertical-align:-3px; margin-right:0.5rem;"></i>GitHub Education Setup
+                                </h2>
+                                <span style="float:right; color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem;">Click to expand</span>
+                            </summary>
+
+                            <div style="margin-top:1.5rem;">
+
+                                <div class="alert alert-info">
+                                    <i data-lucide="sparkles"></i>
+                                    <div>
+                                        <strong>Why this matters for Lab 5:</strong> The GitHub Student Developer Pack gives you free access to <strong>GitHub Copilot Pro</strong>, which includes 300 premium AI requests per month across multiple AI models from Anthropic, OpenAI, Google, and others (<a href="https://docs.github.com/en/copilot/reference/ai-models/supported-models" target="_blank">see the full list of supported models</a>). You'll also get GitHub Codespaces (90 hrs/month of cloud dev environments), Azure cloud credits, free domain names, and a free GitHub certification exam voucher. These tools are essential for this lab and the rest of the course.
+                                    </div>
+                                </div>
+
+                                <h3>Before You Apply</h3>
+                                <p>Complete <strong>every item</strong> on this checklist before starting your application. Skipping any of these is the most common reason for rejection.</p>
+
+                                <div class="concept-box">
+                                    <h4>Pre-Application Checklist</h4>
+                                    <ol>
+                                        <li><strong>Full legal name on your GitHub profile.</strong> This must match your school documents <em>exactly</em> — including middle name or initial if it appears on your student ID. Go to Settings &rarr; Public profile to update it.</li>
+                                        <li><strong>Billing information filled out.</strong> Go to Settings &rarr; Billing and licensing and enter your full legal name and address. No payment method is required — GitHub just uses this to verify your identity.</li>
+                                        <li><strong>Two-factor authentication (2FA) enabled.</strong> Go to Settings &rarr; Password and authentication and set up 2FA. This is required.</li>
+                                        <li><strong>Add a short bio to your profile.</strong> Even one sentence (e.g., "Student at TCU") helps. Go to Settings &rarr; Public profile.</li>
+                                        <li><strong>Have your school email ready</strong> (your <code>@tcu.edu</code> address). This is the fastest verification method.</li>
+                                    </ol>
+                                </div>
+
+                                <h3>Application Steps</h3>
+                                <div class="concept-box">
+                                    <ol>
+                                        <li>Log into GitHub and go to <strong>Settings &rarr; Billing and licensing &rarr; GitHub Education</strong>.</li>
+                                        <li>Click <strong>"Start an application"</strong> and select the student option.</li>
+                                        <li>Enter your <strong>school email address</strong> (<code>@tcu.edu</code>). If you can verify through email alone, this is the fastest path — approval can come in days rather than weeks.</li>
+                                        <li>If email verification isn't enough, you'll be asked to upload <strong>proof of enrollment</strong>. Acceptable documents include:
+                                            <ul>
+                                                <li>Student ID (with your name and current dates visible)</li>
+                                                <li>Enrollment verification letter</li>
+                                                <li>Class schedule or course enrollment receipt</li>
+                                                <li>Official transcript with enrollment dates</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Use your phone camera to take a photo of the document</strong> — do not upload a screenshot, PDF, or pre-existing image file. GitHub's system strongly prefers live camera photos. Make sure the image is well-lit, in focus, and all text is readable.</li>
+                                        <li>Submit and wait. Typical turnaround is <strong>7–14 business days</strong> from application to full benefit activation.</li>
+                                    </ol>
+                                </div>
+
+                                <h3>Common Rejection Reasons (and How to Avoid Them)</h3>
+                                <div class="concept-box">
+                                    <ul>
+                                        <li><strong>Name mismatch:</strong> Your GitHub profile name doesn't match your documents. Fix this <em>before</em> applying — even small differences (e.g., "Rob" vs. "Robert") can trigger rejection.</li>
+                                        <li><strong>Blurry or low-quality photo:</strong> Use your phone's rear camera in good lighting. All text on the document must be crisp and readable.</li>
+                                        <li><strong>No 2FA:</strong> If two-factor authentication isn't enabled, your application will be automatically rejected.</li>
+                                        <li><strong>Incomplete billing info:</strong> The name and address fields in Billing and licensing must be filled out. This is easy to overlook.</li>
+                                        <li><strong>Screenshot instead of camera photo:</strong> GitHub's verification system expects a live photo capture. Screenshots, scanned PDFs, and gallery uploads have significantly higher rejection rates.</li>
+                                        <li><strong>Non-English documents without translation:</strong> If your document is in another language, photograph it next to a side-by-side English translation.</li>
+                                    </ul>
+                                </div>
+
+                                <h3>If You're Rejected</h3>
+                                <div class="concept-box">
+                                    <ol>
+                                        <li><strong>Read the rejection email carefully.</strong> It will tell you the specific reason. Don't skip this step.</li>
+                                        <li><strong>Fix the issue.</strong> Update your profile name, enable 2FA, complete your billing info — whatever the email flagged.</li>
+                                        <li><strong>Wait 24–48 hours.</strong> GitHub locks reapplication briefly after a denial. Don't try to resubmit immediately.</li>
+                                        <li><strong>Take fresh photos.</strong> Even if you think your original photos were fine, take new ones with your phone camera. Users report higher approval rates with fresh captures.</li>
+                                        <li><strong>Reapply</strong> through Settings &rarr; Billing and licensing &rarr; GitHub Education.</li>
+                                        <li><strong>Still rejected?</strong> Contact <a href="https://support.github.com" target="_blank">GitHub Support</a> with a clear explanation of what you fixed between attempts.</li>
+                                    </ol>
+                                </div>
+
+                                <div class="alert alert-warning">
+                                    <i data-lucide="alert-triangle"></i>
+                                    <div>
+                                        <strong>Apply early.</strong> Don't wait until you need Copilot for an assignment. Start the process now so you have time to reapply if necessary.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </details>
                     </section>
 
                     <!-- Part 1: AI Coding Spectrum -->
