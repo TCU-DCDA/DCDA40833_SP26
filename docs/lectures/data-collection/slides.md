@@ -216,18 +216,33 @@ layout: center
 class: text-center
 ---
 
-# Try It: <span class="text-teal-400">Instant Data Scraper</span>
+# Try It: <span class="text-teal-400">No-Code Web Scraping</span>
 
-Chrome extension for no-code web scraping
+Chrome extensions for point-and-click data extraction
 
 <div class="font-mono text-sm text-teal-400 mt-6">
   <a href="https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah" target="_blank">
-    chromewebstore.google.com/detail/instant-data-scraper/...
+    Instant Data Scraper ↗
   </a>
 </div>
 
 <div class="font-mono text-sm text-teal-400 mt-4">
   <a href="https://easyscraper.com/" target="_blank">
-    easyscraper.com
+    Easy Scraper ↗
+  </a>
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# Lab 4: <span class="text-teal-400">Data Sources</span>
+
+A curated list of repositories for your Tableau visualization project
+
+<div class="font-mono text-sm text-teal-400 mt-8">
+  <a href="https://tcu-dcda.github.io/DCDA40833_SP26/labs/lab04.html#data-sources" target="_blank">
+    Lab 4 — Data Sources ↗
   </a>
 </div>
