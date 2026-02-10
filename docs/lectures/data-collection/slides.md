@@ -1,6 +1,6 @@
 ---
 theme: default
-title: Data Collection
+title: Web Scraping & Data Ethics
 info: |
   DCDA · Spring 2026
   Digital Culture & Data Analytics
@@ -12,7 +12,7 @@ routerMode: hash
 mdc: true
 ---
 
-# Data Collection
+# Web Scraping & Data Ethics
 
 <div class="mt-4 opacity-70 font-mono text-sm tracking-widest">DCDA · SPRING 2026</div>
 
