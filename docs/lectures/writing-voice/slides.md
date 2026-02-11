@@ -133,7 +133,7 @@ It's a tool of cognition.
 
 ::right::
 
-<img src="/images/cognition.png" class="rounded-xl shadow-2xl shadow-teal-500/10 w-80" />
+<img src="/images/cognition.png" class="rounded-xl shadow-2xl shadow-teal-500/10 w-full" />
 
 ---
 layout: two-cols
@@ -168,7 +168,7 @@ If it diverged, especially in ways you didn't expect — <strong>that's the cogn
 
 ::right::
 
-<img src="/images/test.png" class="rounded-xl shadow-2xl shadow-teal-500/10 w-80" />
+<img src="/images/test.png" class="rounded-xl shadow-2xl shadow-teal-500/10 w-full" />
 
 ---
 
@@ -297,7 +297,7 @@ layoutClass: gap-8 items-center
 
 ::right::
 
-<img src="/images/ai-prose.png" class="rounded-xl shadow-2xl shadow-teal-500/10 w-80" />
+<img src="/images/ai-prose.png" class="rounded-xl shadow-2xl shadow-teal-500/10 w-full" />
 
 ---
 
@@ -444,4 +444,4 @@ The choice is yours.
 
 ::right::
 
-<img src="/images/closing.png" class="rounded-xl shadow-2xl shadow-teal-500/10 w-80" />
+<img src="/images/closing.png" class="rounded-xl shadow-2xl shadow-teal-500/10 w-full" />
