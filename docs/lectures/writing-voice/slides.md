@@ -232,7 +232,7 @@ Language does more than deliver information. It serves **three functions:**
     <div class="text-sm opacity-80">Deliver information from one person to another</div>
   </div>
   <div class="bg-teal-500/10 border border-teal-500/20 rounded-lg p-6">
-    <div class="text-teal-400 font-semibold text-lg mb-2">Cognize</div>
+    <div class="text-teal-400 font-semibold text-lg mb-2">Cogitate</div>
     <div class="text-sm opacity-80">You don't fully know your ideas until you've struggled to articulate them</div>
   </div>
   <div class="bg-teal-500/10 border border-teal-500/20 rounded-lg p-6">
