@@ -241,12 +241,12 @@ Language does more than deliver information. It serves **three functions:**
   </div>
 </div>
 
-<div class="mt-6 text-center text-base opacity-70">
-These functions are interconnected — you can't fully separate them.
+<div class="mt-4 text-center text-sm italic opacity-70">
+"Language has two functions: to convey information and to negotiate the type of relationship holding between speaker and hearer."
 </div>
 
 <div class="mt-2 text-center font-mono text-xs opacity-40">
-Pinker / Nowak
+<a href="https://www.pnas.org/doi/full/10.1073/pnas.0707192105" target="_blank">Pinker, Nowak & Lee, <em>PNAS</em> (2008)</a> · Cogitation is our addition (see Ong above)
 </div>
 
 ---
