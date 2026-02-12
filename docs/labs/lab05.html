@@ -232,6 +232,25 @@
                         <h2>Part 2: Experiments in AI-Assisted Development</h2>
                         <p>Complete <strong>at least two</strong> of the following experiments:</p>
 
+                        <div class="alert alert-warning">
+                            <i data-lucide="save"></i>
+                            <div>
+                                <strong>Before you start:</strong> Commit and push your current portfolio so you have a clean save point to return to if anything breaks during your experiments. In GitHub Desktop, make sure all your changes are checked, type <strong>"Save before Lab 5 experiments"</strong> as your commit message, click <strong>Commit to main</strong>, then <strong>Push origin</strong>.
+                            </div>
+                        </div>
+
+                        <div class="concept-box">
+                            <h3>How to Comment: The Understanding Spectrum</h3>
+                            <p>When you add comments to AI-generated code, be honest about your level of understanding. Your comments are a record of what you know — not a performance.</p>
+                            <ul>
+                                <li><strong>"I wrote this"</strong> — You understand it fully. A brief comment is fine.</li>
+                                <li><strong>"I understand the logic"</strong> — You get <em>what</em> it does and <em>why</em>, even if you couldn't write it from scratch. Explain in your own words.</li>
+                                <li><strong>"I know what it does but not how"</strong> — You see the input and output but the mechanism is unclear. Flag it honestly.</li>
+                                <li><strong>"I don't understand this"</strong> — That's okay to say. Try to figure it out (ask the AI to explain, look it up) and document what you learned.</li>
+                            </ul>
+                            <p>This honesty feeds directly into your reflection — you'll be able to point to specific moments where you were confident, where you weren't, and what you did about it.</p>
+                        </div>
+
                         <div class="concept-box">
                             <h3>Experiment A: Portfolio Enhancement</h3>
                             <p>Use AI to add a feature to your Skills Portfolio.</p>
@@ -249,7 +268,7 @@
                             <ol>
                                 <li><strong>Plan first</strong> — sketch what you want, identify the components</li>
                                 <li><strong>Prompt the AI</strong> — describe the feature clearly</li>
-                                <li><strong>Review the code</strong> — read every line; add comments explaining what each part does</li>
+                                <li><strong>Review the code</strong> — read every line and add comments using the understanding spectrum above</li>
                                 <li><strong>Test thoroughly</strong> — does it work? Is it accessible? Does it break anything?</li>
                                 <li><strong>Refine</strong> — ask AI to modify, or make changes yourself</li>
                             </ol>
@@ -257,22 +276,23 @@
 
                         <div class="concept-box">
                             <h3>Experiment B: Python Code Generation</h3>
-                            <p>Use AI to generate Python code for a data analysis task.</p>
+                            <p>Use <a href="https://colab.research.google.com/" target="_blank">Google Colab</a> and AI to generate Python code for a data task. Colab runs in your browser with Python and common libraries (pandas, matplotlib, etc.) already installed — no setup required.</p>
 
                             <h4>Options:</h4>
                             <ul>
-                                <li>Clean/transform a messy dataset</li>
-                                <li>Create a specific type of visualization</li>
-                                <li>Perform statistical analysis</li>
-                                <li>Scrape data from a website</li>
-                                <li>Process text or perform sentiment analysis</li>
+                                <li>Read a CSV file and create a basic chart <em>(beginner-friendly)</em></li>
+                                <li>Create a specific type of visualization <em>(beginner-friendly)</em></li>
+                                <li>Clean or transform a messy dataset <em>(intermediate)</em></li>
+                                <li>Perform statistical analysis <em>(intermediate)</em></li>
+                                <li>Scrape data from a website <em>(advanced)</em></li>
+                                <li>Process text or perform sentiment analysis <em>(advanced)</em></li>
                             </ul>
 
                             <h4>Process:</h4>
                             <ol>
                                 <li><strong>Define the task</strong> — be specific about inputs, outputs, and requirements</li>
                                 <li><strong>Generate code</strong> — prompt AI with clear instructions</li>
-                                <li><strong>Review line-by-line</strong> — add comments explaining the logic</li>
+                                <li><strong>Review line-by-line</strong> — add comments using the understanding spectrum above</li>
                                 <li><strong>Test with sample data</strong> — does it produce expected results?</li>
                                 <li><strong>Handle edge cases</strong> — what breaks it? Ask AI to fix, or fix yourself</li>
                             </ol>
@@ -280,13 +300,21 @@
 
                         <div class="concept-box">
                             <h3>Experiment C: Debug with AI</h3>
-                            <p>Take broken code and use AI to fix it.</p>
+                            <p>Take broken code and use AI to fix it. Try to identify the bug yourself first, then see how AI approaches it.</p>
 
-                            <h4>Options:</h4>
+                            <h4>Starter Bugs to Try:</h4>
                             <ul>
-                                <li>Find a buggy code snippet online (or write intentionally broken code)</li>
-                                <li>Use AI to identify and fix the issue</li>
-                                <li>Compare AI's solution to your own debugging process</li>
+                                <li><strong>HTML/CSS:</strong> A page where the layout breaks at certain screen sizes, or a nav menu that doesn't link to the right sections <em>(beginner-friendly)</em></li>
+                                <li><strong>JavaScript:</strong> A button click handler that doesn't fire, or a loop that produces unexpected output <em>(beginner-friendly)</em></li>
+                                <li><strong>Python:</strong> A script that crashes on certain inputs, or a function that returns wrong results for edge cases <em>(intermediate)</em></li>
+                                <li><strong>Your own code:</strong> Something from a previous lab or project that you never got working quite right <em>(any level)</em></li>
+                            </ul>
+
+                            <h4>What to Compare:</h4>
+                            <ul>
+                                <li>Did the AI find the same bug you did, or a different one?</li>
+                                <li>Was the AI's fix what you expected, or did it take a different approach?</li>
+                                <li>Did the AI introduce any new problems while fixing the original?</li>
                             </ul>
 
                             <h4>Process:</h4>
@@ -294,7 +322,7 @@
                                 <li><strong>Describe the problem</strong> to the AI</li>
                                 <li><strong>Evaluate the fix</strong> — does it actually solve the problem?</li>
                                 <li><strong>Understand the root cause</strong> — why was the code broken?</li>
-                                <li><strong>Document</strong> — what did you learn about debugging with AI?</li>
+                                <li><strong>Document</strong> — comment the fix using the understanding spectrum above; what did you learn about debugging with AI?</li>
                             </ol>
                         </div>
 
@@ -406,7 +434,7 @@
                                 <label for="check3">Submit to D2L dropbox:
                                     <ul>
                                         <li>Critical Reflection (400-600 words) — as PDF or Word document</li>
-                                        <li>Code + Documentation — your final code with extensive comments</li>
+                                        <li>Code + Documentation — your final code with comments. If you used Google Colab, download your notebook (.ipynb file) along with any datasets you used, add them to your portfolio repository, and link to the notebook from your lab05.html page.</li>
                                         <li>Original AI prompts you used</li>
                                         <li>Examples of AI output (before your modifications)</li>
                                         <li>Links: GitHub Pages URL and GitHub repository URL</li>
@@ -440,7 +468,7 @@
                     <!-- Looking Ahead -->
                     <section id="looking-ahead">
                         <h2>Looking Ahead</h2>
-                        <p>The skills you develop here — prompting effectively, evaluating AI output, maintaining code literacy — will serve you in Lab 6 (Python mapping) and your Semester Project.</p>
+                        <p>The skills you develop here — prompting effectively, evaluating AI output, maintaining code literacy — will serve you throughout the rest of this course and your Semester Project.</p>
                         
                         <p>The question isn't <em>"Should I use AI?"</em> but <em>"How do I use AI responsibly and effectively?"</em></p>
 

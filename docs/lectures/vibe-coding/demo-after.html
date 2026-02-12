@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan's Portfolio</title>
+  <style>
+    /* === BASE STYLES ===
+       I wrote this - same styles from my original portfolio -->  */
+
+    body {
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #4a2c82;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* === NAVIGATION ===
+       I understand the logic: the nav is still a horizontal flexbox list
+       on desktop, same as before. The media query below changes it
+       for small screens. -->  */
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 0;
+      display: block;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* === HAMBURGER BUTTON ===
+       I know what this does but not exactly how: the three lines are made
+       from a span and its ::before and ::after pseudo-elements. Each one
+       is a small rectangle positioned with "absolute." I get that they
+       stack vertically to look like three lines, but I'd have to mess
+       with the values to fully understand the spacing. -->  */
+
+    .hamburger {
+      display: none;           /* hidden on desktop */
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 100;
+    }
+
+    .hamburger-icon {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      position: relative;
+    }
+
+    /* I don't understand this: I looked up ::before and ::after -
+       they're "pseudo-elements" that create fake elements before/after
+       the span. The "content: ''" is required or they won't show up
+       at all. I don't fully get why content has to be empty quotes
+       instead of just... nothing? But it breaks without it. -->  */
+
+    .hamburger-icon::before,
+    .hamburger-icon::after {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      position: absolute;
+      left: 0;
+    }
+
+    .hamburger-icon::before {
+      top: -8px;
+    }
+
+    .hamburger-icon::after {
+      top: 8px;
+    }
+
+    /* === MAIN CONTENT ===
+       I wrote this - same as my original layout -->  */
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #4a2c82;
+    }
+
+    /* === MOBILE STYLES ===
+       I understand the logic: @media (max-width: 768px) means
+       "apply these styles only when the screen is 768px wide or
+       smaller." So on a phone, the nav becomes vertical and the
+       hamburger button appears. 768px is a common breakpoint -
+       I've seen it in a few tutorials. -->  */
+
+    @media (max-width: 768px) {
+
+      /* Show the hamburger button on mobile */
+      .hamburger {
+        display: block;
+      }
+
+      /* I understand the logic: on mobile the nav links stack
+         vertically instead of sitting in a row. flex-direction: column
+         does that. -->  */
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        /* I know what this does but not how: max-height: 0 and
+           overflow: hidden together make the menu invisible by
+           collapsing it to zero height. The "transition" property
+           animates it open smoothly. I tried removing "ease" and
+           it still worked, so I think ease just controls the
+           speed curve? Not totally sure. -->  */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      /* When the nav has the "open" class, expand to show links.
+         I understand the logic: the JS below adds/removes "open"
+         when you tap the hamburger. max-height: 300px is just a
+         number big enough to fit all the links - it's not exact. -->  */
+      nav ul.open {
+        max-height: 300px;
+      }
+
+      nav li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #555;
+      }
+
+      nav a {
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- I wrote this: same header from my original portfolio -->
+  <header>
+    <h1>Jordan Rivera</h1>
+    <p>DCDA 40833 - Digital Curation &amp; Data Analytics</p>
+  </header>
+
+  <nav>
+    <!-- I don't understand this: aria-expanded and aria-label are
+         "accessibility attributes." The AI told me screen readers use
+         aria-expanded to announce whether the menu is open or closed.
+         I looked it up on MDN and I think I get the idea, but I
+         wouldn't have known to add these on my own. I'm also not sure
+         when aria-label is needed vs. just having text inside the
+         button. I want to learn more about this. -->
+    <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span class="hamburger-icon"></span>
+    </button>
+
+    <ul id="nav-list">
+      <!-- I wrote this: same links as before, just inside the new structure -->
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lab1.html">Lab 1</a></li>
+      <li><a href="lab2.html">Lab 2</a></li>
+      <li><a href="lab3.html">Lab 3</a></li>
+      <li><a href="lab4.html">Lab 4</a></li>
+    </ul>
+  </nav>
+
+  <!-- I wrote this: same main content, nothing changed here -->
+  <main>
+    <h2>Welcome</h2>
+    <p>
+      This is my portfolio for DCDA 40833. I'll be posting my lab work
+      and reflections here throughout the semester. I'm a Communication
+      major and this is my first time building a website from scratch.
+    </p>
+  </main>
+
+  <script>
+    // === HAMBURGER TOGGLE ===
+    //
+    // I understand the logic: when someone clicks the hamburger button,
+    // this adds or removes the class "open" on the nav list. The CSS
+    // above watches for that class to expand the menu. classList.toggle
+    // is like a light switch - click once it adds "open," click again
+    // it removes it.
+
+    const hamburger = document.querySelector(".hamburger");
+    const navList = document.getElementById("nav-list");
+
+    hamburger.addEventListener("click", function () {
+      navList.classList.toggle("open");
+
+      // I know what this does but not how: this flips the aria-expanded
+      // value between "true" and "false." The === checks if it's
+      // currently "true" and if so switches to "false," or vice versa.
+      // I get that it's for accessibility but I'm not sure how to
+      // actually test it with a screen reader.
+      const expanded = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", !expanded);
+    });
+  </script>
+
+</body>
+</html>
