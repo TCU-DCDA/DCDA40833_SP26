@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Schedule | DCDA 40833</title>
+    <link rel="stylesheet" href="lab-styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Schedule table styles */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .schedule-table thead th {
+            background: var(--soul-red);
+            color: #ffffff;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .schedule-table thead th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        .schedule-table thead th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        .schedule-table tbody tr {
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .schedule-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-table td {
+            padding: 0.75rem 1rem;
+            vertical-align: top;
+            color: var(--text-secondary);
+        }
+
+        .schedule-table .week-label {
+            font-weight: 700;
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+
+        .schedule-table .week-theme {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 0.25rem;
+            font-weight: 400;
+        }
+
+        .schedule-table .due {
+            color: var(--soul-red);
+            font-weight: 600;
+        }
+
+        .schedule-table .break-row td {
+            background: var(--light-gray);
+            color: var(--text-muted);
+            font-style: italic;
+            text-align: center;
+        }
+
+        .schedule-table .break-row td:first-child {
+            text-align: left;
+            font-style: normal;
+        }
+
+        .schedule-table .section-break td {
+            background: var(--charcoal);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 1rem;
+        }
+
+        .schedule-note {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .schedule-table {
+                font-size: 0.85rem;
+            }
+
+            .schedule-table thead th,
+            .schedule-table td {
+                padding: 0.5rem 0.6rem;
+            }
+
+            .schedule-table thead th {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .schedule-table thead {
+                display: none;
+            }
+
+            .schedule-table,
+            .schedule-table tbody,
+            .schedule-table tr,
+            .schedule-table td {
+                display: block;
+            }
+
+            .schedule-table tbody tr {
+                margin-bottom: 1rem;
+                padding: 1rem;
+                background: var(--white);
+                border: 1px solid var(--border-gray);
+                border-radius: 8px;
+                border-bottom: 1px solid var(--border-gray);
+            }
+
+            .schedule-table td {
+                padding: 0.25rem 0;
+                border: none;
+            }
+
+            .schedule-table td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: var(--text-primary);
+                display: block;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 0.15rem;
+            }
+
+            .schedule-table .break-row td {
+                text-align: left;
+            }
+
+            .schedule-table .section-break td {
+                border-radius: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lab-page-container">
+
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <a href="index.html" class="mobile-back">
+                <i data-lucide="arrow-left" class="icon"></i>
+            </a>
+            <div class="mobile-brand">
+                <span class="mobile-title">Schedule</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <i data-lucide="menu" class="icon"></i>
+            </button>
+        </header>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay"></div>
+
+        <!-- Sidebar Navigation -->
+        <aside class="lab-sidebar">
+            <!-- Brand -->
+            <div class="lab-brand">
+                <div class="lab-number">DCDA 40833</div>
+                <p class="lab-designation">Course Schedule</p>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="lab-nav">
+                <a href="index.html" class="back-link">
+                    <i data-lucide="arrow-left" class="icon"></i>
+                    <span>Back to Resources</span>
+                </a>
+            </nav>
+
+            <!-- Jump Menu -->
+            <div class="jump-menu">
+                <h3>Jump To</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#labs-phase">Labs (Wk 1-6)</a></li>
+                        <li><a href="#workshops-phase">Workshops (Wk 7-9)</a></li>
+                        <li><a href="#break">Spring Break</a></li>
+                        <li><a href="#project-phase">Project Work (Wk 11-13)</a></li>
+                        <li><a href="#presentations-phase">Presentations (Wk 14-17)</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="lab-main-content">
+
+            <!-- Hero Section -->
+            <header class="lab-hero" style="background: linear-gradient(135deg, var(--soul-red) 0%, var(--soul-red-dark) 100%);">
+                <div class="lab-hero-content">
+                    <h1>Course Schedule</h1>
+                    <p class="lab-subtitle">Spring 2026</p>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <div class="lab-wrapper">
+                <div class="lab-content">
+
+                    <p class="schedule-note">This calendar represents our current plans and objectives. As we go through the course, those plans may need to change to enhance class learning opportunities. Such changes will be clearly communicated. If a moment arises when the schedule below differs from the due dates listed in Announcements, defer to Announcements.</p>
+
+                    <!-- Labs Phase -->
+                    <section id="labs-phase">
+                        <h2>Labs (Weeks 1-6)</h2>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Week</th>
+                                    <th>Tuesday</th>
+                                    <th>Thursday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 1 <span class="week-theme">First Day &amp; Web Basics</span></td>
+                                    <td data-label="Tuesday">Intro to the course and each other</td>
+                                    <td data-label="Thursday">Begin work on Lab 1<br><span class="due">Course Reflection 1 due Jan 15 by 11:30 PM</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 2 <span class="week-theme">AI is More than ChatGPT</span></td>
+                                    <td data-label="Tuesday">HTML, CSS, and Working with GitHub</td>
+                                    <td data-label="Thursday"><span class="due">Lab 1 due Jan 21 by 11:30 PM</span><br>Begin work on Lab 2</td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 3 <span class="week-theme">Ethics of Visualization</span></td>
+                                    <td data-label="Tuesday">Lecture<br>Readings: "Do No Harm Guide" (PDF)</td>
+                                    <td data-label="Thursday"><span class="due">Lab 2 due Jan 29 by 11:30 PM</span><br>Begin work on Lab 3</td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 4 <span class="week-theme">Visualization as EDA</span></td>
+                                    <td data-label="Tuesday">Intro to Kaggle, Tableau, and G-Suite for Data Analysis</td>
+                                    <td data-label="Thursday"><span class="due">Lab 3 due Feb 3 by 11:30 PM</span><br>Begin work on Lab 4</td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 5 <span class="week-theme">Agentic-assisted Coding</span></td>
+                                    <td data-label="Tuesday">Further HTML and CSS training</td>
+                                    <td data-label="Thursday"><span class="due">Lab 4 due Feb 12 by 11:30 PM</span><br>Begin work on Lab 5</td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 6 <span class="week-theme">Data Analysis</span></td>
+                                    <td data-label="Tuesday">Python Tutorial (Sentiment Analysis)</td>
+                                    <td data-label="Thursday"><span class="due">Lab 5 due by 11:30 PM</span><br>Begin work on Lab 6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Workshops Phase -->
+                    <section id="workshops-phase">
+                        <h2>Workshops &amp; Midsemester (Weeks 7-9)</h2>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Week</th>
+                                    <th>Tuesday</th>
+                                    <th>Thursday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 7 <span class="week-theme">Workshop</span></td>
+                                    <td data-label="Tuesday">Project Workshop / Tailored Tutorial</td>
+                                    <td data-label="Thursday"><span class="due">Lab 6 due by 11:30 PM</span><br>Project Workshop / Tailored Tutorial</td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 8 <span class="week-theme">Workshop</span></td>
+                                    <td data-label="Tuesday">Project Workshop / Tailored Tutorial</td>
+                                    <td data-label="Thursday">Project Workshop / Tailored Tutorial<br><span class="due">Skill Portfolio &amp; Course Reflection 2 due Sun 3/8 by 11:30 PM</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 9 <span class="week-theme">Workshop</span></td>
+                                    <td data-label="Tuesday">Project Workshop / Tailored Tutorial</td>
+                                    <td data-label="Thursday">Project Workshop / Tailored Tutorial<br><span class="due">Project Proposal + Annotated Bibliography due Sun 3/15 by 11:30 PM</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Spring Break -->
+                    <section id="break">
+                        <h2>Spring Break (Week 10)</h2>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Week</th>
+                                    <th>Tuesday</th>
+                                    <th>Thursday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="break-row">
+                                    <td class="week-label" data-label="Week">Wk 10</td>
+                                    <td data-label="Tuesday">Spring Break</td>
+                                    <td data-label="Thursday">Spring Break</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Project Phase -->
+                    <section id="project-phase">
+                        <h2>Project Work (Weeks 11-13)</h2>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Week</th>
+                                    <th>Tuesday</th>
+                                    <th>Thursday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 11 <span class="week-theme">Workshop</span></td>
+                                    <td data-label="Tuesday">Project Workshop / Tailored Tutorial</td>
+                                    <td data-label="Thursday">Project Workshop / Tailored Tutorial</td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 12 <span class="week-theme">Workshop</span></td>
+                                    <td data-label="Tuesday">Project Workshop / Tailored Tutorial</td>
+                                    <td data-label="Thursday">Project Workshop / Tailored Tutorial</td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 13 <span class="week-theme">Workshop</span></td>
+                                    <td data-label="Tuesday">Project Workshop / Tailored Tutorial</td>
+                                    <td data-label="Thursday">Project Workshop / Tailored Tutorial</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Presentations Phase -->
+                    <section id="presentations-phase">
+                        <h2>Peer Review, Presentations &amp; Finals (Weeks 14-17)</h2>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Week</th>
+                                    <th>Tuesday</th>
+                                    <th>Thursday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 14 <span class="week-theme">Peer Review</span></td>
+                                    <td data-label="Tuesday">Project Workshop / Tailored Tutorial<br><span class="due">Rough Draft (Written Content) due by class time</span></td>
+                                    <td data-label="Thursday">Peer Review (Written Content)<br><span class="due">Peer Review due Fri 4/17 by 11:30 PM</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 15 <span class="week-theme">Presentations</span></td>
+                                    <td data-label="Tuesday">Project Draft Presentations (Content + Deliverable)</td>
+                                    <td data-label="Thursday">Project Draft Presentations (Content + Deliverable)</td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 16 <span class="week-theme">Presentations</span></td>
+                                    <td data-label="Tuesday">Project Draft Presentations (Content + Deliverable)</td>
+                                    <td data-label="Thursday">Study Day (No Class)</td>
+                                </tr>
+                                <tr>
+                                    <td class="week-label" data-label="Week">Wk 17 <span class="week-theme">Final Projects Due</span></td>
+                                    <td data-label="Tuesday"><span class="due">11:00 section due by 1:30 PM</span><br><span class="due">2:00 section due by 4:30 PM</span></td>
+                                    <td data-label="Thursday"><span class="due">9:30 section due by 10:30 AM</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="lab-footer">
+                <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
+                <p><a href="index.html">Back to Resources</a></p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const sidebar = document.querySelector('.lab-sidebar');
+        const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+
+        function toggleMobileMenu() {
+            sidebar.classList.toggle('mobile-open');
+            mobileOverlay.classList.toggle('active');
+            document.body.classList.toggle('mobile-menu-active');
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking a nav link
+        document.querySelectorAll('.lab-sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1024) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        // Jump Menu Active State
+        const jumpLinks = document.querySelectorAll('.jump-menu nav a');
+        const sections = document.querySelectorAll('section[id]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            jumpLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
