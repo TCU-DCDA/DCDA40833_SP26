@@ -26,27 +26,22 @@ mdc: true
   <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
     <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">1</span>
     <span class="text-lg">Copilot Orientation</span>
-    <span class="ml-auto text-sm opacity-50 font-mono">15 min</span>
   </div>
   <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
     <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">2</span>
     <span class="text-lg">The AI Coding Spectrum</span>
-    <span class="ml-auto text-sm opacity-50 font-mono">10 min</span>
   </div>
   <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
     <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">3</span>
     <span class="text-lg">Save Point</span>
-    <span class="ml-auto text-sm opacity-50 font-mono">5 min</span>
   </div>
   <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
     <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">4</span>
     <span class="text-lg">Live Demo: Hamburger Nav</span>
-    <span class="ml-auto text-sm opacity-50 font-mono">20 min</span>
   </div>
   <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
     <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">5</span>
     <span class="text-lg">Work Time</span>
-    <span class="ml-auto text-sm opacity-50 font-mono">30 min</span>
   </div>
 </div>
 
@@ -95,7 +90,7 @@ Copilot Pro gives you access to **multiple AI models.**
 <div class="mt-6 space-y-3 text-lg">
   <div class="flex items-start gap-3">
     <span class="text-teal-400 mt-1">→</span>
-    <span>Claude, GPT-4o, Gemini, and others</span>
+    <span>Claude, ChatGPT, Gemini, and others</span>
   </div>
   <div class="flex items-start gap-3">
     <span class="text-teal-400 mt-1">→</span>
@@ -511,7 +506,7 @@ Common issues we'll address.
 
 ---
 
-# Work Time <span class="text-teal-400">(25 min)</span>
+# Work Time
 
 <div class="mt-6 text-lg leading-relaxed">
 
@@ -567,7 +562,7 @@ Three areas:
     <div class="text-teal-400 font-semibold text-lg mb-2">Process Evaluation</div>
   </div>
   <div class="bg-teal-500/10 border border-teal-500/20 rounded-lg p-6">
-    <div class="text-teal-400 font-semibold text-lg mb-2">Ethical Considerations</div>
+    <div class="text-teal-400 font-semibold text-lg mb-2">Ethical & Pedagogical</div>
   </div>
 </div>
 

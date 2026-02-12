@@ -13,7 +13,7 @@ The following items are required deliverables. They are evaluated on a complete/
 
 - [ ] **At least two experiments completed** — Two or more experiments from the options (Portfolio Enhancement, Python Code Generation, Debug with AI) are attempted and documented
 - [ ] **Reflection addresses all nine prompts** — Written reflection covers Technical Understanding (prompts 1-3), Process Evaluation (prompts 4-6), and Ethical & Pedagogical Considerations (prompts 7-9) within the 400-600 word range
-- [ ] **Portfolio page with required elements** — `lab05.html` includes a description of what was built, a code snippet with comments, vibe coding guidelines, and a screenshot or demo
+- [ ] **Portfolio page with required elements** — `lab05.html` includes a description of what was built, a code snippet commented using the Understanding Spectrum, vibe coding guidelines, and a screenshot or demo
 - [ ] **Navigation linked** — Portfolio page is accessible from your `index.html` main navigation
 - [ ] **Pushed to GitHub and live on GitHub Pages** — Updated portfolio is pushed to the repository and the live site displays correctly
 - [ ] **Submitted to D2L** — Reflection document, commented code, original AI prompts, AI output examples, and links all submitted to the D2L dropbox
@@ -52,11 +52,11 @@ The following dimensions evaluate the depth and quality of your work. This is wh
 
 ### 2. Code Understanding & Documentation
 
-*This evaluates whether you understand what the AI generated — not whether you could have written it yourself. Honest acknowledgment of what you don't yet understand is valued over false confidence.*
+*This evaluates whether you understand what the AI generated — not whether you could have written it yourself. Use the Understanding Spectrum from the lab to frame your comments: "I wrote this," "I understand the logic," "I know what it does but not how," and "I don't understand this." Honest acknowledgment of what you don't yet understand is valued over false confidence.*
 
 #### Exceeds Expectations
+- Comments use the Understanding Spectrum to clearly distinguish between parts understood fully, parts understood conceptually, and parts still being learned — this honesty is a strength, not a weakness
 - Comments demonstrate genuine understanding of the code's logic, not just restated syntax (e.g., "this filters the array" vs. "this line uses .filter()")
-- Clearly distinguishes between parts they understand fully, parts they understand conceptually, and parts they're still learning — this honesty is a strength, not a weakness
 - Identifies specific AI choices they would change and explains why
 - Documentation would help another student at a similar level understand the code
 
