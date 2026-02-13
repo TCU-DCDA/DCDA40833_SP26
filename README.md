@@ -52,6 +52,24 @@ Features:
 - Mazda Soul Red theme with background imagery
 - Mobile-responsive design
 
+## Lecture Materials (Slidev)
+
+Slide decks are located in `docs/lectures/` and built with Slidev:
+- `writing-voice/` — Writing & Voice lecture
+- `data-collection/` — Data Collection lecture
+- `github-intro/` — GitHub Introduction
+- `vibe-coding/` — Vibe Coding prep session
+
+**Development workflow:**
+```bash
+cd docs/lectures/<lecture-name>/
+npm install              # Install dependencies (first time only)
+npm run dev              # Start development server
+npm run build            # Build for production (outputs to dist/)
+```
+
+**Note:** `node_modules/` directories are not tracked in git. Run `npm install` to restore dependencies when editing lectures.
+
 ## Course Structure
 
 | First Half (Weeks 1-8) | Second Half (Weeks 9-16) |

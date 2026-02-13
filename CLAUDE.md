@@ -6,7 +6,7 @@
 
 ---
 
-## Current Repository Status (January 2026)
+## Current Repository Status (February 2026)
 
 ### Lab Structure (Finalized)
 | Lab | Title | Portfolio Page |
@@ -15,17 +15,17 @@
 | 2 | AI Tool Evaluation (evergreen framework) | `ai-evaluation.html` |
 | 3 | Tufte Critique (visualization analysis) | `tufte-critique.html` |
 | 4 | Tableau Visualization (Tableau Public) | `tableau-visualization.html` |
-| 5 | Python Mapping (Folium/GeoPy) | `hometown-map.html` |
-| 6 | Vibe Coding (AI-assisted development) | TBD |
+| 5 | Vibe Coding (AI-assisted development) | TBD |
+| 6 | Python Mapping (Folium/GeoPy) | `hometown-map.html` |
 
 ### Course Website
 - **Live URL:** https://tcu-dcda.github.io/DCDA40833_SP26/
 - All 6 labs converted to HTML with sidebar navigation
 - Mazda Soul Red theme (#C1272D)
 
-### Pending
+### Maintenance
+- Repository cleanup completed (Feb 2026): removed local node_modules, deleted orphaned directories
 - Chrome sidebar compatibility issue (works in Safari/Firefox)
-- Lab 6 pedagogical review
 - See [TODO.md](TODO.md) for full task tracking
 
 ---
@@ -98,4 +98,4 @@ Before making changes, confirm:
 
 ---
 
-*Last updated: January 2026*
+*Last updated: February 2026*

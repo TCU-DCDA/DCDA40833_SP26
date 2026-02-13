@@ -79,6 +79,12 @@
 
 ## Completed ✓
 
+### Repository Cleanup (February 2026)
+- ✅ Removed local node_modules directories (~1.3GB freed)
+- ✅ Deleted orphaned `docs/lectures/data-collection-viz/` directory
+- ✅ Verified .gitignore working correctly
+- ✅ Git status remains clean, no tracked files affected
+
 ### Course Website - DEPLOYED
 **URL:** https://tcu-dcda.github.io/DCDA40833_SP26/
 
