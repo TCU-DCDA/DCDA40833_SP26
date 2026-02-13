@@ -28,17 +28,20 @@ By this point in the semester, your portfolio should contain:
    - Analysis using Tufte's principles (Option A) or artistic evaluation criteria (Option B)
    - Embedded visualization and link to source
 
-4. **Tableau Visualization** (`tableau-visualization.html`) — Lab 4
+4. **Tableau Visualization** (`lab04.html`) — Lab 4
    - Embedded Tableau Public visualization
    - Reflection and analysis (500+ words)
 
-5. **Python Mapping** (`hometown-map.html`) — Lab 5
+5. **Vibe Coding** (`lab05.html`) — Lab 5
+   - AI-assisted development experiments (at least 2)
+   - Critical reflection (400-600 words)
+   - Commented code with understanding annotations
+   - Screenshots or demos of working features
+
+6. **Python Mapping** (`lab06.html`) — Lab 6
    - Interactive Folium map of your hometown
    - Reflection (300+ words)
    - Documentation of Python code and mapping process
-
-6. **[Lab 6 Content]** — Lab 6
-   - *Content TBD based on Lab 6 assignment*
 
 ---
 
@@ -91,7 +94,7 @@ Comments should explain:
 
 ## Submission
 
-**Due:** [See course schedule]
+**Due:** Sunday, March 8 by 11:30 PM
 
 Submit to D2L dropbox:
 1. Link to your **GitHub repository**
@@ -101,16 +104,16 @@ Your instructors will review both your live site and your repository code (inclu
 
 ---
 
-## Connection to Self-Reflection 2
+## Connection to Midsemester Reflection
 
-Your Skills Portfolio will be a key piece of evidence in your **Self-Reflection 2** (submitted separately). Use your portfolio to demonstrate:
+Your Skills Portfolio will be a key piece of evidence in your **Midsemester Reflection** (submitted separately). Use your portfolio to demonstrate:
 
 - **Digital Culture proficiency** — Web development, design, digital communication
 - **Data Analytics proficiency** — Visualization, critique, mapping, data storytelling
 - **Project Design and Planning** — Building something iteratively over the semester
 - **Self-direction and growth** — How you refined your work beyond minimum requirements
 
-See the `/self-reflections/` folder for the self-reflection template and guidelines.
+See the Midsemester Reflection instructions on the course website for the template and guidelines.
 
 ---
 

@@ -2,13 +2,15 @@ By the deadline, please type up and turn in to this dropbox your answers to the 
 
 # Open-Ended Project Prompt
 
+**Due:** Sunday, March 15 by 11:30 PM
+
 To begin, please let us know which option best describes the project you're proposing here. In short, what kind of "deep dive" do you (or your group) plan to take:
 
-### Option 1 (DA)
-This option is for students wanting to take an appropriately deep dive into Python-driven data analysis and visualization on a topic of their choosing. Students choosing Option 1 would have the option to use WordPress or another web-based template to deliver their results.
+### Option 1: Data Analysis (DA)
+A deep dive into Python-driven data analysis and visualization on a topic of your choosing. You may use WordPress or another web-based template to deliver your results.
 
-### Option 2 (DC)
-This option is for students wanting to an appropriately deep dive into web development (or another multimodal authoring tool) on a research topic or creative endeavor that engages some aspect of digital culture. Students choosing Option 2 would have the option to select a topic or creative endeavor that does not require strict data analysis.
+### Option 2: Digital Culture (DC)
+A deep dive into web development (or another multimodal authoring tool) focused on a research topic or creative endeavor that engages some aspect of digital culture. This option does not require strict data analysis.
 
 ## Current Research Question (or Research Statement) & Hypothesis
 
@@ -38,7 +40,7 @@ Why is it important to investigate your topic now?  Why is the issue a matter of
 
 With your Project Proposal, please also include an Annotated Bibliography (of a minimum of 10 sources)
 
-For a helpful discussion of how to compose (and why it's a good thing to write) an annotated bibliography, check out this link: https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/index.html
+> **Resource:** For a helpful discussion of how to compose (and why it's a good thing to write) an annotated bibliography, see the [Purdue OWL guide on Annotated Bibliographies](https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/index.html).
 
 First, state as a complete sentence the most up-to-date version of your Research Question.
 
