@@ -1,1 +1,1 @@
-see skill portfolio prompt
+See combined prompt: `skills_portfolio/skills_portfolio.md` (Part 2: Midsemester Reflection)

@@ -1,18 +1,22 @@
-# Skills Portfolio — Final Submission
+# Skills Portfolio & Midsemester Reflection
 
-## Overview
-
-Your **Skills Portfolio** is a web-based showcase of your work throughout the semester. Unlike a traditional assignment submitted once at the end of the course, this portfolio has been **built iteratively** — you started the foundation in Lab 1 and added new pages with each subsequent lab.
-
-This final submission asks you to **refine, polish, and unify** your portfolio into a cohesive demonstration of your skills and learning.
+**Due:** Sunday, March 9 by 11:30 PM
 
 ---
 
-## What Your Portfolio Should Include
+## Part 1: Skills Portfolio
+
+### Overview
+
+Your **Skills Portfolio** is a web-based showcase of your work throughout the semester. Unlike a traditional assignment submitted once at the end of the course, this portfolio has been **built iteratively** — you started the foundation in Lab 1 and added new pages with each subsequent lab.
+
+This submission asks you to **refine, polish, and unify** your portfolio into a cohesive demonstration of your skills and learning.
+
+### What Your Portfolio Should Include
 
 By this point in the semester, your portfolio should contain:
 
-### Required Pages (from Labs 1-6)
+#### Required Pages (from Labs 1-6)
 
 1. **Home/Landing Page** (`index.html`) — Set up in Lab 1
    - Introduction and navigation to all other pages
@@ -43,20 +47,18 @@ By this point in the semester, your portfolio should contain:
    - Reflection (300+ words)
    - Documentation of Python code and mapping process
 
----
+### Final Polish Requirements
 
-## Final Polish Requirements
+For this submission, go beyond what you submitted for individual labs:
 
-For this final submission, go beyond what you submitted for individual labs:
-
-### 1. Visual Refinement & Consistency
+#### 1. Visual Refinement & Consistency
 
 - **Unified design:** Ensure all pages share consistent styling (colors, fonts, layout)
 - **Enhanced CSS:** Add polish beyond basic requirements (spacing, hover effects, responsive design)
 - **Navigation:** Clear, working navigation on every page
 - **Professional appearance:** Clean, readable, well-organized
 
-### 2. Enhanced Content & Context
+#### 2. Enhanced Content & Context
 
 For each lab page, add:
 
@@ -68,7 +70,7 @@ Consider adding:
 - An "About" page introducing yourself and your interests
 - A reflection on your growth across the semester
 
-### 3. Code Quality & Documentation
+#### 3. Code Quality & Documentation
 
 **IMPORTANT:** Comment your code thoroughly.
 
@@ -81,9 +83,9 @@ Comments should explain:
 - What each section of code accomplishes
 - How different elements work together
 
-> 💡 **Tip:** Comments are visible in VS Code and when viewing page source (right-click → View Page Source), but not to regular site visitors.
+> **Tip:** Comments are visible in VS Code and when viewing page source (right-click → View Page Source), but not to regular site visitors.
 
-### 4. Technical Requirements
+#### 4. Technical Requirements
 
 - All files organized in your repository (HTML, CSS, images, etc.)
 - All links working (internal navigation, external resources)
@@ -92,34 +94,67 @@ Comments should explain:
 
 ---
 
-## Submission
+## Part 2: Midsemester Reflection
 
-**Due:** Sunday, March 8 by 11:30 PM
+Your Midsemester Reflection is a written argument for the grade you believe you have earned during the first half of the semester (weeks 1-8). Your Skills Portfolio is the primary evidence for this argument — use it to support your claims with specific examples.
 
-Submit to D2L dropbox:
-1. Link to your **GitHub repository**
-2. Link to your **live GitHub Pages site**
-
-Your instructors will review both your live site and your repository code (including comments).
+Submit as a **Word document** using the following outline:
 
 ---
 
-## Connection to Midsemester Reflection
+**Name**
 
-Your Skills Portfolio will be a key piece of evidence in your **Midsemester Reflection** (submitted separately). Use your portfolio to demonstrate:
+**Date**
 
-- **Digital Culture proficiency** — Web development, design, digital communication
-- **Data Analytics proficiency** — Visualization, critique, mapping, data storytelling
-- **Project Design and Planning** — Building something iteratively over the semester
-- **Self-direction and growth** — How you refined your work beyond minimum requirements
+**DCDA 40833**
 
-See the Midsemester Reflection instructions on the course website for the template and guidelines.
+### Overview
+
+Here is an overview of how I've developed this semester.
+
+### Proficiencies
+
+**Digital Culture**
+
+Here is a description of how I've developed in this strand so far. It uses specific examples from my work.
+
+**Data Analytics**
+
+Here is a description of how I've developed in this strand so far. It uses specific examples from my work.
+
+**Project Design and Planning**
+
+Here is a description of how I've developed in this strand so far. It uses specific examples from my work.
+
+**Collaboration**
+
+Here is a description of how I've developed in this strand so far. It uses specific examples from my work.
+
+### Self Evaluation
+
+Here is an evaluation of my development over the first half of the semester. It uses specific examples from my work, paying particular attention to work I submitted and feedback I received for the Skills Portfolio as well as noting any assignments I may have rushed or failed to turn in.
+
+### Grade
+
+Based on the above information, I argue that I have earned [insert your grade here].
+
+---
+
+## Submission
+
+Submit **both items** to the D2L dropbox by **Sunday, March 9 at 11:30 PM**:
+
+1. Link to your **GitHub repository**
+2. Link to your **live GitHub Pages site**
+3. **Midsemester Reflection** — as a Word document
+
+Your instructors will review your live site, your repository code (including comments), and your reflection.
 
 ---
 
 ## Grading Considerations
 
-In the spirit of this course's **ungrading approach**, this assignment doesn't receive a numerical score. However, in your self-reflection and grade argument, you should address:
+In the spirit of this course's **ungrading approach**, the Skills Portfolio doesn't receive a numerical score. Your Midsemester Reflection is where you argue for your grade. In that argument, you should address:
 
 - **Completeness:** Are all required pages present and functional?
 - **Polish:** Did you go beyond minimum requirements to create something professional?

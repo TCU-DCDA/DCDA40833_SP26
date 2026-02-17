@@ -12,11 +12,11 @@
 | Lab | Title | Portfolio Page |
 |-----|-------|----------------|
 | 1 | Portfolio Setup (GitHub, HTML/CSS) | `index.html` |
-| 2 | AI Tool Evaluation (evergreen framework) | `ai-evaluation.html` |
-| 3 | Tufte Critique (visualization analysis) | `tufte-critique.html` |
-| 4 | Tableau Visualization (Tableau Public) | `tableau-visualization.html` |
-| 5 | Vibe Coding (AI-assisted development) | TBD |
-| 6 | Python Mapping (Folium/GeoPy) | `hometown-map.html` |
+| 2 | AI Tool Evaluation (evergreen framework) | `lab02.html` |
+| 3 | Tufte Critique (visualization analysis) | `lab03.html` |
+| 4 | Tableau Visualization (Tableau Public) | `lab04.html` |
+| 5 | Vibe Coding (AI-assisted development) | `lab05.html` |
+| 6 | Python Mapping (Folium/GeoPy) | `lab06.html` |
 
 ### Course Website
 - **Live URL:** https://tcu-dcda.github.io/DCDA40833_SP26/
