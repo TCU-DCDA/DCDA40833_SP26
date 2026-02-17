@@ -12,11 +12,11 @@ Two-session prep for Lab 5 (Vibe Coding). Glanceable reference for running class
 
 ---
 
-# DAY 1: Intro + Demo (80 minutes)
+# DAY 1: Intro + Demo
 
 ---
 
-## Copilot Orientation (10 min)
+## Copilot Orientation
 
 - Have students open VS Code
 - Walk through three ways to use Copilot:
@@ -30,7 +30,7 @@ Two-session prep for Lab 5 (Vibe Coding). Glanceable reference for running class
 
 ---
 
-## The AI Coding Spectrum (10 min)
+## The AI Coding Spectrum
 
 - Walk through four levels using a concrete example (dark mode toggle):
   - **Fundamentals First** -- You write the CSS and JS; ask AI "why isn't my class toggle working?"
@@ -46,7 +46,7 @@ Two-session prep for Lab 5 (Vibe Coding). Glanceable reference for running class
 
 ---
 
-## Save Point (5 min)
+## Save Point
 
 - Everyone opens GitHub Desktop together
 - Walk them through: check all changes, summary "Save before Lab 5 experiments", Commit to main, Push origin
@@ -57,24 +57,24 @@ Two-session prep for Lab 5 (Vibe Coding). Glanceable reference for running class
 
 ---
 
-## Live Demo: Hamburger Nav Menu (25 min)
+## Live Demo: Hamburger Nav Menu
 
 Reference materials: `demo-before.html` and `demo-after.html` in this folder.
 
-### Step 1 -- Plan First (3 min)
+### Step 1 -- Plan First
 
 - Open `demo-before.html` -- show the basic portfolio with a horizontal nav
 - Ask: "What do we need to make this work on mobile?"
 - Sketch on board or list: hamburger button, collapsible nav, media query, JS toggle
 - **"Always plan before you prompt."**
 
-### Step 2 -- Craft the Prompt (5 min)
+### Step 2 -- Craft the Prompt
 
 - Show a bad prompt: "make my site responsive"
 - Show a good prompt: "Add a hamburger menu to my HTML portfolio. The nav should collapse into a hamburger icon on screens under 768px. Use vanilla JavaScript, no frameworks. Here's my current HTML: [paste]"
 - Ask students: **"What makes the second prompt better?"** (context, specificity, constraints)
 
-### Step 3 -- Review the Output (10 min)
+### Step 3 -- Review the Output
 
 - Open `demo-after.html` -- walk through the AI's response line by line
 - This is the teaching moment: model how to read code you didn't write
@@ -87,31 +87,80 @@ Reference materials: `demo-before.html` and `demo-after.html` in this folder.
 - **"Your comments are a record of your understanding, not a performance."**
 - Ask: **"What's the difference between these comments and just writing '// toggle menu' above everything?"**
 
-### Step 4 -- Test and Refine (5 min)
+### Step 4 -- Test and Refine
 
 - Open in browser, resize window, show the hamburger working
 - Find or introduce a bug: "The menu doesn't close when I click a link"
 - Show two options: go back to AI and ask for a fix, OR fix it yourself
 - Either way, you need to understand the fix
 
-### Step 5 -- Good vs. Bad Comments Side by Side (2 min)
+### Step 5 -- Good vs. Bad Comments Side by Side
 
 - Bad: `// toggle menu` above `toggleMenu()`
 - Good: `// When hamburger is clicked, toggle 'active' class on the nav. This triggers the CSS transform to slide the menu in from the right. I understand classList.toggle but had to look up how the CSS transition works.`
 
-> Transition: "Now it's your turn."
+> Transition: "That was a front-end example. Let's do the same thing with data."
 
 ---
 
-## Experiment Selection + Work Time (20 min)
+## Live Demo 2: Data Collection & Analysis
 
-- 5 min overview of the three experiments:
+Reference material: `demo-data.py` in this folder. Run this in **Google Colab** (colab.research.google.com).
+
+### Step 1 -- Plan First
+
+- Pose the question: **"Which countries have the most UNESCO World Heritage Sites?"**
+- Ask students: "What do we need to answer this?"
+- List on board: a data source, a way to read it into Python, some filtering, a chart
+- **"Same rule: plan before you prompt."**
+
+### Step 2 -- Craft the Prompt
+
+- Open a new Colab notebook
+- Show a bad prompt: "analyze some data for me"
+- Show a good prompt: "Use pandas to scrape the Wikipedia table of World Heritage Sites by country. Show me the top 10 countries by total number of sites. Then create a horizontal bar chart with matplotlib."
+- Ask: **"Why is this better?"** (names the library, names the source, specifies "top 10," specifies chart type)
+
+### Step 3 -- Review the Output
+
+- Paste the AI's response into a Colab cell and run it
+- Walk through the code line by line:
+  - `pd.read_html(url)` -- **"One line scrapes an entire table from a webpage."** Pause here. This is the hook.
+  - It returns a list of DataFrames -- ask: **"Why a list? Wikipedia pages have many tables."** Show how `[0]` or indexing selects the right one.
+  - Column names may be messy (multi-level headers, footnote markers) -- **"This is what real data looks like."**
+  - `nlargest()` or `sort_values()` + `head()` for top 10
+  - `plt.barh()` for the chart
+- If column names or table structure have changed since you last tested, that's fine -- model debugging live: **"The AI wrote code for the table structure it expected. The real table is slightly different. That's normal."**
+- Key message: **"With data code, you can check if the output is correct by looking at it. You know how many World Heritage Sites Italy has -- does the chart match?"**
+
+### Step 4 -- Iterate
+
+- The first chart probably looks generic. Ask the AI to improve it:
+  - "Sort the bars so the country with the most sites is at the top. Add a title. Use a color that isn't the default blue."
+- Show the before/after
+- **"Small, specific follow-up prompts beat rewriting the whole thing."**
+- Point out: this is the same cycle. Plan → prompt → review → iterate. Works for HTML, works for data.
+
+### Step 5 -- Quick Understanding Spectrum Check
+
+- Point to a line: `pd.read_html(url)` -- **"Where would you put this on the spectrum?"**
+  - Most students: "I know what it does but not how" -- that's honest and fine
+- Point to `plt.barh()` -- same question
+- **"You'd comment these the same way you commented the hamburger CSS."**
+
+> Transition: "You've now seen vibe coding for front-end and for data. Time to try it yourself."
+
+---
+
+## Experiment Selection + Work Time
+
+- Overview of the three experiments:
   - **Experiment A** -- Portfolio enhancement -- HTML/CSS/JS in VS Code. Options listed in lab.
   - **Experiment B** -- Python in Google Colab (colab.research.google.com) -- no installation needed. Difficulty labels on options. **"If Python makes you nervous, this might be the best one to try -- using AI to help with something you're uncomfortable with is exactly what makes this interesting."**
   - **Experiment C** -- Debug with AI -- starter bugs provided in the lab. Try to find the bug yourself first, then compare with AI.
 - Remind: at least two experiments
 - Remind: **save your prompts and AI responses as you go** -- you need them for submission
-- 15 min: students start working. Circulate. Watch for:
+- Students start working. Circulate. Watch for:
   - Students who are stuck choosing
   - Students who are scope-creeping (steer toward simpler)
   - Students who accepted AI output without reading it
@@ -119,11 +168,11 @@ Reference materials: `demo-before.html` and `demo-after.html` in this folder.
 
 ---
 
-# DAY 2: Work Time + Reflection Prep (40 minutes)
+# DAY 2: Work Time + Reflection Prep
 
 ---
 
-## Check-in (5 min)
+## Check-in
 
 - Quick pulse: **"Where are you? What's stuck?"**
 - Address common issues from Day 1
@@ -131,7 +180,7 @@ Reference materials: `demo-before.html` and `demo-after.html` in this folder.
 
 ---
 
-## Work Time (25 min)
+## Work Time
 
 - Students continue experiments. Circulate and check:
   - Are comments honest or performative?
@@ -141,7 +190,7 @@ Reference materials: `demo-before.html` and `demo-after.html` in this folder.
 
 ---
 
-## Reflection Preview (10 min)
+## Reflection Preview
 
 - Reference: `reflection-examples.md` in this folder
 - Show the generic example first. Ask: **"What's wrong with this?"**

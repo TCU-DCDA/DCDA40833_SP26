@@ -41,6 +41,10 @@ mdc: true
   </div>
   <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
     <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">5</span>
+    <span class="text-lg">Live Demo: Data Collection & Analysis</span>
+  </div>
+  <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
+    <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">6</span>
     <span class="text-lg">Work Time</span>
   </div>
 </div>
@@ -395,6 +399,128 @@ Your comments are a record of your understanding -- not a performance.
   <span>Or fix it yourself</span>
 </div>
 
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+<div class="text-3xl font-bold">Live Demo 2</div>
+
+<div class="mt-4 text-xl text-teal-400">Vibe Coding for Data Collection & Analysis</div>
+
+<div class="mt-6 text-lg opacity-60">Same process, different context</div>
+
+---
+
+# The Question
+
+<div class="mt-8 text-xl leading-relaxed">
+
+Which countries have the most **UNESCO World Heritage Sites**?
+
+</div>
+
+<div class="mt-8 space-y-3 text-lg">
+  <div class="flex items-start gap-3">
+    <span class="text-teal-400 mt-1">→</span>
+    <span>We need to <strong>collect</strong> the data from somewhere</span>
+  </div>
+  <div class="flex items-start gap-3">
+    <span class="text-teal-400 mt-1">→</span>
+    <span>We need to <strong>clean and filter</strong> it</span>
+  </div>
+  <div class="flex items-start gap-3">
+    <span class="text-teal-400 mt-1">→</span>
+    <span>We need to <strong>visualize</strong> it</span>
+  </div>
+</div>
+
+<div class="mt-8 bg-teal-500/10 border-l-3 border-teal-400 pl-4 py-3 rounded-r text-base">
+Same rule: plan before you prompt.
+</div>
+
+---
+
+# The Prompt
+
+<div class="mt-6 grid grid-cols-2 gap-6">
+  <div class="bg-amber-500/10 border border-amber-500/20 rounded-lg p-6">
+    <div class="text-amber-400 font-semibold text-lg mb-3">Bad Prompt</div>
+    <div class="text-sm opacity-80 italic">"analyze some data for me"</div>
+  </div>
+  <div class="bg-teal-500/10 border border-teal-500/20 rounded-lg p-6">
+    <div class="text-teal-400 font-semibold text-lg mb-3">Good Prompt</div>
+    <div class="text-sm opacity-80 italic">"Use pandas to scrape the Wikipedia table of World Heritage Sites by country. Show me the top 10 countries by total number of sites. Then create a horizontal bar chart with matplotlib."</div>
+  </div>
+</div>
+
+<div class="mt-8 text-lg leading-relaxed">
+
+Same principles: **context** (Wikipedia, pandas), **specificity** (top 10, total sites), **constraints** (horizontal bar chart, matplotlib).
+
+</div>
+
+---
+
+# Review the Output
+
+<div class="mt-6 space-y-5 text-lg leading-relaxed">
+
+<div class="flex items-start gap-3">
+  <span class="text-teal-400 mt-1">→</span>
+  <span><code>pd.read_html()</code> -- one line to scrape a table from a webpage</span>
+</div>
+
+<div class="flex items-start gap-3">
+  <span class="text-teal-400 mt-1">→</span>
+  <span>Returns a <strong>list</strong> of tables -- why a list? Which one do we want?</span>
+</div>
+
+<div class="flex items-start gap-3">
+  <span class="text-teal-400 mt-1">→</span>
+  <span>Column names might be messy -- that's real-world data</span>
+</div>
+
+<div class="flex items-start gap-3">
+  <span class="text-teal-400 mt-1">→</span>
+  <span>The chart works but it looks generic -- can we do better?</span>
+</div>
+
+</div>
+
+<div class="mt-6 bg-teal-500/10 border-l-3 border-teal-400 pl-4 py-3 rounded-r text-base">
+Data code is easier to review -- you can <strong>see</strong> if the output is right.
+</div>
+
+---
+
+# Iterate
+
+<div class="mt-6 text-lg leading-relaxed">
+
+Follow-up prompt:
+
+</div>
+
+<div class="mt-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-6 text-base italic opacity-80">
+"Sort the bars so the country with the most sites is at the top. Add a title. Use a color that isn't the default blue."
+</div>
+
+<div class="mt-8 space-y-3 text-lg">
+  <div class="flex items-start gap-3">
+    <span class="text-teal-400 mt-1">→</span>
+    <span>Small, specific requests get better results than rewriting the whole prompt</span>
+  </div>
+  <div class="flex items-start gap-3">
+    <span class="text-teal-400 mt-1">→</span>
+    <span>Each iteration is a chance to understand one more piece</span>
+  </div>
+</div>
+
+<div class="mt-8 bg-teal-500/10 border-l-3 border-teal-400 pl-4 py-3 rounded-r text-base">
+This is the same cycle: <strong>plan → prompt → review → iterate.</strong> It works for a nav menu and for data analysis.
 </div>
 
 ---
