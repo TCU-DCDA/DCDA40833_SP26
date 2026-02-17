@@ -20,32 +20,36 @@ mdc: true
 
 ---
 
-# Day 1: Agenda
+# Agenda
 
-<div class="mt-8 space-y-4">
-  <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
-    <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">1</span>
-    <span class="text-lg">Copilot Orientation</span>
+<div class="mt-4 space-y-2">
+  <div class="flex items-center gap-3 bg-teal-500/10 border border-teal-500/20 rounded-lg px-4 py-2">
+    <span class="bg-teal-500/20 text-teal-400 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm shrink-0">1</span>
+    <span>Copilot Orientation</span>
   </div>
-  <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
-    <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">2</span>
-    <span class="text-lg">The AI Coding Spectrum</span>
+  <div class="flex items-center gap-3 bg-teal-500/10 border border-teal-500/20 rounded-lg px-4 py-2">
+    <span class="bg-teal-500/20 text-teal-400 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm shrink-0">2</span>
+    <span>The AI Coding Spectrum</span>
   </div>
-  <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
-    <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">3</span>
-    <span class="text-lg">Save Point</span>
+  <div class="flex items-center gap-3 bg-teal-500/10 border border-teal-500/20 rounded-lg px-4 py-2">
+    <span class="bg-teal-500/20 text-teal-400 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm shrink-0">3</span>
+    <span>Save Point</span>
   </div>
-  <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
-    <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">4</span>
-    <span class="text-lg">Live Demo: Hamburger Nav</span>
+  <div class="flex items-center gap-3 bg-teal-500/10 border border-teal-500/20 rounded-lg px-4 py-2">
+    <span class="bg-teal-500/20 text-teal-400 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm shrink-0">4</span>
+    <span>Live Demo: Hamburger Nav</span>
   </div>
-  <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
-    <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">5</span>
-    <span class="text-lg">Live Demo: Data Collection & Analysis</span>
+  <div class="flex items-center gap-3 bg-teal-500/10 border border-teal-500/20 rounded-lg px-4 py-2">
+    <span class="bg-teal-500/20 text-teal-400 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm shrink-0">5</span>
+    <span>Live Demo: Data Collection & Analysis</span>
   </div>
-  <div class="flex items-center gap-4 bg-teal-500/10 border border-teal-500/20 rounded-lg p-4">
-    <span class="bg-teal-500/20 text-teal-400 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">6</span>
-    <span class="text-lg">Work Time</span>
+  <div class="flex items-center gap-3 bg-teal-500/10 border border-teal-500/20 rounded-lg px-4 py-2">
+    <span class="bg-teal-500/20 text-teal-400 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm shrink-0">6</span>
+    <span>Work Time</span>
+  </div>
+  <div class="flex items-center gap-3 bg-teal-500/10 border border-teal-500/20 rounded-lg px-4 py-2">
+    <span class="bg-teal-500/20 text-teal-400 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm shrink-0">7</span>
+    <span>Reflection Preview</span>
   </div>
 </div>
 
@@ -604,54 +608,6 @@ Pick your experiments and start working.
   <div class="flex items-start gap-3">
     <span class="text-teal-400 mt-1">→</span>
     <span>I'm here -- ask questions early</span>
-  </div>
-</div>
-
----
-layout: center
-class: text-center
----
-
-<div class="text-3xl font-bold">Day 2</div>
-
-<div class="mt-4 text-xl text-teal-400">Work Time + Reflection Prep</div>
-
----
-
-# Check-in
-
-<div class="mt-8 text-xl text-teal-400 italic">
-Where are you? What's stuck?
-</div>
-
-<div class="mt-8 text-lg leading-relaxed">
-
-Common issues we'll address.
-
-</div>
-
----
-
-# Work Time
-
-<div class="mt-6 text-lg leading-relaxed">
-
-Continue your experiments. Questions to ask yourself as you work:
-
-</div>
-
-<div class="mt-6 space-y-3 text-lg">
-  <div class="flex items-start gap-3">
-    <span class="text-teal-400 mt-1">→</span>
-    <span>Am I commenting honestly or performatively?</span>
-  </div>
-  <div class="flex items-start gap-3">
-    <span class="text-teal-400 mt-1">→</span>
-    <span>Am I scope-creeping?</span>
-  </div>
-  <div class="flex items-start gap-3">
-    <span class="text-teal-400 mt-1">→</span>
-    <span>Have I been saving my prompts?</span>
   </div>
 </div>
 
