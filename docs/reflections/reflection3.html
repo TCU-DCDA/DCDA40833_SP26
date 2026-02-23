@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Reflection - DCDA 40833</title>
     <link rel="stylesheet" href="../lab-styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.575.0"></script>
 </head>
 <body>
     <div class="lab-page-container">
+
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <a href="../index.html" class="mobile-back">
+                <i data-lucide="arrow-left" class="icon"></i>
+            </a>
+            <div class="mobile-brand">
+                <span class="mobile-title">Reflection 3</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <i data-lucide="menu" class="icon"></i>
+            </button>
+        </header>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay"></div>
 
         <!-- Sidebar Navigation -->
         <aside class="lab-sidebar">
@@ -250,6 +266,33 @@ Live link to Semester Project: [your project URL or GitHub repository]</pre>
         // Initialize Lucide Icons
         lucide.createIcons();
 
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const sidebar = document.querySelector('.lab-sidebar');
+        const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+
+        function toggleMobileMenu() {
+            sidebar.classList.toggle('mobile-open');
+            mobileOverlay.classList.toggle('active');
+            document.body.classList.toggle('mobile-menu-active');
+        }
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        }
+        if (mobileOverlay) {
+            mobileOverlay.addEventListener('click', toggleMobileMenu);
+        }
+
+        // Close mobile menu when clicking a nav link
+        document.querySelectorAll('.lab-sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1024) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
         // Active Navigation State for jump menu
         const jumpLinks = document.querySelectorAll('.jump-menu nav a');
         const sections = document.querySelectorAll('section');
@@ -260,7 +303,7 @@ Live link to Semester Project: [your project URL or GitHub repository]</pre>
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (window.pageYOffset >= (sectionTop - 200)) {
+                if (window.scrollY >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
             });

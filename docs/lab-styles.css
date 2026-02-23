@@ -51,6 +51,7 @@ body {
     left: 0;
     width: 280px;
     height: 100vh;
+    height: 100dvh;
     background: var(--soul-red);
     border-right: none;
     display: flex;
@@ -137,7 +138,6 @@ body {
 /* Main Content Wrapper */
 .lab-main-content {
     margin-left: 280px;
-    overflow-y: auto;
 }
 
 /* Lab Hero */

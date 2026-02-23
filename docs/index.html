@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course resources for DCDA 40833 Senior Capstone (Spring 2026) — labs, project guidelines, self-reflections, and skills portfolio.">
     <title>DCDA 40833 - Senior Capstone Resources</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.575.0"></script>
 </head>
 <body>
     <div class="app-container">
+
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <div class="mobile-brand">
+                <span class="mobile-title">DCDA 40833</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <i data-lucide="menu" class="icon"></i>
+            </button>
+        </header>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay"></div>
 
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
@@ -168,7 +182,7 @@
                                 <h4>Lab 6: Python Mapping</h4>
                                 <span class="badge lab">Lab</span>
                             </div>
-                            <p>Create an interactive map of your hometown using Python's Folium and GeoPy libraries.</p>
+                            <p>Create an interactive map using Python's Folium and GeoPy libraries. Full prompt coming soon.</p>
                             <span class="card-link" style="opacity: 0.6; cursor: default;">Coming Soon</span>
                         </div>
                     </div>
@@ -186,7 +200,7 @@
                                 <span class="badge project">Portfolio</span>
                             </div>
                             <p>Your web-based showcase built iteratively throughout the semester. Refine, polish, and unify your work from Labs 1-6.</p>
-                            <span class="card-link" style="opacity: 0.6; cursor: default;">Coming Soon</span>
+                            <a href="skills-portfolio.html" class="card-link">View Instructions</a>
                         </div>
                     </div>
                 </section>
@@ -358,7 +372,7 @@
             <footer>
                 <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
                 <p>Instructors: Dr. Curt Rode & Dr. Sean Crotty</p>
-                <p><a href="../README.md">Course Repository</a> | <a href="https://github.com">GitHub</a></p>
+                <p><a href="https://github.com/tcu-dcda/DCDA40833_SP26" target="_blank">Course Repository</a></p>
             </footer>
 
         </main>
@@ -388,6 +402,33 @@
         // Initialize Lucide Icons
         lucide.createIcons();
 
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+
+        function toggleMobileMenu() {
+            sidebar.classList.toggle('mobile-open');
+            mobileOverlay.classList.toggle('active');
+            document.body.classList.toggle('mobile-menu-active');
+        }
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        }
+        if (mobileOverlay) {
+            mobileOverlay.addEventListener('click', toggleMobileMenu);
+        }
+
+        // Close mobile menu when clicking a nav link
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1024) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
         // Active Navigation State - only target sidebar nav links
         const navLinks = document.querySelectorAll('.sidebar nav ul a');
 
@@ -409,7 +450,7 @@
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (window.pageYOffset >= (sectionTop - 200)) {
+                if (window.scrollY >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
             });
