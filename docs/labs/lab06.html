@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 6: Vibe Coding | DCDA 40833</title>
+    <title>Lab 6: Python Mapping | DCDA 40833</title>
     <link rel="stylesheet" href="../lab-styles.css">
     <script src="https://unpkg.com/lucide@0.575.0"></script>
+    <style>
+        /* Code Block Copy Button Styles */
+        .code-block-wrapper {
+            position: relative;
+            margin: 1.5rem 0;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #C1272D;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background 0.2s ease;
+            z-index: 10;
+        }
+        .copy-btn:hover {
+            background: #a01f25;
+        }
+        .copy-btn.copied {
+            background: #166534;
+        }
+        .copy-btn .icon {
+            width: 16px;
+            height: 16px;
+        }
+        .code-block-wrapper .code-block {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="lab-page-container">
@@ -31,7 +69,7 @@
             <!-- Lab Brand -->
             <div class="lab-brand">
                 <div class="lab-number">Lab 06</div>
-                <p class="lab-designation">Vibe Coding</p>
+                <p class="lab-designation">Python Mapping</p>
             </div>
 
             <!-- Navigation -->
@@ -48,13 +86,14 @@
                 <nav>
                     <ul>
                         <li><a href="#overview">Overview</a></li>
-                        <li><a href="#part1">Part 1: AI Coding Spectrum</a></li>
-                        <li><a href="#part2">Part 2: Experiments</a></li>
-                        <li><a href="#part3">Part 3: Critical Reflection</a></li>
-                        <li><a href="#part4">Part 4: Portfolio Integration</a></li>
-                        <li><a href="#deliverables">Deliverables</a></li>
-                        <li><a href="#guidelines">Guidelines for AI Use</a></li>
-                        <li><a href="#looking-ahead">Looking Ahead</a></li>
+                        <li><a href="#objectives">Lab Objectives</a></li>
+                        <li><a href="#part1">Part 1: Custom Basemap</a></li>
+                        <li><a href="#part2">Part 2: Hometown Dataset</a></li>
+                        <li><a href="#part3">Part 3: Interactive Map</a></li>
+                        <li><a href="#reflection">Reflection</a></li>
+                        <li><a href="#self-assessment">Self-Assessment</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#submission">Submission</a></li>
                     </ul>
                 </nav>
             </div>
@@ -63,265 +102,401 @@
         <!-- Main Content Area -->
         <main class="lab-main-content">
 
-    <!-- Hero Section -->
-    <header class="lab-hero" style="background-image: url('images/lab06.png')">
-        <div class="lab-hero-content">
-            <h1>Vibe Coding</h1>
-            <p class="lab-subtitle">AI-Assisted Development</p>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="lab-wrapper">
-
-        <main class="lab-content">
-
-        <!-- Overview -->
-        <section class="overview" id="overview">
-            <h2>Overview</h2>
-            <p>"Vibe coding" refers to AI-assisted code generation where you describe what you want in natural language and the AI produces working code. By now, you've learned HTML/CSS fundamentals (Lab 1), explored AI capabilities critically (Lab 2), built analysis and visualization skills (Labs 3-4), and created an interactive map with Python (Lab 5).</p>
-            <p>In this lab, you'll explore AI as a <strong>coding collaborator</strong> — learning when it's helpful, when it's problematic, and how to maintain your understanding while leveraging AI assistance.</p>
-        </section>
-
-        <!-- Part 1 -->
-        <section id="part1">
-            <h2>Part 1: The AI Coding Spectrum</h2>
-            <p>AI coding tools exist on a spectrum:</p>
-
-            <div class="concept-box">
-                <h4>Fundamentals First</h4>
-                <ul>
-                    <li><strong>Human Role:</strong> Write all code; AI explains errors</li>
-                    <li><strong>AI Role:</strong> Teacher/debugger</li>
-                    <li><strong>Best For:</strong> Learning new concepts</li>
-                </ul>
-            </div>
-
-            <div class="concept-box">
-                <h4>Collaborative</h4>
-                <ul>
-                    <li><strong>Human Role:</strong> Design logic; AI implements</li>
-                    <li><strong>AI Role:</strong> Co-pilot</li>
-                    <li><strong>Best For:</strong> Familiar patterns, new syntax</li>
-                </ul>
-            </div>
-
-            <div class="concept-box">
-                <h4>Vibe Coding</h4>
-                <ul>
-                    <li><strong>Human Role:</strong> Describe outcome; AI generates</li>
-                    <li><strong>AI Role:</strong> Generator</li>
-                    <li><strong>Best For:</strong> Rapid prototyping, repetitive tasks</li>
-                </ul>
-            </div>
-
-            <div class="alert alert-warning">
-                <i data-lucide="alert-triangle"></i>
-                <div>
-                    <strong>Full Automation:</strong> Minimal human involvement creates a black box — risky with no understanding.
+            <!-- Hero Section -->
+            <header class="lab-hero" style="background-image: url('images/lab06.png')">
+                <div class="lab-hero-content">
+                    <h1>Custom Basemap Design &amp; Interactive Hometown Map</h1>
+                    <p class="lab-subtitle">Python Mapping with Folium &amp; Mapbox</p>
                 </div>
-            </div>
+            </header>
 
-            <p><strong>Key principle:</strong> You must be able to <strong>read, explain, and modify</strong> any code you use, regardless of who (or what) wrote it.</p>
-        </section>
+            <!-- Main Content -->
+            <div class="lab-wrapper">
 
-        <!-- Part 2 -->
-        <section id="part2">
-            <h2>Part 2: Experiments in AI-Assisted Development</h2>
-            <p>Complete <strong>at least two</strong> of the following experiments:</p>
+                <div class="lab-content">
 
-            <h3>Experiment A: Portfolio Enhancement</h3>
-            <p>Use AI to add a feature to your Skills Portfolio:</p>
+                    <!-- Overview -->
+                    <section class="overview" id="overview">
+                        <h2>Overview</h2>
+                        <p>This lab combines interactive web mapping with custom cartographic design. You will create a personalized, art-inspired basemap using Mapbox Studio, build a dataset of meaningful locations from your hometown, and integrate both into an interactive web map using Python.</p>
+                        <p>This assignment emphasizes both creative design and technical implementation, bridging the gap between cartographic aesthetics and modern web mapping technology.</p>
 
-            <h4>Options:</h4>
-            <ul>
-                <li>Responsive navigation menu (hamburger menu on mobile)</li>
-                <li>Dark mode toggle</li>
-                <li>Image gallery or carousel</li>
-                <li>CSS animations or transitions</li>
-                <li>Accessibility improvements (ARIA labels, keyboard navigation)</li>
-            </ul>
+                        <div class="alert alert-info">
+                            <i data-lucide="layers"></i>
+                            <div>
+                                <strong>Three Components:</strong> This lab has three main parts: (1) a custom Mapbox basemap, (2) a CSV dataset of hometown locations, and (3) a Python-generated interactive map. All components must be completed and submitted together.
+                            </div>
+                        </div>
+                    </section>
 
-            <h4>Process:</h4>
-            <ol>
-                <li><strong>Plan first</strong> — sketch what you want, identify the components</li>
-                <li><strong>Prompt the AI</strong> — describe the feature clearly</li>
-                <li><strong>Review the code</strong> — read every line; add comments explaining what each part does</li>
-                <li><strong>Test thoroughly</strong> — does it work? Is it accessible? Does it break anything?</li>
-                <li><strong>Refine</strong> — ask AI to modify, or make changes yourself</li>
-            </ol>
-
-            <h3>Experiment B: Python Code Generation</h3>
-            <p>Use AI to generate Python code for a data analysis task:</p>
-
-            <h4>Options:</h4>
-            <ul>
-                <li>Clean/transform a messy dataset</li>
-                <li>Create a specific type of visualization</li>
-                <li>Perform statistical analysis</li>
-                <li>Scrape data from a website</li>
-                <li>Process text or perform sentiment analysis</li>
-            </ul>
-
-            <h4>Process:</h4>
-            <ol>
-                <li><strong>Define the task</strong> — be specific about inputs, outputs, and requirements</li>
-                <li><strong>Generate code</strong> — prompt AI with clear instructions</li>
-                <li><strong>Review line-by-line</strong> — add comments explaining the logic</li>
-                <li><strong>Test with sample data</strong> — does it produce expected results?</li>
-                <li><strong>Handle edge cases</strong> — what breaks it? Ask AI to fix, or fix yourself</li>
-            </ol>
-
-            <h3>Experiment C: Debug with AI</h3>
-            <p>Take broken code and use AI to fix it:</p>
-
-            <h4>Options:</h4>
-            <ul>
-                <li>Find a buggy code snippet online (or write intentionally broken code)</li>
-                <li>Use AI to identify and fix the issue</li>
-                <li>Compare AI's solution to your own debugging process</li>
-            </ul>
-
-            <h4>Process:</h4>
-            <ol>
-                <li><strong>Describe the problem</strong> to the AI</li>
-                <li><strong>Evaluate the fix</strong> — does it actually solve the problem?</li>
-                <li><strong>Understand the root cause</strong> — why was the code broken?</li>
-                <li><strong>Document</strong> — what did you learn about debugging with AI?</li>
-            </ol>
-        </section>
-
-        <!-- Part 3 -->
-        <section id="part3">
-            <h2>Part 3: Critical Reflection</h2>
-            <p>Write a <strong>400-600 word reflection</strong> addressing:</p>
-
-            <h3>Technical Understanding</h3>
-            <div class="concept-box">
-                <ol>
-                    <li><strong>What code did the AI generate?</strong> Describe the feature/function in your own words.</li>
-                    <li><strong>How does it work?</strong> Explain the key logic or mechanisms. If you can't explain it, that's a red flag.</li>
-                    <li><strong>What did you modify?</strong> Did you need to fix bugs, adjust styling, or change functionality? Why?</li>
-                </ol>
-            </div>
-
-            <h3>Process Evaluation</h3>
-            <div class="concept-box">
-                <ol start="4">
-                    <li><strong>When was AI helpful?</strong> What tasks did it accelerate or simplify?</li>
-                    <li><strong>When was AI problematic?</strong> Where did it produce incorrect, inefficient, or unnecessarily complex code?</li>
-                    <li><strong>What's your role?</strong> In an AI-assisted workflow, what remains uniquely human? What can't (or shouldn't) be automated?</li>
-                </ol>
-            </div>
-
-            <h3>Ethical & Pedagogical Considerations</h3>
-            <div class="concept-box">
-                <ol start="7">
-                    <li><strong>Learning trade-offs:</strong> Does vibe coding help or hinder your development as a programmer? Under what conditions?</li>
-                    <li><strong>Attribution:</strong> When using AI-generated code, what does proper citation look like? (Consider academic vs. professional contexts)</li>
-                    <li><strong>Your guidelines:</strong> What personal rules will you follow for using AI in coding? When will you use it? When won't you?</li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- Part 4 -->
-        <section id="part4">
-            <h2>Part 4: Portfolio Integration</h2>
-            <p>Add a <strong>Lab 6 entry</strong> to your Skills Portfolio that includes:</p>
-            <ul>
-                <li>Description of what you built/analyzed with AI assistance</li>
-                <li>Key code snippet with detailed comments</li>
-                <li>Brief discussion of your vibe coding guidelines</li>
-                <li>Screenshot or demo of the working feature</li>
-            </ul>
-
-            <div class="alert alert-info">
-                <i data-lucide="lightbulb"></i>
-                <div>
-                    <strong>Note:</strong> If you used AI to enhance your portfolio (Experiment A), your Lab 6 entry should explain the new feature and your process.
-                </div>
-            </div>
-        </section>
-
-        <!-- Deliverables -->
-        <section class="deliverables" id="deliverables">
-            <h2>Deliverables</h2>
-            <p>Submit to D2L:</p>
-
-            <div class="checklist">
-                <div class="checklist-item">
-                    <input type="checkbox" id="check1">
-                    <label for="check1"><strong>Critical Reflection (400-600 words)</strong> — addressing the prompts in Part 3</label>
-                </div>
-                <div class="checklist-item">
-                    <input type="checkbox" id="check2">
-                    <label for="check2"><strong>Code + Documentation:</strong>
+                    <!-- Objectives -->
+                    <section id="objectives">
+                        <h2>Lab Objectives</h2>
                         <ul>
-                            <li>Your final code with extensive comments</li>
-                            <li>Original AI prompts you used</li>
-                            <li>Examples of AI output (before your modifications)</li>
+                            <li>Design a custom interactive basemap in Mapbox Studio inspired by a meaningful cultural artifact (art, film, TV show, etc.)</li>
+                            <li>Apply principles of map generalization to create a basemap that functions well at multiple scales</li>
+                            <li>Create a structured dataset of personally significant hometown locations</li>
+                            <li>Use Python to geocode addresses, symbolize locations by category, and create interactive pop-ups</li>
+                            <li>Integrate your custom Mapbox basemap into a Python-generated interactive map using the Mapbox API</li>
                         </ul>
-                    </label>
-                </div>
-                <div class="checklist-item">
-                    <input type="checkbox" id="check3">
-                    <label for="check3"><strong>Updated Portfolio</strong> — with Lab 6 entry added</label>
-                </div>
-                <div class="checklist-item">
-                    <input type="checkbox" id="check4">
-                    <label for="check4"><strong>Links:</strong>
+                    </section>
+
+                    <!-- Part 1: Custom Mapbox Basemap Design -->
+                    <section id="part1">
+                        <h2>Part 1: Custom Mapbox Basemap Design</h2>
+
+                        <h3>Step 1: Create a Mapbox Account</h3>
+                        <ol>
+                            <li>Navigate to <a href="https://studio.mapbox.com" target="_blank">studio.mapbox.com</a> and create an account using your TCU email address</li>
+                            <li>Once logged in, you'll see the Mapbox Studio dashboard where you can create and manage map styles</li>
+                        </ol>
+
+                        <h3>Step 2: Choose Your Design Inspiration</h3>
+                        <p>Select a piece of art, media, or design that will inspire your basemap's color palette and aesthetic. This could be:</p>
                         <ul>
-                            <li>GitHub Pages site URL</li>
-                            <li>GitHub repository URL</li>
+                            <li>A favorite painting or art movement (e.g., Van Gogh's Starry Night, Art Deco posters)</li>
+                            <li>A TV show or film (e.g., The Office, Wes Anderson movies, Studio Ghibli)</li>
+                            <li>Album artwork, book covers, or graphic design</li>
+                            <li>Architecture, fashion, or nature photography</li>
                         </ul>
-                    </label>
+
+                        <div class="alert alert-warning">
+                            <i data-lucide="bookmark"></i>
+                            <div>
+                                <strong>Important:</strong> Save or bookmark reference images of your inspiration source. You'll need to include these in your reflection.
+                            </div>
+                        </div>
+
+                        <h3>Step 3: Create a New Style in Mapbox Studio</h3>
+                        <ol>
+                            <li>From your Mapbox Studio dashboard, click the <strong>"New style"</strong> button</li>
+                            <li><strong>Select the "Blank" template</strong> to start with a completely empty canvas (do not use any pre-made templates)</li>
+                            <li>The Mapbox Studio style editor will open with a blank map canvas ready for customization</li>
+                        </ol>
+
+                        <h3>Step 4: Add and Style Components</h3>
+                        <p>Mapbox Studio uses "components" — groups of related layers that can be styled together. You'll add components one by one and customize them to match your design inspiration.</p>
+
+                        <div class="concept-box">
+                            <h4>Required Components (must include all)</h4>
+                            <ul>
+                                <li><strong>Land, water, &amp; sky:</strong> This creates the base layer. Customize colors for land, water, and sky to match your inspiration. Consider whether to show land use details or keep it simple.</li>
+                                <li><strong>Road network:</strong> Add roads and customize their colors and widths. You can toggle on/off road labels, shields (highway markers), and exits. Style different road types (motorways, primary roads, streets) differently based on importance.</li>
+                                <li><strong>Place labels:</strong> Add labels for countries, states, cities, and neighborhoods. Customize the font, size, and when labels appear at different zoom levels. You can show labels as text only or text with icon markers.</li>
+                                <li><strong>POI (Points of Interest) labels:</strong> Add labels for parks, landmarks, and other points of interest. Customize which types of POIs to display and their styling.</li>
+                                <li><strong>Terrain component:</strong> Add terrain visualization (hillshade, contours, or 3D terrain). Use layer ordering and transparency to ensure terrain is visible but not overwhelming.</li>
+                            </ul>
+                        </div>
+
+                        <div class="concept-box">
+                            <h4>Technical Requirements</h4>
+                            <ul>
+                                <li><strong>Minimum of 12 individually styled layers/components</strong> — the required components above should get you most of the way there, but you may need to add additional components or custom layers</li>
+                                <li><strong>Do not use default settings</strong> — every component/layer must be customized to fit your design</li>
+                                <li><strong>Style data across zoom levels:</strong> Use "Style across zoom range" to ensure your map looks good at local (high zoom), regional (medium zoom), and world (low zoom) scales. For example, make labels larger as users zoom in, or hide certain features at small scales.</li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <i data-lucide="lightbulb"></i>
+                            <div>
+                                <strong>Design Tips:</strong>
+                                <ul>
+                                    <li>Use color pickers to extract colors directly from your inspiration source</li>
+                                    <li>Consider uploading custom fonts that match your inspiration (use .ttf or .otf files from <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>)</li>
+                                    <li>Test your map at different zoom levels and locations to ensure it works globally</li>
+                                    <li>Look at other Mapbox examples and online interactive maps (Google Maps, etc.) for ideas about what should appear at different scales</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3>Step 5: Publish Your Style and Get the Style URL</h3>
+                        <ol>
+                            <li>Click the <strong>"Publish"</strong> button in the top right to save and publish your style</li>
+                            <li>Click <strong>"Share"</strong> to access your style's sharing options</li>
+                            <li>Set the style to <strong>"Public"</strong> so it can be accessed via the API</li>
+                            <li>Copy your style URL — it will look like: <code>mapbox://styles/yourusername/yourstyleid</code></li>
+                        </ol>
+
+                        <div class="alert alert-warning">
+                            <i data-lucide="save"></i>
+                            <div>
+                                <strong>Important:</strong> Save this style URL — you'll need it for Part 3 when creating your interactive map.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Part 2: Create Hometown Locations Dataset -->
+                    <section id="part2">
+                        <h2>Part 2: Create Hometown Locations Dataset</h2>
+
+                        <h3>Step 1: Choose Your Locations</h3>
+                        <p>Select <strong>at least 10 locations</strong> from your hometown that are personally meaningful to you. These should be places you would show a friend visiting your hometown for the first time.</p>
+
+                        <div class="concept-box">
+                            <h4>Example Location Types (choose at least 3 different types)</h4>
+                            <ul>
+                                <li>Restaurants &amp; Cafes (especially local, non-chain establishments)</li>
+                                <li>Parks &amp; Recreation Areas</li>
+                                <li>Schools &amp; Educational Institutions</li>
+                                <li>Cultural Sites (museums, theaters, libraries)</li>
+                                <li>Places of Worship</li>
+                                <li>Historical Landmarks</li>
+                                <li>Shopping Districts or Local Businesses</li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-warning">
+                            <i data-lucide="shield-alert"></i>
+                            <div>
+                                <strong>Privacy Note:</strong> Do NOT include your actual home address or any other private/sensitive locations. Think of this as a public-facing map.
+                            </div>
+                        </div>
+
+                        <h3>Step 2: Create Your CSV File</h3>
+                        <p>Create a CSV file named <code>hometown_locations.csv</code> with the following columns:</p>
+
+                        <div class="concept-box">
+                            <h4>CSV Column Structure</h4>
+                            <table style="width:100%; border-collapse:collapse; margin-top:0.75rem;">
+                                <thead>
+                                    <tr style="border-bottom:2px solid var(--border-color);">
+                                        <th style="text-align:left; padding:0.5rem;">Column Name</th>
+                                        <th style="text-align:left; padding:0.5rem;">Data Type</th>
+                                        <th style="text-align:left; padding:0.5rem;">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom:1px solid var(--border-color);">
+                                        <td style="padding:0.5rem;"><code>Name</code></td>
+                                        <td style="padding:0.5rem;">Text</td>
+                                        <td style="padding:0.5rem;">The name of the location (e.g., "Reata Restaurant", "Fort Worth Botanic Garden")</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color);">
+                                        <td style="padding:0.5rem;"><code>Address</code></td>
+                                        <td style="padding:0.5rem;">Text</td>
+                                        <td style="padding:0.5rem;">Full street address (e.g., "310 Houston St, Fort Worth, TX 76102")</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color);">
+                                        <td style="padding:0.5rem;"><code>Type</code></td>
+                                        <td style="padding:0.5rem;">Text</td>
+                                        <td style="padding:0.5rem;">Category of location (e.g., "Restaurant", "Park", "School", "Cultural", "Historical", "Recreation")</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid var(--border-color);">
+                                        <td style="padding:0.5rem;"><code>Description</code></td>
+                                        <td style="padding:0.5rem;">Text</td>
+                                        <td style="padding:0.5rem;">Why this place is meaningful to you and worth visiting (2–3 sentences in your own words)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:0.5rem;"><code>Image_URL</code></td>
+                                        <td style="padding:0.5rem;">Text (URL)</td>
+                                        <td style="padding:0.5rem;">URL of an image of the location (find on Google Images, the location's website, etc.)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="concept-box">
+                            <h4>Example CSV Structure</h4>
+                            <div class="code-block-wrapper">
+                                <button class="copy-btn" onclick="copyCode(this)">
+                                    <i data-lucide="clipboard" class="icon"></i> Copy
+                                </button>
+                                <pre class="code-block"><code>Name,Address,Type,Description,Image_URL
+"Joe T Garcia's","2201 N Commerce St, Fort Worth, TX 76106",Restaurant,"Family-owned Mexican restaurant that's been a Fort Worth institution since 1935. The outdoor patio is perfect for warm evenings and the atmosphere can't be beat.",https://example.com/joetgarcias.jpg</code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Part 3: Create Interactive Map with Python -->
+                    <section id="part3">
+                        <h2>Part 3: Create Interactive Map with Python</h2>
+                        <p>In this section, you'll use Python in VS Code to geocode your locations, create an interactive map with your custom Mapbox basemap, add symbolized markers, and create pop-ups with images and descriptions.</p>
+
+                        <h3>Step 1: Get Your Mapbox Access Token</h3>
+                        <ol>
+                            <li>In Mapbox Studio, click on your account in the top right and select <strong>"Access tokens"</strong></li>
+                            <li>Copy your <strong>default public token</strong> (it starts with <code>pk.</code>)</li>
+                            <li>You'll use this token to access both the Mapbox Geocoding API and to display your custom style</li>
+                        </ol>
+
+                        <h3>Step 2: Set Up Your Python Environment</h3>
+                        <p>Open VS Code and create a new Python file (e.g., <code>hometown_map.py</code>). Install the required libraries:</p>
+                        <div class="code-block-wrapper">
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i data-lucide="clipboard" class="icon"></i> Copy
+                            </button>
+                            <pre class="code-block"><code>pip install folium pandas requests</code></pre>
+                        </div>
+
+                        <h3>Step 3: Write Your Python Code</h3>
+
+                        <div class="alert alert-info">
+                            <i data-lucide="sparkles"></i>
+                            <div>
+                                <strong>AI Encouraged:</strong> You are encouraged to use AI coding tools (like GitHub Copilot, Claude, ChatGPT, etc.) to help generate your code. However, you should aspire to understand what the code does and be able to explain it.
+                            </div>
+                        </div>
+
+                        <p>Your Python script must accomplish the following:</p>
+                        <ul>
+                            <li><strong>Read your CSV file</strong> containing hometown locations</li>
+                            <li><strong>Geocode addresses using the Mapbox Geocoding API</strong> to convert addresses to latitude/longitude coordinates</li>
+                            <li><strong>Create a Folium map with your custom Mapbox basemap</strong> using the tile URL from your Mapbox style</li>
+                            <li><strong>Add markers with different symbols/colors based on location type</strong> (restaurants vs parks vs cultural sites, etc.)</li>
+                            <li><strong>Create interactive pop-ups</strong> that display: (1) Location name, (2) Your personal description, (3) An image of the location</li>
+                            <li><strong>Save the map as an HTML file</strong></li>
+                        </ul>
+
+                        <div class="concept-box">
+                            <h4>Key Code Components</h4>
+                            <p>Use these as a starting point:</p>
+
+                            <p><strong>1. Mapbox Tile URL Format:</strong></p>
+                            <div class="code-block-wrapper">
+                                <button class="copy-btn" onclick="copyCode(this)">
+                                    <i data-lucide="clipboard" class="icon"></i> Copy
+                                </button>
+                                <pre class="code-block"><code>tiles = 'https://api.mapbox.com/styles/v1/YOUR_USERNAME/YOUR_STYLE_ID/tiles/256/{z}/{x}/{y}@2x?access_token=YOUR_ACCESS_TOKEN'</code></pre>
+                            </div>
+
+                            <p><strong>2. Mapbox Geocoding API Format:</strong></p>
+                            <div class="code-block-wrapper">
+                                <button class="copy-btn" onclick="copyCode(this)">
+                                    <i data-lucide="clipboard" class="icon"></i> Copy
+                                </button>
+                                <pre class="code-block"><code>geocode_url = f'https://api.mapbox.com/search/geocode/v6/forward?q={address}&amp;access_token={access_token}'</code></pre>
+                            </div>
+
+                            <p><strong>3. Folium Icon Colors</strong> (use different colors for different location types):</p>
+                            <p>Available colors: <code>red</code>, <code>blue</code>, <code>green</code>, <code>purple</code>, <code>orange</code>, <code>darkred</code>, <code>lightred</code>, <code>beige</code>, <code>darkblue</code>, <code>darkgreen</code>, <code>cadetblue</code>, <code>darkpurple</code>, <code>white</code>, <code>pink</code>, <code>lightblue</code>, <code>lightgreen</code>, <code>gray</code>, <code>black</code>, <code>lightgray</code></p>
+                        </div>
+
+                        <div class="concept-box">
+                            <h4>Testing Your Code</h4>
+                            <ul>
+                                <li>Test with 2–3 locations first before running on all 10+</li>
+                                <li>Verify that geocoding is returning correct coordinates by checking a few in Google Maps</li>
+                                <li>Ensure your custom basemap is loading correctly (you should see your design, not a default map)</li>
+                                <li>Test that pop-ups display properly with images and your descriptions</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Reflection -->
+                    <section id="reflection">
+                        <h2>Written Reflection (250–500 words)</h2>
+                        <p>Your reflection must address the following:</p>
+
+                        <div class="concept-box">
+                            <h4>1. Design Inspiration</h4>
+                            <p>Explain what inspired your basemap design. Include reference images from your inspiration source and describe how you translated its visual elements (colors, mood, style) into your map design.</p>
+                        </div>
+
+                        <div class="concept-box">
+                            <h4>2. Cartographic Challenges</h4>
+                            <p>What were the main challenges you faced when designing your basemap for multiple scales? How did you decide what features to show at different zoom levels?</p>
+                        </div>
+
+                        <div class="concept-box">
+                            <h4>3. Technical Challenges</h4>
+                            <p>What coding challenges did you encounter when creating your interactive map? How did you use AI tools (if applicable) to help overcome them?</p>
+                        </div>
+                    </section>
+
+                    <!-- Self-Assessment -->
+                    <section id="self-assessment">
+                        <h2>Self-Assessment</h2>
+                        <p>Before submitting, take a moment to reflect on your work honestly:</p>
+
+                        <div class="concept-box">
+                            <h4>Questions to Consider</h4>
+                            <ul>
+                                <li><strong>Design Coherence:</strong> Does my basemap have a clear, recognizable connection to my inspiration source? Could someone see the relationship without me explaining it?</li>
+                                <li><strong>Scale Awareness:</strong> Does my map look intentional at different zoom levels, or does it fall apart when zooming in or out?</li>
+                                <li><strong>Data Quality:</strong> Are my location descriptions genuinely personal and meaningful, or are they generic descriptions I could have pulled from Google?</li>
+                                <li><strong>Code Understanding:</strong> If I used AI to generate my Python code, can I explain what each section does? Could I modify it to add a new feature?</li>
+                                <li><strong>Integration:</strong> Do all three components (basemap, data, Python map) work together seamlessly?</li>
+                                <li><strong>Portfolio Quality:</strong> Does this page represent work I would be comfortable showing to a potential employer or graduate program?</li>
+                            </ul>
+                        </div>
+
+                        <p>Use these questions to guide final revisions before submission. Honest self-assessment helps you identify areas of strength and opportunities for growth.</p>
+                    </section>
+
+                    <!-- Resources -->
+                    <section id="resources">
+                        <h2>Helpful Resources</h2>
+                        <ul>
+                            <li><a href="https://docs.mapbox.com/studio-manual/" target="_blank">Mapbox Studio Manual</a></li>
+                            <li><a href="https://docs.mapbox.com/api/search/geocoding/" target="_blank">Mapbox Geocoding API</a></li>
+                            <li><a href="https://python-visualization.github.io/folium/" target="_blank">Folium Documentation</a></li>
+                            <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a> (for custom fonts)</li>
+                            <li><a href="https://www.mapbox.com/gallery" target="_blank">Mapbox Gallery</a> (for inspiration)</li>
+                        </ul>
+                    </section>
+
+                    <!-- Submission -->
+                    <section class="deliverables" id="submission">
+                        <h2>Submission</h2>
+
+                        <h3>Submit to D2L Assignment Folder</h3>
+                        <div class="checklist">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check1">
+                                <label for="check1">Your published Mapbox style URL (in a .txt file or included in your reflection document)</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check2">
+                                <label for="check2">Your <code>hometown_locations.csv</code> file</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check3">
+                                <label for="check3">Your Python script (<code>.py</code> file)</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check4">
+                                <label for="check4">Your final interactive map (as <code>.html</code> file)</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check5">
+                                <label for="check5">Your written reflection (as PDF, 250–500 words)</label>
+                            </div>
+                        </div>
+
+                        <h3>Add to Your Portfolio Website</h3>
+                        <div class="checklist">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check6">
+                                <label for="check6">Add your interactive map (.html file) to your portfolio under the "Lab 6" section</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check7">
+                                <label for="check7">Add your written reflection to the same Lab 6 page (embed as text or link to the PDF)</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check8">
+                                <label for="check8">Push your updated portfolio to your GitHub repository</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check9">
+                                <label for="check9">Verify your GitHub Pages site displays the map and reflection correctly</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="check10">
+                                <label for="check10">Submit links to D2L: GitHub repository URL and live GitHub Pages URL</label>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </div>
-        </section>
 
-        <!-- Guidelines -->
-        <section id="guidelines">
-            <h2>Guidelines for AI Use in This Lab</h2>
-            <p>For this lab specifically:</p>
-
-            <h3>Encouraged:</h3>
-            <ul>
-                <li>Using AI to generate initial code</li>
-                <li>Asking AI to explain code concepts</li>
-                <li>Requesting debugging help</li>
-                <li>Exploring multiple AI-generated approaches</li>
-            </ul>
-
-            <h3>Not Allowed:</h3>
-            <ul>
-                <li>Submitting AI code you don't understand</li>
-                <li>Skipping the commenting/documentation process</li>
-                <li>Using AI to write your reflection</li>
-                <li>Copying code without attribution</li>
-            </ul>
-
-            <div class="alert alert-info">
-                <i data-lucide="info"></i>
-                <div>
-                    <strong>Remember:</strong> The point isn't to avoid AI, but to use it thoughtfully while maintaining your understanding and agency.
-                </div>
-            </div>
-        </section>
-
-        <!-- Looking Ahead -->
-        <section class="looking-ahead" id="looking-ahead">
-            <h2>Looking Ahead</h2>
-            <p>The skills you develop here — prompting effectively, evaluating AI output, maintaining code literacy — will serve you throughout your Semester Project and beyond. As you finalize your Skills Portfolio, you now have a complete toolkit: foundational web skills, critical AI literacy, data visualization expertise, Python mapping capabilities, and thoughtful AI-assisted development practices. The question isn't "Should I use AI?" but "How do I use AI responsibly and effectively?"</p>
-        </section>
-
-        </main>
-    </div>
-
-    <!-- Footer -->
-    <footer class="lab-footer">
-        <p>&copy; 2026 TCU - Digital Culture & Data Analytics</p>
-        <p><a href="../index.html">Back to Home</a></p>
-    </footer>
+            <!-- Footer -->
+            <footer class="lab-footer">
+                <p>&copy; 2026 TCU - Digital Culture &amp; Data Analytics</p>
+                <p><a href="../index.html">Back to Home</a></p>
+            </footer>
 
         </main>
     </div>
@@ -329,6 +504,22 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
+
+        // Copy Code Button
+        function copyCode(btn) {
+            const wrapper = btn.closest('.code-block-wrapper');
+            const code = wrapper.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                btn.innerHTML = '<i data-lucide="check" class="icon"></i> Copied!';
+                btn.classList.add('copied');
+                lucide.createIcons();
+                setTimeout(() => {
+                    btn.innerHTML = '<i data-lucide="clipboard" class="icon"></i> Copy';
+                    btn.classList.remove('copied');
+                    lucide.createIcons();
+                }, 2000);
+            });
+        }
 
         // Mobile Menu Toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
