@@ -16,14 +16,16 @@
 | 3 | Tufte Critique (visualization analysis) | `lab03.html` |
 | 4 | Tableau Visualization (Tableau Public) | `lab04.html` |
 | 5 | Vibe Coding (AI-assisted development) | `lab05.html` |
-| 6 | Python Mapping (Folium/GeoPy) | `lab06.html` |
+| 6 | Python Mapping (Folium/Mapbox) | `lab06.html` |
 
 ### Course Website
 - **Live URL:** https://tcu-dcda.github.io/DCDA40833_SP26/
 - All 6 labs converted to HTML with sidebar navigation
+- All 6 labs have ungrading rubrics (`lab01_rubric.md` – `lab06_rubric.md`)
 - Mazda Soul Red theme (#C1272D)
 
 ### Maintenance
+- Lab 6 finalized (Feb 2026): HTML page, rubric, and index card with March 2 due date
 - Repository cleanup completed (Feb 2026): removed local node_modules, deleted orphaned directories
 - Chrome sidebar compatibility issue (works in Safari/Firefox)
 - See [TODO.md](TODO.md) for full task tracking

@@ -1,6 +1,6 @@
 # TODO - DCDA 40833 Senior Capstone (Spring 2026)
 
-**Last Updated:** January 2026
+**Last Updated:** February 2026
 
 ---
 
@@ -35,10 +35,10 @@
 ## Medium Priority
 
 ### Lab Content Review
-- [ ] Review Lab 6 (Python Mapping) content and finalize approach
+- [x] Review Lab 6 (Python Mapping) content and finalize approach (completed Feb 2026)
 - [ ] Add portfolio integration guidance to each lab
 - [ ] Consider adding example student portfolios
-- [ ] Create rubrics for Labs 4, 5, 6 (Labs 1-3 complete)
+- [x] Create rubrics for Labs 4, 5, 6 (completed Feb 2026 — all 6 labs now have rubrics)
 
 ### Website Enhancements
 - [ ] Mobile responsive testing across devices
@@ -78,6 +78,12 @@
 ---
 
 ## Completed ✓
+
+### Lab 6 Finalized (February 2026)
+- ✅ Lab 6 HTML page created (`docs/labs/lab06.html`) from draft — custom Mapbox basemap + Python mapping
+- ✅ Lab 6 rubric created (`docs/labs/lab06_rubric.md`) — ungrading format matching Labs 4 & 5
+- ✅ Lab 6 card on index.html linked with due date (March 2, 2026)
+- ✅ All 6 labs now have HTML pages and rubrics
 
 ### Repository Cleanup (February 2026)
 - ✅ Removed local node_modules directories (~1.3GB freed)

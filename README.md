@@ -23,7 +23,7 @@ This capstone course is the culminating experience for the Digital Culture and D
 │   ├── lab-styles.css          # Lab page styling
 │   └── labs/                   # Lab instruction pages (HTML)
 │       ├── lab01.html - lab06.html
-│       ├── lab01_rubric.md - lab03_rubric.md  # Ungrading rubrics
+│       ├── lab01_rubric.md - lab06_rubric.md  # Ungrading rubrics
 │       └── images/             # Lab hero images
 ├── project/                    # Semester project prompts & guidelines
 │   └── project_prompt.md       # Main project proposal prompt
@@ -86,7 +86,7 @@ npm run build            # Build for production (outputs to dist/)
   - Lab 3: Visualization critique (data viz analysis)
   - Lab 4: Data visualization with Tableau Public
   - Lab 5: Vibe coding & AI-assisted development
-  - Lab 6: Python mapping with Folium/GeoPy
+  - Lab 6: Python mapping with Folium & custom Mapbox basemaps
 - **Skills Portfolio** — Web-based showcase built incrementally throughout semester
 - **Self-Reflections (3)** — Baseline, Midsemester & Final reflections with grade justification
 - **Project Proposal** — Research question, methodology, and annotated bibliography
