@@ -33,19 +33,19 @@ The following dimensions evaluate the depth and quality of your work. This is wh
 #### Exceeds Expectations
 - Chooses experiments that push beyond current comfort zone — works with unfamiliar languages, tools, or concepts
 - Attempts more than the minimum two experiments, or pursues experiments with meaningful scope
-- Shows evidence of iterating with the AI — refining prompts, trying different approaches, not just accepting the first output
+- Shows evidence of trying multiple approaches or pushing past initial results, not settling for the first attempt
 - Takes on a task where failure was a real possibility, and documents what happened either way
 
 #### Meets Expectations
 - Completes two experiments that are appropriate for current skill level
 - Experiments are substantive enough to generate meaningful observations about AI-assisted coding
-- Shows evidence of following the prescribed process (plan, prompt, review, test, refine)
+- Shows evidence of following the prescribed process (planning, generating, reviewing, testing, and refining)
 - Experiments produce working results
 
 #### Does Not Meet Expectations
 - Experiments are trivially simple regardless of skill level (e.g., asking AI to write a single line of code)
 - Only one experiment completed, or second experiment is barely attempted
-- No evidence of following the process — jumped straight to accepting AI output
+- No evidence of following the process — no planning, testing, or iteration evident
 - Experiments chosen to avoid engagement rather than to learn
 
 ---
@@ -76,10 +76,10 @@ The following dimensions evaluate the depth and quality of your work. This is wh
 
 ### 3. Critical Reflection
 
-*This evaluates the depth of your thinking about AI as a coding collaborator — not just what happened, but what it means. The reflection must be your own writing, not AI-generated.*
+*This evaluates the depth of your thinking about AI as a coding collaborator — not just what happened, but what it means. The reflection must be your own writing, not AI-generated. (Code comments are evaluated separately in Dimension 2.)*
 
 #### Exceeds Expectations
-- **Technical Understanding (prompts 1-3):** Explains code in their own words with specificity; modifications are described with clear reasoning, not just "I changed a few things"
+- **Technical Understanding (prompts 1-3):** Reflects on the experience of working with AI-generated code with specificity; modifications are described with clear reasoning about *why* changes were needed, not just what was changed
 - **Process Evaluation (prompts 4-6):** Identifies specific moments where AI helped and specific moments where it failed or misled — with concrete examples, not generalizations
 - **Ethics & Pedagogy (prompts 7-9):** Personal guidelines are specific and grounded in actual experience from the experiments — not abstract principles that could apply to anyone
 - Reflection reads as genuine thinking, not as a performance of what the instructor wants to hear
@@ -121,7 +121,7 @@ The following dimensions evaluate the depth and quality of your work. This is wh
 - AI prompts and outputs are missing or incomplete
 - No way to distinguish AI contribution from student contribution
 - Only the final product is shown with no evidence of process
-- Documentation suggests the student accepted AI output without review or iteration
+- Submission lacks the artifacts needed to understand the collaboration (prompts, original outputs, revision history)
 
 ---
 
@@ -144,7 +144,7 @@ The following dimensions evaluate the depth and quality of your work. This is wh
 
 #### Does Not Meet Expectations
 - Writing is unclear, disorganized, or difficult to follow
-- Reads as AI-generated — polished surface with no personal voice or specific experience
+- Lacks personal voice — reads as generic or formulaic with no connection to specific experience
 - Ideas are underdeveloped or repetitive
 - Significant errors interfere with communication
 - Content is padded rather than substantive
