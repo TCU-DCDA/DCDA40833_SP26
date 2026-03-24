@@ -486,7 +486,7 @@ footer a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     /* Mobile Header */
     .mobile-header {
         display: flex;
