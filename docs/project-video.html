@@ -62,8 +62,8 @@
             <!-- Hero Section -->
             <header class="lab-hero" style="background-image: url('labs/images/brainstorm.png')">
                 <div class="lab-hero-content">
-                    <h1>Video Walkthrough</h1>
-                    <p class="lab-subtitle">Semester Project &mdash; Final Presentation</p>
+                    <h1>Semester Project</h1>
+                    <p class="lab-subtitle">Video Walkthrough</p>
                 </div>
             </header>
 
@@ -103,7 +103,7 @@
                             <h4>The Content</h4>
                             <ul>
                                 <li><strong>Research Question &amp; Hypothesis</strong> &mdash; What did you set out to investigate, and what did you expect to find?</li>
-                                <li><strong>Methodology</strong> &mdash; How did you approach the project? What tools, techniques, or methods did you use?</li>
+                                <li><strong>Methodology</strong> &mdash; How did you approach the project? What tools, techniques, or methods did you use? If you used AI tools, reflect on that experience &mdash; what role did they play, and what did you learn from using them?</li>
                                 <li><strong>Findings &amp; Insights</strong> &mdash; What did you discover? Did your findings support or challenge your hypothesis?</li>
                                 <li><strong>Reflection</strong> &mdash; What would you do differently? What surprised you? What did you learn?</li>
                             </ul>
@@ -203,7 +203,7 @@
         // Close mobile menu when clicking a nav link
         document.querySelectorAll('.lab-sidebar a').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 1024) {
+                if (window.innerWidth <= 768) {
                     toggleMobileMenu();
                 }
             });

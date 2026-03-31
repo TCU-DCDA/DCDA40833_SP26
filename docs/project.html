@@ -122,6 +122,8 @@
                         <h2>Research Methodology</h2>
                         <p>What specific techniques and methods do you plan to use for this project? Are they mostly quantitative? Mostly qualitative? A combination (hybrid) of both? How will those techniques and methods help you answer your Research Question?</p>
                         <p>The sources you've gathered during your research will likely be a good resource and reference point here too.</p>
+
+                        <p>If you plan to use AI tools (e.g., vibe coding, ChatGPT, Claude, Copilot) as part of your workflow, describe how you anticipate using them and what role they'll play in your process. While it's important to disclose their use, it's more important that you articulate on that use and the possibilities &mdash; and consequences &mdash; of your choosing to use them for this project.</p>
                     </section>
 
                     <!-- Purpose -->
@@ -219,7 +221,7 @@
         // Close mobile menu when clicking a nav link
         document.querySelectorAll('.lab-sidebar a').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 1024) {
+                if (window.innerWidth <= 768) {
                     toggleMobileMenu();
                 }
             });
