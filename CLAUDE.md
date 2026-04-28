@@ -78,7 +78,7 @@ This repository supports a course using an **"ungrading" model**:
 ### Key Policies
 
 - Late work affects ability to receive timely feedback
-- **Late Semester Projects and Final Reflections are NOT accepted** (graduating seniors)
+- **Late Semester Projects and Final Reflections are NOT accepted** — these are firm deadlines
 - Attendance is tracked but not graded — affects grade argument persuasiveness
 
 ### AI Usage
